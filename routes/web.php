@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Input;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +22,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('email/verify/{token}',['as'=>'email.verify','uses'=>'EmailController@verify']);
+
+Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
+{
+    $router->post('login', 'LoginController@login');
+    $router->post('logout', 'LoginController@logout');
+
+    $router->get('/', 'DashboardController@index');
+    $router->post('/register','RegisterController@register');
+});
