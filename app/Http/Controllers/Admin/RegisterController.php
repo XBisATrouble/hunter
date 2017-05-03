@@ -42,7 +42,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest:admin', ['except' => 'logout']);
+        $this->middleware('guest:admin');
         $this->username = config('admin.global.username');
     }
 
@@ -70,10 +70,9 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         $this->validator($request->all())->validate();
-
         event(new Registered($user = $this->create($request->all())));
 
-        $this->guard('admin');
+        Auth::guard('admin')->login($user);
 
         return redirect($this->redirectTo);
     }
@@ -89,9 +88,11 @@ class RegisterController extends Controller
         $admin = Admin::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'avatar' => '/images/avatars/default.png',
+            'confirmation_token' => str_random(40),
             'password' => bcrypt($data['password']),
         ]);
-        //$this->sendVerifyEmailTo($admin);
+        $this->sendVerifyEmailTo($admin);
         return $admin;
     }
 

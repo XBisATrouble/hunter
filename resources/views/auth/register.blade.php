@@ -18,11 +18,11 @@
 					<input class="user_submit" type="submit" name="user_info" style="display: none;">
 					{{ csrf_field() }}
 					<div class="user_button_banner">
-						<div class="user_input_submit_button input_button signin user_button" style="width:100%">注册</div>
+						<div class="user_input_submit_button input_button signin user_button reg" style="width:100%">注册</div>
 					</div>
 				</form>
 			</div>
-			<img class="company" src="img/qiye.png"></div>
+			<img class="company" src="dist/qiye.png"></div>
 		<div class="main_r_page main_page">
 			<div class="main_r_tan main_tan"></div>
 			<div class="main_company_input_banner">
@@ -33,11 +33,11 @@
 					<input class="company_submit" type="submit" name="company_info" style="display: none;">
 					{{ csrf_field() }}
 					<div class="company_button_banner">
-						<div class="company_input_submit_button input_button signin company_button" style="width:100%">注册</div>
+						<div class="company_input_submit_button input_button signin company_button reg" style="width:100%">注册</div>
 					</div>
 				</form>
 			</div>
-			<img class="user" src="img/yonghu.png"></div>
+			<img class="user" src="dist/yonghu.png"></div>
 	</div>
 	<div class="mobile_user_input_banner" style="display: none;">
 		<input class="mobile_user_input" type="text" name="user_email" placeholder="请使用邮箱注册">

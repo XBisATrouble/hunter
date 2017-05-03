@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use App\User;
 use Illuminate\Http\Request;
 use Auth;
@@ -19,13 +20,29 @@ class EmailController extends Controller
     public function verify($token)
     {
         $user = User::where('confirmation_token', $token)->first();
-        if ( is_null($user) ) {
-            return redirect('/');
+        $admin = Admin::where('confirmation_token', $token)->first();
+        if ( is_null($user) && is_null($admin) )
+        {
+            return redirect('404');
         }
-        $user->is_active = 1;
-        $user->confirmation_token = str_random(40);
-        $user->save();
-        Auth::login($user);
-        return redirect('/home');
+        else
+        {
+            if (!is_null($user))
+            {
+                $user->is_active = 1;
+                $user->confirmation_token = str_random(40);
+                $user->save();
+                Auth::login($user);
+                return redirect('/home');
+            }
+            if (!is_null($admin))
+            {
+                $admin->is_active = 1;
+                $admin->confirmation_token = str_random(40);
+                $admin->save();
+                Auth::guard('admin')->login($admin);
+                return redirect('/admin');
+            }
+        }
     }
 }

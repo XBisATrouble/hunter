@@ -17,7 +17,10 @@ class CreateJobsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('salary');
-            $table->string('location');
+            $table->string('province');
+            $table->string('city');
+            $table->string('type');
+            $table->string('class_id');
             $table->string('experience');
             $table->string('education');
             $table->string('advantage');
