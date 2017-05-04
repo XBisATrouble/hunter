@@ -1,80 +1,79 @@
-(function click_function() {
-	var main_banner = document.querySelector('.main_banner'),
-		main_l_page = document.querySelector('.main_l_page'),
-		main_r_page = document.querySelector('.main_r_page'),
-		user = document.querySelector('.user'),
-		company = document.querySelector('.company'),
-		user_input = document.querySelectorAll('.user_input'),
-		company_input = document.querySelectorAll('.company_input'),
-		main_user_input_banner = document.querySelector('.main_user_input_banner'),
-		main_company_input_banner = document.querySelector('.main_company_input_banner'),
-		user_button_banner = document.querySelector('.user_button_banner'),
-		company_button_banner = document.querySelector('.company_button_banner');
+var job_level_1 = document.querySelector('.job_level_1'),
+    job_level_2 = document.querySelector('.job_level_2'),
+    job_level_3 = document.querySelector('.job_level_3');
 
-	main_l_page.addEventListener('click', (e) => {
-		if (e.target.className === "main_l_page main_page" || e.target.className === "company" || e.target.className === "main_l_tan main_tan") {
+function demo() {
+    console.log($('.job_province option:selected').text());
+}
 
-			company.style.setProperty('opacity', '1');
-			user.style.setProperty('opacity', '0');
-			user.style.setProperty('z-index', '-1');
-			company.style.setProperty('z-index', '0');
 
-			main_l_page.style.setProperty('width', '30%');
-			main_r_page.style.setProperty('width', '70%');
+function getJobType1() {
+    var xml = new XMLHttpRequest(),
+        resData = "",
+        resJson = "";
+    job_level_1 = document.querySelector('.job_level_1');
 
-			for (var i = 0; i < user_input.length; i++) {
-				user_input[i].style.setProperty('opacity', '0');
-				user_input[i].style.setProperty('right', '100%');
-			}
-			for (var i = 0; i < company_input.length; i++) {
-				company_input[i].style.setProperty('opacity', '1');
-				company_input[i].style.setProperty('right', '0');
-			}
+    xml.open('GET', '/api/jobType', true);
+    xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xml.send(null);
 
-			user_button_banner.style.setProperty('opacity', '0');
-			user_button_banner.style.setProperty('right', '125%');
-			company_button_banner.style.setProperty('opacity', '1');
-			company_button_banner.style.setProperty('right', '0');
-		}
-	});
+    xml.onreadystatechange = function() {
+        if (xml.readyState === 4 && xml.status === 200) {
+            resJson = JSON.parse(xml.responseText);
+            for (var i = 0; i < resJson.length; i++) {
+                resData = resData + "<option value='" + resJson[i].id + "'>" + resJson[i].name + "</option>";
+            }
+            job_level_1.innerHTML = job_level_1.innerHTML + resData;
+            job_level_1.addEventListener("change", getJobType2);
+        }
+    }
+};
 
-	main_r_page.addEventListener('click', (e) => {
-		if (e.target.className === "main_r_page main_page" || e.target.className === "user" || e.target.className === "main_r_tan main_tan") {
+function getJobType2() {
+    var xml = new XMLHttpRequest(),
+        resData = "",
+        resJson = "",
+        job_level_2 = document.querySelector('.job_level_2'),
+        job_level_3 = document.querySelector('.job_level_3');
+    job_level_2.innerHTML = "<option selected='selected'>职能分类</option>";
 
-			company.style.setProperty('opacity', '0');
-			user.style.setProperty('opacity', '1');
-			user.style.setProperty('z-index', '0');
-			company.style.setProperty('z-index', '-1');
+    xml.open('GET', '/api/jobType/' + $('.job_level_1 option:selected').val(), true);
+    xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xml.send(null);
 
-			main_l_page.style.setProperty('width', '70%');
-			main_r_page.style.setProperty('width', '30%');
+    xml.onreadystatechange = function() {
+        if (xml.readyState === 4 && xml.status === 200) {
+            resJson = JSON.parse(xml.responseText);
+            for (var i = 0; i < resJson.length; i++) {
+                resData = resData + "<option value='" + resJson[i].id + "'>" + resJson[i].name + "</option>";
+            }
+            job_level_2.innerHTML = job_level_2.innerHTML + resData;
+            job_level_2.addEventListener("change", getJobType3);
+        }
+    }
+}
 
-			for (var i = 0; i < user_input.length; i++) {
-				user_input[i].style.setProperty('opacity', '1');
-				user_input[i].style.setProperty('right', '0');
-			}
-			for (var i = 0; i < company_input.length; i++) {
-				company_input[i].style.setProperty('opacity', '0');
-				company_input[i].style.setProperty('right', '-100%');
-			}
+function getJobType3() {
+    var xml = new XMLHttpRequest(),
+        resData = "",
+        resJson = "",
+        job_level_3 = document.querySelector('.job_level_3');
+    job_level_3.innerHTML = "<option selected='selected'>具体工作</option>";
 
-			user_button_banner.style.setProperty('opacity', '1');
-			user_button_banner.style.setProperty('right', '0');
-			company_button_banner.style.setProperty('opacity', '0');
-			company_button_banner.style.setProperty('right', '-125%');
 
-		}
-	});
+    xml.open('GET', '/api/jobSection/'+$('.job_level_2 option:selected').val(), true);
+    xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xml.send(null);
 
-	user_button_banner.addEventListener('click' , (e)=>{
-		if (e.target.className === "user_input_submit_button input_button login user_button" || e.target.className === "user_input_submit_button input_button signin user_button reg") {
-			document.querySelector('.user_submit').click();
-		}
-	});
+    xml.onreadystatechange = function() {
+        if (xml.readyState === 4 && xml.status === 200) {
+            resJson = JSON.parse(xml.responseText);
+            for (var i = 0; i < resJson.length; i++) {
+                resData = resData + "<option value='" + resJson[i].id + "'>" + resJson[i].name + "</option>";
+            }
+            job_level_3.innerHTML = job_level_3.innerHTML + resData;
+        }
+    }
+}
 
-	company_button_banner.addEventListener('click', (e)=>{
-		if (e.target.className ==="company_input_submit_button input_button login company_button" || e.target.className === "company_input_submit_button input_button signin company_button reg") {
-			document.querySelector('.company_submit').click();
-		}
-	});
-}());
+window.addEventListener("load", getJobType1);

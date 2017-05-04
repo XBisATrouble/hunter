@@ -31,7 +31,6 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('/', 'DashboardController@index');
     $router->post('/register','RegisterController@register');
 
-    $router->get('jobs','JobsController@create');
     $router->post('jobs','JobsController@store');
-
+    $router->get('/jobs/create','JobsController@create');
 });
