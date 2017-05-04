@@ -2,11 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\StoreJobRequest;
+use App\Repositories\JobRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class JobsController extends Controller
 {
+    protected $jobRepositories;
+
+    public function __construct()
+    {
+        $this->jobRepositories=new JobRepository();
+        $this->middleware('auth.admin:admin')->except(['index','show']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -33,9 +43,23 @@ class JobsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreJobRequest $request)
     {
-        //
+        $data=[
+            'name'=>$request->get('job_name'),
+            'salary'=>$request->get('job_salary_min').'k-'.$request->get('job_salary_max').'k',
+            'province'=>$request->get('job_province'),
+            'city'=>$request->get('job_city'),
+            'class_id'=>7,
+            'experience'=>$request->get('job_experience'),
+            'education'=>$request->get('job_education'),
+            'description'=>$request->get('job_description'),
+            'address'=>$request->get('job_location'),
+            'publisher'=>Auth::guard('admin')->user()->name,
+        ];
+        $job=$this->jobRepositories->create($data);
+
+        return redirect()->route('job.show', [$job->id]);
     }
 
     /**

@@ -17,19 +17,19 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            $url = $guard ? '/admin':'/home';
+//        if (Auth::guard($guard)->check()) {
+//            $url = $guard ? '/admin':'/home';
+//            return redirect($url);
+//        }
+        if (Auth::guard()->check()) {
+            $url = '/home';
             return redirect($url);
         }
-//        if (Auth::guard($guard)->check()) {
-//            $url = '/home';
-//            return redirect($url);
-//        }
-//
-//        if (Auth::guard('admin')->check()) {
-//            $url = '/admin';
-//            return redirect($url);
-//        }
+
+        if (Auth::guard('admin')->check()) {
+            $url = '/admin';
+            return redirect($url);
+        }
 
         return $next($request);
     }

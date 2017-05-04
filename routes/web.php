@@ -31,6 +31,11 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('/', 'DashboardController@index');
     $router->post('/register','RegisterController@register');
 
-    $router->post('jobs','JobsController@store');
-    $router->get('/jobs/create','JobsController@create');
+//    $router->post('jobs','JobsController@store');
+//    $router->get('/jobs/create','JobsController@create');
+
+    Route::resource('jobs','JobsController',['names' => [
+        'create' => 'question.create',
+        'show' => 'question.show',
+    ]]);
 });

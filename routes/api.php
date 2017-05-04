@@ -17,8 +17,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
 
-Route::get('/provinces','CityController@provinces');
-Route::get('/cities/{province_id}','CityController@show');
 Route::get('/jobType','JobsController@typeClass');
 Route::get('/jobType/{id}','JobsController@typeDivision');
 Route::get('/jobSection/{id}','JobsController@typeSection');
