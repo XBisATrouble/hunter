@@ -67,13 +67,13 @@
 	});
 
 	user_button_banner.addEventListener('click' , (e)=>{
-		if (e.target.className === "user_input_submit_button input_button login user_button" || e.target.className ==="user_input_submit_button input_button signin user_button") {
+		if (e.target.className === "user_input_submit_button input_button login user_button" || e.target.className ==="user_input_submit_button input_button signin user_button reg") {
 			document.querySelector('.user_submit').click();
 		}
 	});
 
 	company_button_banner.addEventListener('click', (e)=>{
-		if (e.target.className === "company_input_submit_button input_button signin company_button" || e.target.className ==="company_input_submit_button input_button login company_button") {
+		if (e.target.className === "company_input_submit_button input_button signin company_button reg" || e.target.className ==="company_input_submit_button input_button login company_button") {
 			document.querySelector('.company_submit').click();
 		}
 	});
