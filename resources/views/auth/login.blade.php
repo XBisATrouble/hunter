@@ -5,7 +5,7 @@
 	<title>企业网申主页</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="/css/normallize.css">
-	<link rel="stylesheet" type="text/css" href="/css/index.css"></head>
+	<link rel="stylesheet" type="text/css" href="/css/login.css"></head>
 <body>
 <div class="main_banner" style="min-width: 300px;min-height: 700px;">
 	<div class="main_l_page main_page">
@@ -43,7 +43,7 @@
 	<input class="mobile_user_input" type="text" name="user_email" placeholder="请使用邮箱注册">
 	<input class="mobile_user_input" type="text" name="user_name" placeholder="请输入您的真实姓名">
 	<input class="mobile_user_input" type="password" name="user_password" placeholder="请输入您的密码"></div>
-<script src="/js/index.js"></script>
+<script src="/js/login.js"></script>
 <script src="/js/initRem.js"></script>
 </body>
 </html>

@@ -89,7 +89,7 @@
 <div class="botoom_banner">
 	<div class="bottom_content"></div>
 </div>
-<script src="/js/index.js"></script>
+<script src="/js/postJob.js"></script>
 <script type="text/javascript">first("job_province","job_city","job_info",0,0);</script>
 </body>
 </html>
