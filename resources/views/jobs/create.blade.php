@@ -16,6 +16,7 @@
 				<li>面试管理</li>
 				<li>简历管理</li>
 				<li>找简历</li>
+				<li>职位管理</li>
 				<li>发布职位</li>
 				<li>首页</li>
 				<li class="icon" style="padding: 15px 25px">
@@ -91,6 +92,9 @@
 					@if ($errors->has('job_education'))
 						<span class="input_error_msg">{{ $errors->first('job_education') }}</span>
 					@endif
+					<br>
+					<img src="/dist/des.png">
+					<input class="job_input" type="text" name="job_advantage" placeholder="职位诱惑">
 					<br>
 					<img src="/dist/des.png">
 					<br>
