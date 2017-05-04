@@ -57,13 +57,13 @@
 					<br>
 					<span class="job_tittle">职位需求</span>
 					<img src="/dist/type.png">
-					<select class="job_select job_level_1">
+					<select class="job_select job_level_1" name="job_level_1">
 						<option selected="selected">职能大类</option>
 					</select>
-					<select class="job_select job_level_2">
+					<select class="job_select job_level_2" name="job_level_2">
 						<option selected="selected">职能分类</option>
 					</select>
-					<select class="job_select job_level_3">
+					<select class="job_select job_level_3" name="job_level_3">
 						<option selected="selected">具体工作</option>
 					</select>
 					<span class="input_error_msg">错误</span>

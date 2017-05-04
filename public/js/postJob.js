@@ -77,6 +77,18 @@ function getJobType3() {
     }
 }
 
+job_level_1.addEventListener('change',()=>{
+
+});
+
+job_level_1.addEventListener('change',()=>{
+
+});
+
+job_level_1.addEventListener('change',()=>{
+
+});
+
 window.addEventListener("load", getJobType1);
 
 post_job_button.addEventListener('click', () => {
