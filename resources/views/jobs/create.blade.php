@@ -16,6 +16,7 @@
 				<li>面试管理</li>
 				<li>简历管理</li>
 				<li>找简历</li>
+				<li>职位管理</li>
 				<li>发布职位</li>
 				<li>首页</li>
 				<li class="icon" style="padding: 15px 25px">
@@ -44,7 +45,7 @@
 					</select>
 					<input class="job_input mid" type="text" name="job_location" placeholder="详细地址">
 					@if ($errors->has('address'))
-						<span class="input_error_msg">{{ $errors->first('address') }}</span>
+					<span class="input_error_msg">{{ $errors->first('address') }}</span>
 					@endif
 					<br>
 					<img src="/dist/sal.png">
@@ -52,7 +53,7 @@
 					~
 					<input class="job_input moreSmall" type="text" name="job_salary_max" placeholder="薪水(单位K)">
 					@if ($errors->has('salary'))
-						<span class="input_error_msg">{{ $errors->first('salary') }}</span>
+					<span class="input_error_msg">{{ $errors->first('salary') }}</span>
 					@endif
 					<br>
 					<span class="job_tittle">职位需求</span>
@@ -79,7 +80,7 @@
 						<option>不限</option>
 					</select>
 					@if ($errors->has('experience'))
-						<span class="input_error_msg">{{ $errors->first('experience') }}</span>
+					<span class="input_error_msg">{{ $errors->first('experience') }}</span>
 					@endif
 					<br>
 					<img src="/dist/edu.png">
@@ -93,8 +94,11 @@
 						<option>不限</option>
 					</select>
 					@if ($errors->has('education'))
-						<span class="input_error_msg">{{ $errors->first('education') }}</span>
+					<span class="input_error_msg">{{ $errors->first('education') }}</span>
 					@endif
+					<br>
+					<img src="/dist/des.png">
+					<input class="job_input" type="text" name="job_advantage" placeholder="职位诱惑">
 					<br>
 					<img src="/dist/des.png">
 					<br>
