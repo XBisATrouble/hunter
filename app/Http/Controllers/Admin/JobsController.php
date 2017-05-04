@@ -50,16 +50,16 @@ class JobsController extends Controller
             'salary'=>$request->get('job_salary_min').'k-'.$request->get('job_salary_max').'k',
             'province'=>$request->get('job_province'),
             'city'=>$request->get('job_city'),
-            'class_id'=>7,
+            'class_id'=>$request->get('job_level_3'),
             'experience'=>$request->get('job_experience'),
             'education'=>$request->get('job_education'),
             'description'=>$request->get('job_description'),
-            'address'=>$request->get('job_location'),
+            'address'=>$request->get('job_address'),
             'publisher'=>Auth::guard('admin')->user()->name,
         ];
         $job=$this->jobRepositories->create($data);
 
-        return redirect()->route('job.show', [$job->id]);
+        return redirect()->route('jobs.show', [$job->id]);
     }
 
     /**
@@ -70,7 +70,7 @@ class JobsController extends Controller
      */
     public function show($id)
     {
-        //
+        return $id;
     }
 
     /**

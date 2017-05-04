@@ -35,7 +35,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 //    $router->get('/jobs/create','JobsController@create');
 
     Route::resource('jobs','JobsController',['names' => [
-        'create' => 'question.create',
-        'show' => 'question.show',
+        'create' => 'jobs.create',
+        'show' => 'jobs.show',
     ]]);
 });

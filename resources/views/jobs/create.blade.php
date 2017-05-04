@@ -31,8 +31,8 @@
 					<span class="job_tittle">职位信息</span>
 					<img src="/dist/job.png">
 					<input class="job_input" type="text" name="job_name" placeholder="您要发布的职位名称">
-					@if ($errors->has('name'))
-					<span class="input_error_msg">{{ $errors->first('name') }}</span>
+					@if ($errors->has('job_name'))
+					<span class="input_error_msg">{{ $errors->first('job_name') }}</span>
 					@endif
 					<br>
 					<img src="/dist/loc.png">
@@ -42,18 +42,15 @@
 					<select class="job_select job_city" name="job_city">
 						<option>选择城市</option>
 					</select>
-					<input class="job_input mid" type="text" name="job_location" placeholder="详细地址">
-					@if ($errors->has('address'))
-						<span class="input_error_msg">{{ $errors->first('address') }}</span>
+					<input class="job_input mid" type="text" name="job_address" placeholder="详细地址">
+					@if ($errors->has('job_address'))
+						<span class="input_error_msg">{{ $errors->first('job_address') }}</span>
 					@endif
 					<br>
 					<img src="/dist/sal.png">
 					<input class="job_input moreSmall" type="text" name="job_salary_min" placeholder="薪水(单位K)">
 					~
 					<input class="job_input moreSmall" type="text" name="job_salary_max" placeholder="薪水(单位K)">
-					@if ($errors->has('salary'))
-						<span class="input_error_msg">{{ $errors->first('salary') }}</span>
-					@endif
 					<br>
 					<span class="job_tittle">职位需求</span>
 					<img src="/dist/type.png">
@@ -66,7 +63,6 @@
 					<select class="job_select job_level_3" name="job_level_3">
 						<option selected="selected">具体工作</option>
 					</select>
-					<span class="input_error_msg">错误</span>
 					<br>
 					<img src="/dist/exp.png">
 					<select class="job_select job_experience" name="job_experience">
@@ -78,8 +74,8 @@
 						<option>十年以上</option>
 						<option>不限</option>
 					</select>
-					@if ($errors->has('experience'))
-						<span class="input_error_msg">{{ $errors->first('experience') }}</span>
+					@if ($errors->has('job_experience'))
+						<span class="input_error_msg">{{ $errors->first('job_experience') }}</span>
 					@endif
 					<br>
 					<img src="/dist/edu.png">
@@ -92,8 +88,8 @@
 						<option>高中</option>
 						<option>不限</option>
 					</select>
-					@if ($errors->has('education'))
-						<span class="input_error_msg">{{ $errors->first('education') }}</span>
+					@if ($errors->has('job_education'))
+						<span class="input_error_msg">{{ $errors->first('job_education') }}</span>
 					@endif
 					<br>
 					<img src="/dist/des.png">
