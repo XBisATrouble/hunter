@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\StoreJobRequest;
+use App\Job;
 use App\Repositories\JobRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -24,7 +25,8 @@ class JobsController extends Controller
      */
     public function index()
     {
-        //
+        $jobs=Job::with('publisher')->get();
+        return $jobs;
     }
 
     /**
@@ -55,7 +57,7 @@ class JobsController extends Controller
             'education'=>$request->get('job_education'),
             'description'=>$request->get('job_description'),
             'address'=>$request->get('job_address'),
-            'publisher'=>Auth::guard('admin')->user()->name,
+            'publisher'=>Auth::guard('admin')->user()->id,
         ];
         $job=$this->jobRepositories->create($data);
 

@@ -69,12 +69,24 @@
 						<span class="input_error_msg">{{ $errors->first('job_education') }}</span>
 					@endif
 					<br>
-					<img src="/dist/des.png">
+					<img src="/dist/dia.png">
 					<input class="job_input" type="text" name="job_advantage" placeholder="职位诱惑">
+					<br>
+					<img src="/dist/edu.png">
+					<select class="job_select job_education" name="job_education">
+						<option selected="selected">学历要求</option>
+						<option>博士</option>
+						<option>硕士</option>
+						<option>本科</option>
+						<option>大专</option>
+						<option>高中</option>
+						<option>不限</option>
+					</select>
 					<br>
 					<img src="/dist/des.png">
 					<br>
 					<textarea class="job_input job_description" name="job_description" placeholder="对您发布的职位待遇以及详情进行描述(必填)"></textarea>
+					<br>
 					<input class="post_job_submit_button" type="submit" name="job_info" style="display: none;">
 					<div class="post_job_button">发布职位</div>
 				</form>

@@ -10,8 +10,17 @@ class Job extends Model
         'name','salary','province','city','class_id','experience','education','advantage','description','address','publisher'
     ];
 
+    protected $hidden=[
+        'created_at','updated_at',
+    ];
+
     public function publisher()
     {
-        $this->hasOne(Models\Admin::class,'publisher','id');
+        return $this->hasOne(Models\Admin::class,'id','publisher');
+    }
+
+    public function topics()
+    {
+        return $this->belongsToMany(Topic::class)->withTimestamps();
     }
 }
