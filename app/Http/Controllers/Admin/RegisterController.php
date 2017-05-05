@@ -70,6 +70,7 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         $this->validator($request->all())->validate();
+        return $request->all();
         event(new Registered($user = $this->create($request->all())));
 
         Auth::guard('admin')->login($user);

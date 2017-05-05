@@ -45,6 +45,7 @@ li
 .nav_list
 {
     float: left;
+
     width: 840px;
     height: 70px;
 }
@@ -108,7 +109,7 @@ li
 
     width: 1400px;
     height: 1200px;
-    padding: 50px 100px;
+    padding: 50px 80px;
 
     color: rgba(0,0,0,.5);
 }
@@ -266,8 +267,8 @@ textarea.job_description:focus
 
     cursor: pointer;
     -webkit-transition: background-color .1s;
-    -o-transition: background-color .1s;
-    transition: background-color .1s;
+         -o-transition: background-color .1s;
+            transition: background-color .1s;
     text-align: center;
 
     color: #f1f1f1;
@@ -278,6 +279,128 @@ textarea.job_description:focus
 {
     background-color: rgba(0,146,210,.9);
 }
+.email_verify_message
+{
+    font-size: 34px;
+    line-height: 300px;
+
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+/*main_company_controll_moduel*/
+.main_compnay_left_banner
+{
+    float: left;
+
+    width: 300px;
+    height: 100%;
+}
+.main_compnay_left_nav
+{
+    overflow: hidden;
+
+    width: 300px;
+    height: 100%;
+
+    border-right: 1px solid rgba(22,22,22,.1);
+    border-radius: 3px;
+}
+.main_compnay_left_nav > li
+{
+    font-size: 18px;
+    line-height: 60px;
+
+    width: 300px;
+    height: 60px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+
+    cursor: pointer;
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+    letter-spacing: 3px;
+
+    border-left: 5px solid rgba(22,22,22,.1);
+}
+.main_compnay_left_nav > li:hover
+{
+    padding-left: 30px;
+
+    border-left: 5px solid rgba(0,146,210,1);
+}
+.main_company_right_banner
+{
+    float: left;
+
+    width: 920px;
+    height: 100%;
+    padding-left: 80px;
+}
+.main_company_right_banner_nav
+{
+            display: flex;
+
+    -webkit-display: flex;
+}
+.main_company_right_banner_nav > li
+{
+    line-height: 50px;
+
+    width: 80px;
+    height: 50px;
+
+    cursor: pointer;
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+    text-align: center;
+
+    background-color: #eee;
+
+    flex-grow: 1;
+}
+.main_company_right_banner_nav > li:hover
+{
+    color: #fff;
+    background-color: rgba(0,146,210,1);
+
+    flex-grow: 2;
+}
+.main_company_right_banner_item
+{
+            display: flex;
+
+    height: 1000px;
+
+    flex-wrap: wrap;
+    -webkit-display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+}
+.main_company_right_banner_item > li
+{
+    width: 200px;
+    height: 250px;
+
+-webkit-transition: all .3s;
+-o-transition: all .3s;
+transition: all .3s;
+    background-color: #eee;
+}
+.main_company_right_banner_item > li:hover
+{
+    color: #fff;
+    background-color: rgba(0,146,210,1);
+}
+
+
+
+
 
 
 
@@ -290,23 +413,15 @@ textarea.job_description:focus
 
     height: 200px;
 
-    background-color: rgba(22,22,22,1);
+    background-color: #e1e1e1;
 }
 .bottom_content
 {
     position: relative;
+
     width: 1200px;
     height: 200px;
     margin: 0 auto;
 
-    background-color: rgba(22,22,22,1);
-}
-.email_verify_message
-{
-    height:300px;
-    width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 300px;
-    font-size: 34px;
+    background-color: #e1e1e1;
 }

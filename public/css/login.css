@@ -228,6 +228,13 @@ input
     color: rgba(0,0,0,.5);
     background-color: #f1f1f1;
 }
+#errorMsg
+{
+    margin: 0;
+    color: red;
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
 .company_input
 {
     right: -100%;

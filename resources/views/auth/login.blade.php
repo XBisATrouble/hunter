@@ -14,10 +14,11 @@
 			<form action="{{ url('login') }}" method="post" id="user" style="height: 100%;">
 				<input class="user_input input" type="text" name="email" placeholder="请输入您的邮箱">
 				<input class="user_input input" type="password" name="password" placeholder="请输入您的密码">
+				<div class="user_input input" id="errorMsg">用户名密码错误</div>
 				<input class="user_submit" type="submit" name="user_info" style="display: none;">
 				{{ csrf_field() }}
 				<div class="user_button_banner">
-					<div class="user_input_submit_button input_button signin user_button" onclick="window.location='{{ url('home') }}'">注册</div>
+					<div class="user_input_submit_button input_button signin user_button" onclick="window.location='{{ url('register') }}'">注册</div>
 					<div class="user_input_submit_button input_button login user_button">登录</div>
 				</div>
 			</form>
@@ -29,6 +30,7 @@
 			<form action="{{ url('admin/login') }}" method="post" id="admin" style="height: 100%">
 				<input class="company_input input" type="text" name="email" placeholder="请输入企业邮箱">
 				<input class="company_input input" type="password" name="password" placeholder="请输入您的密码">
+				<div class="company_input input" id="errorMsg">用户名密码错误</div>
 				<input class="company_submit" type="submit" name="compant_info" style="display: none;">
 				{{ csrf_field() }}
 				<div class="company_button_banner">
