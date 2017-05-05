@@ -17,7 +17,7 @@
 				<input class="user_submit" type="submit" name="user_info" style="display: none;">
 				{{ csrf_field() }}
 				<div class="user_button_banner">
-					<div class="user_input_submit_button input_button signin user_button" onclick="window.location='{{ url('home') }}'">注册</div>
+					<div class="user_input_submit_button input_button signin user_button" onclick="window.location='{{ url('register') }}'">注册</div>
 					<div class="user_input_submit_button input_button login user_button">登录</div>
 				</div>
 			</form>

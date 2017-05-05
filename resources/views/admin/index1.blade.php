@@ -12,10 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 
     <!-- Scripts -->
     <script>
@@ -91,6 +88,17 @@
         @endif
     </div>
     <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Dashboard</div>
+
+                    <div class="panel-body">
+                        You are logged in!
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

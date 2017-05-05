@@ -17,6 +17,7 @@
 					<input class="user_input input" type="password" name="password" id="password" placeholder="请输入您的密码">
 					<input class="user_submit" type="submit" name="user_info" style="display: none;">
 					{{ csrf_field() }}
+
 					<div class="user_button_banner">
 						<div class="user_input_submit_button input_button signin user_button reg" style="width:100%">注册</div>
 					</div>
