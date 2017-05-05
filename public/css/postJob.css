@@ -46,6 +46,7 @@ li
 {
     float: left;
 
+    width: 840px;
     height: 70px;
 }
 .nav_list > li
@@ -65,6 +66,8 @@ li
     letter-spacing: 2px;
 
     color: #f1f1f1;
+    /*  line-height: 75px;
+    border-bottom: 5px solid #f1f1f1;*/
     background-color: rgba(241,241,241,0);
 }
 .nav_list > li.icon:hover
