@@ -45,7 +45,7 @@ li
 .nav_list
 {
     float: left;
-
+    width: 840px;
     height: 70px;
 }
 .nav_list > li
@@ -83,7 +83,7 @@ li
 
     overflow: hidden;
 
-    height: 1200px;
+    height: 1300px;
     padding: 50px 0;
 
     border-radius: 3px;
@@ -94,7 +94,7 @@ li
     z-index: 1;
 
     width: 1400px;
-    height: 1100px;
+    height: 1200px;
     margin: 0 auto;
 
     background-color: #fff;
@@ -252,7 +252,30 @@ textarea.job_description:focus
     background-color: rgba(0,146,210,.9);
 }
 
+.return_index_button
+{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 60px;
 
+    width: 40%;
+    height: 60px;
+    margin: 0 auto;
+
+    cursor: pointer;
+    -webkit-transition: background-color .1s;
+    -o-transition: background-color .1s;
+    transition: background-color .1s;
+    text-align: center;
+
+    color: #f1f1f1;
+    border-radius: 3px;
+    background-color: rgba(0,146,210,1);
+}
+.return_index_button:hover
+{
+    background-color: rgba(0,146,210,.9);
+}
 
 
 
@@ -269,9 +292,19 @@ textarea.job_description:focus
 }
 .bottom_content
 {
+    position: relative;
     width: 1200px;
     height: 200px;
     margin: 0 auto;
 
     background-color: rgba(22,22,22,1);
+}
+.email_verify_message
+{
+    height:300px;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 300px;
+    font-size: 34px;
 }
