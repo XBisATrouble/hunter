@@ -14,7 +14,9 @@
 			<form action="{{ url('login') }}" method="post" id="user" style="height: 100%;">
 				<input class="user_input input" type="text" name="email" placeholder="请输入您的邮箱">
 				<input class="user_input input" type="password" name="password" placeholder="请输入您的密码">
-				<div class="user_input input" id="errorMsg">用户名密码错误</div>
+				@if($errors->has('email'))
+				<div class="user_input input" id="errorMsg">{{ $errors->first('email') }}</div>
+				@endif
 				<input class="user_submit" type="submit" name="user_info" style="display: none;">
 				{{ csrf_field() }}
 				<div class="user_button_banner">
@@ -30,7 +32,9 @@
 			<form action="{{ url('admin/login') }}" method="post" id="admin" style="height: 100%">
 				<input class="company_input input" type="text" name="email" placeholder="请输入企业邮箱">
 				<input class="company_input input" type="password" name="password" placeholder="请输入您的密码">
-				<div class="company_input input" id="errorMsg">用户名密码错误</div>
+				@if($errors->has('email'))
+				<div class="company_input input" id="errorMsg">{{ $errors->first('email') }}</div>
+				@endif
 				<input class="company_submit" type="submit" name="compant_info" style="display: none;">
 				{{ csrf_field() }}
 				<div class="company_button_banner">
@@ -44,7 +48,8 @@
 <div class="mobile_user_input_banner" style="display: none;">
 	<input class="mobile_user_input" type="text" name="user_email" placeholder="请使用邮箱注册">
 	<input class="mobile_user_input" type="text" name="user_name" placeholder="请输入您的真实姓名">
-	<input class="mobile_user_input" type="password" name="user_password" placeholder="请输入您的密码"></div>
+	<input class="mobile_user_input" type="password" name="user_password" placeholder="请输入您的密码">
+</div>
 <script src="/js/login.js"></script>
 <script src="/js/initRem.js"></script>
 </body>
