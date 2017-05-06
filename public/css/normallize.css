@@ -92,6 +92,11 @@ template, /* 1 */
 a {
     background-color: transparent; /* 1 */
     -webkit-text-decoration-skip: objects; /* 2 */
+    text-decoration: none;
+    color: #f1f1f1;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 
 /**

@@ -70,14 +70,79 @@ li
     border-bottom: 5px solid #f1f1f1;*/
     background-color: rgba(241,241,241,0);
 }
+.nav_list > li a
+{
+    display: inline-block;
+
+    height: 70px;
+}
 .nav_list > li.icon:hover
 {
-    background-color: rgba(22,22,22,1);
+    background-color: rgba(22,22,22,0);
 }
 .nav_list > li:hover
 {
     color: #161616;
     background-color: rgba(241,241,241,1);
+}
+.nav_list > li:hover a
+{
+    color: #161616;
+}
+.nav_user_function
+{
+    float: right;
+
+    width: 360px;
+}
+.nav_user_function > li
+{
+    line-height: 70px;
+
+    float: left;
+
+    width: 120px;
+    height: 70px;
+
+    cursor: pointer;
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+    text-align: center;
+
+    color: #f1f1f1;
+}
+.nav_user_function > li a
+{
+    display: inline-block;
+
+    height: 70px;
+}
+.nav_user_function > li:hover
+{
+    color: #161616;
+    background-color: rgba(241,241,241,1);
+}
+.nav_user_function > li:hover a
+{
+    color: #161616;
+}
+.nav_user_function > li.avatar
+{
+    height: 70px;
+    padding: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 70px;
+}
+.nav_user_function > li.avatar img
+{
+    width: 50px;
+    height: 50px;
+}
+.nav_user_function > li.avatar:hover
+{
+    background-color: rgba(0,0,0,0);
 }
 .main_banner
 {
@@ -387,9 +452,10 @@ textarea.job_description:focus
     width: 200px;
     height: 250px;
 
--webkit-transition: all .3s;
--o-transition: all .3s;
-transition: all .3s;
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+
     background-color: #eee;
 }
 .main_company_right_banner_item > li:hover
