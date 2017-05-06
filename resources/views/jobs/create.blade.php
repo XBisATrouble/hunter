@@ -1,5 +1,5 @@
 @extends('layouts.adminApp')
-
+<script type="text/javascript" src="/js/city.js"></script>
 @section('content')
 		<div class="main_content">
 			<div class="main_jobs_moduel moduel">
@@ -92,4 +92,7 @@
 				</form>
 			</div>
 		</div>
+
+		<script src="/js/postJob.js"></script>
+		<script type="text/javascript">first("job_province","job_city","job_info",0,0);</script>
 @endsection('content')
