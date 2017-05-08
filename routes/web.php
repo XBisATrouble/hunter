@@ -36,7 +36,4 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
         'create' => 'jobs.create',
         'show' => 'jobs.show',
     ]]);
-    $router->get('/banner',function(){
-    	return view('admin.index1');
-    });
 });
