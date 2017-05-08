@@ -93,7 +93,7 @@ li
 {
     float: right;
 
-    width: 360px;
+    width: 240px;
 }
 .nav_user_function > li
 {
@@ -129,21 +129,66 @@ li
 }
 .nav_user_function > li.avatar
 {
+    overflow: hidden;
+
+    width: 70px;
     height: 70px;
     padding: 10px;
+
     border-radius: 50%;
-    overflow: hidden;
-    width: 70px;
 }
 .nav_user_function > li.avatar img
 {
     width: 50px;
     height: 50px;
+
+    border-radius: 50%;
 }
 .nav_user_function > li.avatar:hover
 {
     background-color: rgba(0,0,0,0);
 }
+.nav_user_function > li:hover .nav_user_menu
+{
+    height: 210px;
+
+    opacity: 1;
+    color: rgba(241,241,241,1);
+}
+.nav_user_menu
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 120px;
+    height: 0;
+
+    -webkit-transition: height .3s, opacity .2s .1s;
+         -o-transition: height .3s, opacity .2s .1s;
+            transition: height .3s, opacity .2s .1s;
+
+    opacity: 0;
+    /*    box-shadow: 0 8px 8px 1px rgba(22,22,22,.5);*/
+}
+.nav_user_menu > li
+{
+    line-height: 70px;
+
+    width: 120px;
+    height: 70px;
+
+    -webkit-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+    text-align: center;
+
+    color: rgba(22,22,22,1);
+    background-color: rgba(241,241,241,1);
+    /*    padding-left: 10px;
+    border-left: 5px solid rgba(255,255,255,.7);*/
+}
+
 .main_banner
 {
     position: relative;
@@ -168,6 +213,29 @@ li
     background-color: #fff;
     box-shadow: 0 2px 8px 1px rgba(22,22,22,.1);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .moduel
 {
     font-weight: 300;
@@ -356,6 +424,25 @@ textarea.job_description:focus
     text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*main_company_controll_moduel*/
 .main_compnay_left_banner
 {
@@ -442,15 +529,15 @@ textarea.job_description:focus
 
     height: 1000px;
 
-    flex-wrap: wrap;
     -webkit-display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-around;
 }
 .main_company_right_banner_item > li
 {
-    width: 200px;
-    height: 250px;
+    width: 1000px;
+    height: 300px;
 
     -webkit-transition: all .3s;
          -o-transition: all .3s;
@@ -463,6 +550,39 @@ textarea.job_description:focus
     color: #fff;
     background-color: rgba(0,146,210,1);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.job_nav
+{
+    width: 100px;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

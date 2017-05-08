@@ -12,28 +12,43 @@
     <div class="nav_banner">
         <div class="nav">
             <ul class="nav_list">
-                <li><a href="">面试管理</a></li>
-                <li><a href="">简历管理</a></li>
-                <li><a href="">找简历</a></li>
-                <li><a href="">职位管理</a></li>
-                <li><a href="/admin/jobs/create">发布职位</a></li>
-                <li><a href="/admin">首页</a></li>
+                <li>
+                    <a href="">面试管理</a>
+                </li>
+                <li>
+                    <a href="">简历管理</a>
+                </li>
+                <li>
+                    <a href="">找简历</a>
+                </li>
+                <li>
+                    <a href="">职位管理</a>
+                </li>
+                <li>
+                    <a href="/admin/jobs/create">发布职位</a>
+                </li>
+                <li>
+                    <a href="/admin">首页</a>
+                </li>
                 <li class="icon" style="padding: 15px 25px">
                     <img src="/dist/icon.png"></li>
             </ul>
             <ul class="nav_user_function">
-                <li class="avatar"><img src="{{ Auth::guard('admin')->user()->avatar }}"></li>
-                <li><a href="">{{ Auth::guard('admin')->user()->name }}</a></li>
+                <li class="avatar">
+                    <img src="{{ Auth::guard('admin')->user()->avatar }}"></li>
                 <li>
-                    <a href="{{ url('/logout') }}"
+                    <a href="">{{ Auth::guard('admin')->user()->name }}</a>
+                    <ul class="nav_user_menu">
+                        <li>示例连接</li>
+                        <li>示例连接</li>
+                        <li>
+                            <a id="logout" href="{{ url('/logout') }}"
                         onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                        退出
-                    </a>
+                            document.getElementById('logout-form').submit();">退出</a>
 
-                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>

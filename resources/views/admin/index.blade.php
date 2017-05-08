@@ -17,16 +17,9 @@
                 <li>热门简历</li>
             </ul>
             <ul class="main_company_right_banner_item">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>
+                
+                </li>
                 <li></li>
                 <li></li>
             </ul>
