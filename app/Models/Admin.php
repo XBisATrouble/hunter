@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -26,4 +27,9 @@ class Admin extends Authenticatable
     protected $hidden = [
         'password', 'remember_token', 'created_at','updated_at','is_active','confirmation_token',
     ];
+
+    public function owns(Model $model)
+    {
+        return $this->id == $model->publisher_id;
+    }
 }

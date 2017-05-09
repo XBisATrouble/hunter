@@ -22,7 +22,7 @@
                     <a href="">找简历</a>
                 </li>
                 <li>
-                    <a href="">职位管理</a>
+                    <a href="/admin/jobs">职位管理</a>
                 </li>
                 <li>
                     <a href="/admin/jobs/create">发布职位</a>

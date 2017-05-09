@@ -35,5 +35,6 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     Route::resource('jobs','JobsController',['names' => [
         'create' => 'jobs.create',
         'show' => 'jobs.show',
+        'index'=>'jobs.index',
     ]]);
 });

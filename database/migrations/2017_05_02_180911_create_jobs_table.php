@@ -25,7 +25,7 @@ class CreateJobsTable extends Migration
             $table->string('advantage');
             $table->string('description');
             $table->string('address');
-            $table->string('publisher');
+            $table->string('publisher_id');
             $table->timestamps();
         });
     }

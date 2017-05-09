@@ -25,8 +25,8 @@ class JobsController extends Controller
      */
     public function index()
     {
-        $jobs=Job::with('publisher')->get();
-        return $jobs;
+        $jobs=$this->jobRepositories->getJobsFeedByAuth(Auth::guard('admin')->user()->id);
+        return view('jobs.index',compact('jobs'));
     }
 
     /**
@@ -55,9 +55,10 @@ class JobsController extends Controller
             'class_id'=>$request->get('job_level_3'),
             'experience'=>$request->get('job_experience'),
             'education'=>$request->get('job_education'),
+            'advantage'=>$request->get('job_advantage'),
             'description'=>$request->get('job_description'),
             'address'=>$request->get('job_address'),
-            'publisher'=>Auth::guard('admin')->user()->id,
+            'publisher_id'=>Auth::guard('admin')->user()->id,
         ];
         $job=$this->jobRepositories->create($data);
 
@@ -72,7 +73,8 @@ class JobsController extends Controller
      */
     public function show($id)
     {
-        return view('jobs.show');
+        $job = $this->jobRepositories->byId($id);
+        return view('jobs.show',compact('job'));
     }
 
     /**
@@ -83,7 +85,12 @@ class JobsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $job = $this->jobRepositories->byId($id);
+        if (Auth::guard('admin')->user()->owns($job))
+        {
+            return view('jobs.edit',compact('job'));
+        }
+        return back();
     }
 
     /**
@@ -93,9 +100,24 @@ class JobsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreJobRequest $request, $id)
     {
-        //
+        $job=$this->jobRepositories->byId($id);
+        $job->update([
+            'name'=>$request->get('job_name'),
+            'salary'=>$request->get('job_salary_min').'k-'.$request->get('job_salary_max').'k',
+            'province'=>$request->get('job_province'),
+            'city'=>$request->get('job_city'),
+            'class_id'=>$request->get('job_level_3'),
+            'experience'=>$request->get('job_experience'),
+            'education'=>$request->get('job_education'),
+            'advantage'=>$request->get('job_advantage'),
+            'description'=>$request->get('job_description'),
+            'address'=>$request->get('job_address'),
+            'publisher_id'=>Auth::guard('admin')->user()->id,
+        ]);
+
+        return redirect()->route('jobs.show', [$job->id]);
     }
 
     /**
