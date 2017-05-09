@@ -66,8 +66,6 @@ li
     letter-spacing: 2px;
 
     color: #f1f1f1;
-    /*  line-height: 75px;
-    border-bottom: 5px solid #f1f1f1;*/
     background-color: rgba(241,241,241,0);
 }
 .nav_list > li a
@@ -196,7 +194,7 @@ li
 
     overflow: hidden;
 
-    height: 1300px;
+    min-height: 1300px;
     padding: 50px 0;
 
     border-radius: 3px;
@@ -207,11 +205,11 @@ li
     z-index: 1;
 
     width: 1400px;
-    height: 1200px;
+    min-height: 1200px;
     margin: 0 auto;
 
     background-color: #fff;
-    box-shadow: 0 2px 8px 1px rgba(22,22,22,.1);
+    box-shadow: 0 0 8px 3px rgba(22,22,22,.1);
 }
 
 
@@ -564,12 +562,130 @@ textarea.job_description:focus
 
 
 
-.job_nav
-{
-    width: 100px;
-    background-color: red;
-}
 
+
+.job_des_moduel
+{
+    padding: 50px 30px;
+}
+.job_simple_des
+{
+    float: left;
+
+    width: 900px;
+    height: 100%;
+    /*    background-color: rgba(0,146,210,1);*/
+}
+.job_simple_des_tag
+{
+    position: relative;
+    left: -50px;
+
+    width: 950px;
+    height: 100px;
+    padding: 10px 0 10px 40px;
+
+    background-color: rgba(0,146,210,1);
+}
+.job_simple_des_tag_tan
+{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-width: 0 20px 10px 0;
+    border-style: solid;
+    border-color: transparent #00518a transparent transparent;
+}
+.line
+{
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 30px;
+
+    width: 900px;
+    height: 30px;
+
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.job_des_moduel p
+{
+    font-weight: 500;
+    line-height: 30px;
+
+    margin: 0;
+    padding: 0;
+}
+.job_des_moduel img
+{
+    float: left;
+
+    height: 100%;
+    margin-right: 10px;
+}
+p.job_name
+{
+    font-size: 30px;
+    line-height: 40px;
+
+    height: 40px;
+
+    color: rgba(241,241,241,1);
+}
+p.job_from
+{
+    font-size: 20px;
+
+    height: 40px;
+
+    color: rgba(241,241,241,1);
+}
+p.job_salary
+{
+    font-size: 32px;
+
+    height: 32px;
+    margin-top: 30px;
+
+    color: #ff6f00;
+}
+p.job_location
+{
+    height: 30px;
+    margin-top: 30px;
+}
+p.job_experience
+{
+    height: 30px;
+    margin-top: 30px;
+}
+p.job_education
+{
+    height: 30px;
+    margin-top: 30px;
+}
+p.job_description
+{
+    margin-top: 30px;
+}
+.job_company_description
+{
+    min-height: 400px;
+    width: 100%;
+}
+.job_hr_banner
+{
+    float: right;
+
+    width: 400px;
+    height: 100%;
+    margin-top: 20px;
+
+    border-left: 1px solid rgba(0,0,0,.1);
+}
 
 
 
