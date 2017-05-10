@@ -32,14 +32,33 @@ span.strong
 }
 span.float_left
 {
-    float: left;
     display: inline-block;
+    float: left;
+}
+span.morebig
+{
+    font-size: 30px;
+
+    color: #fff;
 }
 a.full_a
 {
+    display: inline-block;
+
     width: 100%;
     height: 100%;
-    display:inline-block;
+}
+.gray
+{
+    color: #aaa;
+}
+.blue
+{
+    color: rgba(0,146,210,1);
+}
+.big
+{
+    font-size: 28px;
 }
 .nav_banner
 {
@@ -51,7 +70,7 @@ a.full_a
     width: 100%;
     height: 70px;
 
-    background-color: rgba(22,22,22,1);
+    background-color: rgba(70,70,70,1);
     box-shadow: 0 0 8px 1px rgba(22,22,22,.5);
 }
 .nav
@@ -60,7 +79,7 @@ a.full_a
     height: 70px;
     margin: 0 auto;
 
-    background-color: rgba(22,22,22,1);
+    background-color: rgba(70,70,70,1);
 }
 .nav_list
 {
@@ -187,7 +206,6 @@ a.full_a
             transition: height .3s, opacity .2s .1s;
 
     opacity: 0;
-    /*    box-shadow: 0 8px 8px 1px rgba(22,22,22,.5);*/
 }
 .nav_user_menu > li
 {
@@ -255,16 +273,15 @@ a.full_a
     font-weight: 300;
 
     width: 1400px;
-    height: 1200px;
+    min-height: 1200px;
     padding: 50px 80px;
 
     color: rgba(0,0,0,.5);
 }
 .main_jobs_moduel input
 {
-    color: rgba(0,0,0,0.5);
-    font-weight: 500;
     font-size: 14px;
+    font-weight: 500;
     line-height: 40px;
 
     width: 300px;
@@ -277,6 +294,7 @@ a.full_a
             transition: all .1s;
     letter-spacing: 2px;
 
+    color: rgba(0,0,0,.5);
     border: 1px solid rgba(0,0,0,.2);
     border-radius: 2px;
     outline: none;
@@ -472,6 +490,7 @@ textarea.job_description:focus
     overflow: hidden
 
     width: 300px;
+
     height: 100%;
 
     border-right: 1px solid rgba(22,22,22,.1);
@@ -592,7 +611,6 @@ textarea.job_description:focus
 
     width: 900px;
     height: 100%;
-    /*    background-color: rgba(0,146,210,1);*/
 }
 .job_simple_des_tag
 {
@@ -735,53 +753,63 @@ p.job_advantage
     float: right;
 
     width: 400px;
-    height: 70%;
-    display: flex;
-    background-color: rgba(0,146,210,1);
-    flex-wrap: wrap;
-    align-content: space-around;
-    position: relative;
-    left: 60px;
-    box-shadow: 0 0 6px 1px rgba(22,22,22,.2);
+    height: 50%;
+
+    color: rgba(0,0,0,.4);
+    border-bottom: 1px solid rgba(0,146,210,1);
 }
 .company_avatar img
 {
-    margin: 0;
     float: left;
+
+    margin: 0;
 }
 .company_avatar_banner
 {
-    height: 80px;
-    width: 80px;
-    overflow: hidden;
-    border-radius: 50%;
     float: left;
+    overflow: hidden;
+
+    width: 80px;
+    height: 80px;
     margin-right: 20px;
+
+    border-radius: 50%;
 }
 .company_avatar
 {
-    margin-top: 50px;
-    width: 400px;
-    height: 80px;
-    color: rgba(241,241,241,1);
     font-size: 24px;
     font-weight: 500;
     line-height: 80px;
+
+    width: 400px;
+    height: 80px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     padding: 0 80px;
-    border-radius: 50%;
+}
+p.p_company_info
+{
+    font-size: 20px;
+    line-height: 50px;
+
+    display: inline-block;
+
+    width: 400px;
+    height: 50px;
+    padding-left: 90px;
 }
 .job_recommend_banner_tan
 {
     position: absolute;
-    bottom: -10px;
     right: 0;
+    bottom: -10px;
 
     width: 0;
     height: 0;
 
     border-width: 10px 30px 0 0;
     border-style: solid;
-    border-color: #00518a transparent transparent transparent;
+    border-color: rgba(22,22,22,1) transparent transparent transparent;
 }
 .actions
 {
@@ -817,6 +845,97 @@ p.job_advantage
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+.index_single_item
+{
+    position: relative;
+    top: 50px;
+
+    overflow: hidden;
+
+    width: 1300px;
+    height: 280px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-left: 5px solid rgba(0,0,0,0.3);
+}
+.index_single_item a
+{
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+}
+.index_single_item a:hover
+{
+    color: rgba(0,146,210,1);
+}
+.index_single_item_jobinfo
+{
+    position: relative;
+
+    float: left;
+
+    width: 900px;
+    height: 280px;
+    padding: 20px 20px 20px 50px;
+}
+.index_single_item_peopleinfo
+{
+    float: right;
+
+    width: 180px;
+    height: 280px;
+}
+.index_single_item_jobinfo_numofpeople
+{
+    position: absolute;
+    height: 50px; 
+    width: 150px;
+    line-height: 50px;
+    font-weight: 500;color: rgba(0,0,0,.5);
+    text-align: center;
+    font-size: 18px;
+border-left: 1px solid rgba(0,0,0,.1);
+border-right: 1px solid rgba(0,0,0,.1);
+    left: 30%;
+}
+span.numofpeople
+{
+    padding: 0 10px;
+    color: rgba(0,146,210,1);
+    font-size: 26px;
+}
+.index_single_item_jobinfo_button
+{
+    position: absolute;
+    width: 100px;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: rgba(0,146,210,1);
+}
+.index_single_item_jobinfo_edit_button
+{
+    left: 70%;
+}
+.index_single_item_jobinfo_delete_button
+{
+    left: 85%;
+}
 
 
 
