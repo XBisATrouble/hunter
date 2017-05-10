@@ -16,7 +16,7 @@ class JobsController extends Controller
     public function __construct()
     {
         $this->jobRepositories=new JobRepository();
-        $this->middleware('auth.admin:admin')->except(['index','show']);
+        $this->middleware('auth.admin:admin');
     }
     /**
      * Display a listing of the resource.
