@@ -21,6 +21,45 @@ li
 {
     list-style: none;
 }
+span.strong
+{
+    font-size: 22px;
+    font-weight: 700;
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+}
+span.float_left
+{
+    display: inline-block;
+    float: left;
+}
+span.morebig
+{
+    font-size: 30px;
+
+    color: #fff;
+}
+a.full_a
+{
+    display: inline-block;
+
+    width: 100%;
+    height: 100%;
+}
+.gray
+{
+    color: #aaa;
+}
+.blue
+{
+    color: rgba(0,146,210,1);
+}
+.big
+{
+    font-size: 28px;
+}
 .nav_banner
 {
     line-height: 70px;
@@ -31,7 +70,7 @@ li
     width: 100%;
     height: 70px;
 
-    background-color: rgba(22,22,22,1);
+    background-color: rgba(70,70,70,1);
     box-shadow: 0 0 8px 1px rgba(22,22,22,.5);
 }
 .nav
@@ -40,7 +79,7 @@ li
     height: 70px;
     margin: 0 auto;
 
-    background-color: rgba(22,22,22,1);
+    background-color: rgba(70,70,70,1);
 }
 .nav_list
 {
@@ -167,7 +206,6 @@ li
             transition: height .3s, opacity .2s .1s;
 
     opacity: 0;
-    /*    box-shadow: 0 8px 8px 1px rgba(22,22,22,.5);*/
 }
 .nav_user_menu > li
 {
@@ -183,16 +221,12 @@ li
 
     color: rgba(22,22,22,1);
     background-color: rgba(241,241,241,1);
-    /*    padding-left: 10px;
-    border-left: 5px solid rgba(255,255,255,.7);*/
 }
 
 .main_banner
 {
     position: relative;
     top: 70px;
-
-    overflow: hidden;
 
     min-height: 1300px;
     padding: 50px 0;
@@ -239,7 +273,7 @@ li
     font-weight: 300;
 
     width: 1400px;
-    height: 1200px;
+    min-height: 1200px;
     padding: 50px 80px;
 
     color: rgba(0,0,0,.5);
@@ -247,6 +281,7 @@ li
 .main_jobs_moduel input
 {
     font-size: 14px;
+    font-weight: 500;
     line-height: 40px;
 
     width: 300px;
@@ -259,6 +294,7 @@ li
             transition: all .1s;
     letter-spacing: 2px;
 
+    color: rgba(0,0,0,.5);
     border: 1px solid rgba(0,0,0,.2);
     border-radius: 2px;
     outline: none;
@@ -451,9 +487,10 @@ textarea.job_description:focus
 }
 .main_compnay_left_nav
 {
-    overflow: hidden;
+    overflow: hidden
 
     width: 300px;
+
     height: 100%;
 
     border-right: 1px solid rgba(22,22,22,.1);
@@ -574,7 +611,6 @@ textarea.job_description:focus
 
     width: 900px;
     height: 100%;
-    /*    background-color: rgba(0,146,210,1);*/
 }
 .job_simple_des_tag
 {
@@ -586,6 +622,7 @@ textarea.job_description:focus
     padding: 10px 0 10px 40px;
 
     background-color: rgba(0,146,210,1);
+    box-shadow: 0 0 6px 1px rgba(22,22,22,.2);
 }
 .job_simple_des_tag_tan
 {
@@ -602,14 +639,14 @@ textarea.job_description:focus
 }
 .line
 {
-    margin-bottom: 30px;
     font-size: 24px;
     line-height: 30px;
 
     width: 900px;
     height: 30px;
+    margin-bottom: 30px;
 
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid rgba(0,146,210,1);
 }
 .job_des_moduel p
 {
@@ -667,24 +704,140 @@ p.job_education
     height: 30px;
     margin-top: 30px;
 }
+p.job_creatat
+{
+    position: relative;
+    top: -20px;
+
+    display: inline-block;
+    float: right;
+}
 p.job_description
 {
+    font-size: 18px;
+    line-height: 36px;
+
+    width: 900px;
+    min-height: 250px;
+}
+p.job_advantage
+{
+    height: 30px;
     margin-top: 30px;
 }
 .job_company_description
 {
-    min-height: 400px;
-    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+
+    width: 900px;
+    min-height: 250px;
 }
-.job_hr_banner
+.company_brief
+{
+    float: left;
+
+    width: 500px;
+    height: 250px;
+}
+.job_from_location
 {
     float: right;
 
     width: 400px;
-    height: 100%;
-    margin-top: 20px;
+    height: 250px;
+}
+.job_recommend_banner
+{
+    float: right;
 
-    border-left: 1px solid rgba(0,0,0,.1);
+    width: 400px;
+    height: 50%;
+
+    color: rgba(0,0,0,.4);
+    border-bottom: 1px solid rgba(0,146,210,1);
+}
+.company_avatar img
+{
+    float: left;
+
+    margin: 0;
+}
+.company_avatar_banner
+{
+    float: left;
+    overflow: hidden;
+
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+
+    border-radius: 50%;
+}
+.company_avatar
+{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 80px;
+
+    width: 400px;
+    height: 80px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 0 80px;
+}
+p.p_company_info
+{
+    font-size: 20px;
+    line-height: 50px;
+
+    display: inline-block;
+
+    width: 400px;
+    height: 50px;
+    padding-left: 90px;
+}
+.job_recommend_banner_tan
+{
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+
+    width: 0;
+    height: 0;
+
+    border-width: 10px 30px 0 0;
+    border-style: solid;
+    border-color: rgba(22,22,22,1) transparent transparent transparent;
+}
+.actions
+{
+    width: 100%;
+    height: 30px;
+}
+.job_show_action_button
+{
+    font-size: 16px;
+    line-height: 30px;
+
+    float: left;
+
+    width: 120px;
+    height: 30px;
+
+    text-align: center;
+
+    border-radius: 3px;
+    background-color: rgba(0,146,210,1);
+}
+.edit_button
+{
+    margin-right: 120px;
+}
+.delete_button
+{
+    float: left;;
 }
 
 
@@ -692,6 +845,97 @@ p.job_description
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+.index_single_item
+{
+    position: relative;
+    top: 50px;
+
+    overflow: hidden;
+
+    width: 1300px;
+    height: 280px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-left: 5px solid rgba(0,0,0,0.3);
+}
+.index_single_item a
+{
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+}
+.index_single_item a:hover
+{
+    color: rgba(0,146,210,1);
+}
+.index_single_item_jobinfo
+{
+    position: relative;
+
+    float: left;
+
+    width: 900px;
+    height: 280px;
+    padding: 20px 20px 20px 50px;
+}
+.index_single_item_peopleinfo
+{
+    float: right;
+
+    width: 180px;
+    height: 280px;
+}
+.index_single_item_jobinfo_numofpeople
+{
+    position: absolute;
+    height: 50px; 
+    width: 150px;
+    line-height: 50px;
+    font-weight: 500;color: rgba(0,0,0,.5);
+    text-align: center;
+    font-size: 18px;
+border-left: 1px solid rgba(0,0,0,.1);
+border-right: 1px solid rgba(0,0,0,.1);
+    left: 30%;
+}
+span.numofpeople
+{
+    padding: 0 10px;
+    color: rgba(0,146,210,1);
+    font-size: 26px;
+}
+.index_single_item_jobinfo_button
+{
+    position: absolute;
+    width: 100px;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: rgba(0,146,210,1);
+}
+.index_single_item_jobinfo_edit_button
+{
+    left: 70%;
+}
+.index_single_item_jobinfo_delete_button
+{
+    left: 85%;
+}
 
 
 
