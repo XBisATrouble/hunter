@@ -16,7 +16,7 @@ class JobsController extends Controller
     public function __construct()
     {
         $this->jobRepositories=new JobRepository();
-        $this->middleware('auth.admin:admin')->except(['index','show']);
+        $this->middleware('auth.admin:admin');
     }
     /**
      * Display a listing of the resource.
@@ -86,9 +86,11 @@ class JobsController extends Controller
     public function edit($id)
     {
         $job = $this->jobRepositories->byId($id);
+        $matches=$this->matchSalary($job->salary);
+        $class=$this->jobRepositories->getClassById($job->class_id);
         if (Auth::guard('admin')->user()->owns($job))
         {
-            return view('jobs.edit',compact('job'));
+            return view('jobs.edit',compact('job','matches','class'));
         }
         return back();
     }
@@ -128,6 +130,26 @@ class JobsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $job=$this->jobRepositories->byId($id);
+
+        if (Auth::guard('admin')->user()->owns($job)){
+            $job->delete();
+
+            return redirect('/admin/jobs');
+        }
+
+        abort(403,'Forbidden');
+    }
+
+    /**
+     * 将8k-15k剥离
+     * @param $salary
+     * @return array
+     */
+    public function matchSalary($salary)
+    {
+        $pattern='/(.*?)k-(.*?)k/';
+        preg_match($pattern,$salary,$matches);
+        return $matches;
     }
 }

@@ -24,6 +24,11 @@
 			<div class="actions">
 				@if(Auth::guard('admin')->check() && Auth::guard('admin')->user()->owns($job))
 					<span class="edit"><a href="/admin/jobs/{{$job->id}}/edit">编辑</a></span>
+					<form action="/admin/jobs/{{$job->id}}" method="POST" class="delete-form">
+						{{ method_field('DELETE') }}
+						{{ csrf_field() }}
+						<button class="button is-naked delete-button">删除</button>
+					</form>
 				@endif
 			</div>
 		</div>

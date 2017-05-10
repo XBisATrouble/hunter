@@ -1,6 +1,6 @@
 @extends('layouts.adminApp')
-<script type="text/javascript" src="/js/city.js"></script>
 @section('content')
+    <script type="text/javascript" src="/js/city.js"></script>
     <div class="main_content">
         <div class="main_jobs_moduel moduel">
             <form class="job_info" name="job_info" action="/admin/jobs/{{ $job->id }}" method="post">
@@ -26,20 +26,20 @@
                 @endif
                 <br>
                 <img src="/dist/sal.png">
-                <input class="job_input moreSmall" type="text" name="job_salary_min" value="{{ preg_replace("/k.*/",'', $job->salary) }}" placeholder="薪水(单位K)">
+                <input class="job_input moreSmall" type="text" name="job_salary_min" value="{{ $matches[1] }}" placeholder="薪水(单位K)">
                 ~
-                <input class="job_input moreSmall" type="text" name="job_salary_max" value="{{ $job->salary }}" placeholder="薪水(单位K)">
+                <input class="job_input moreSmall" type="text" name="job_salary_max" value="{{ $matches[2] }}" placeholder="薪水(单位K)">
                 <br>
                 <span class="job_tittle">职位需求</span>
                 <img src="/dist/type.png">
                 <select class="job_select job_level_1" name="job_level_1">
-                    <option selected="selected">职能大类</option>
+                    <option selected="selected">{{ $class[2] }}</option>
                 </select>
                 <select class="job_select job_level_2" name="job_level_2">
-                    <option selected="selected">职能分类</option>
+                    <option selected="selected">{{ $class[1] }}</option>
                 </select>
                 <select class="job_select job_level_3" name="job_level_3">
-                    <option selected="selected">具体工作</option>
+                    <option selected="selected">{{ $class[0] }}</option>
                 </select>
                 <br>
                 <img src="/dist/exp.png">
