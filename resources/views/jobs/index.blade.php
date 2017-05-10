@@ -10,8 +10,16 @@
 				<span class="numofpeople">5</span>
 				份简历
 			</div>
-			<div class="index_single_item_jobinfo_edit_button index_single_item_jobinfo_button">编辑</div>
-			<div class="index_single_item_jobinfo_delete_button index_single_item_jobinfo_button">删除</div>
+			<div class="index_single_item_jobinfo_edit_button index_single_item_jobinfo_button">
+				<a href="/admin/jobs/{{$job->id}}/edit" class="full_a">编辑</a>
+			</div>
+			<div class="index_single_item_jobinfo_delete_button index_single_item_jobinfo_button">
+				<form action="/admin/jobs/{{$job->id}}" method="POST" class="delete-form">
+					{{ method_field('DELETE') }}
+					{{ csrf_field() }}
+					<button class="full_a">删除</button>
+				</form>
+			</div>
 			<a class="gray big" href="jobs/{{$job->id}}">{{ $job->name }}</a>
 			<p class="gray">
 				工作发布于 :
