@@ -41,6 +41,10 @@ span.morebig
 
     color: #fff;
 }
+button.button_normal
+{
+    
+}
 a.full_a
 {
     display: inline-block;
@@ -707,7 +711,6 @@ p.job_education
 p.job_creatat
 {
     position: relative;
-    top: -20px;
 
     display: inline-block;
     float: right;
@@ -719,6 +722,10 @@ p.job_description
 
     width: 900px;
     min-height: 250px;
+
+    max-height: 280px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 p.job_advantage
 {
@@ -825,11 +832,17 @@ p.p_company_info
 
     width: 120px;
     height: 30px;
-
+    overflow: hidden;
+    color: #fff;
+    cursor: pointer;
     text-align: center;
 
     border-radius: 3px;
     background-color: rgba(0,146,210,1);
+}
+.job_show_action_button:hover
+{
+    background-color: rgba(0,146,210,.8);
 }
 .edit_button
 {
@@ -907,7 +920,7 @@ p.p_company_info
 {
     position: absolute;
     height: 50px; 
-    width: 150px;
+    width: 180px;
     line-height: 50px;
     font-weight: 500;color: rgba(0,0,0,.5);
     text-align: center;
@@ -931,19 +944,18 @@ span.numofpeople
     line-height: 40px;
     text-align: center;
     color: #fff;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 5px;
     background-color: rgba(0,146,210,1);
 }
 .index_single_item_jobinfo_edit_button
 {
-    left: 70%;
-}
-.index_single_item_jobinfo_delete_button
-{
     left: 85%;
 }
-
+.index_single_item_jobinfo_button a:hover
+{
+    color: #fff;
+}
 
 
 

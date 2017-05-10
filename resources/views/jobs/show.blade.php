@@ -52,11 +52,11 @@
 				<div class="edit_button job_show_action_button">
 					<a href="/admin/jobs/{{$job->id}}/edit" class="full_a">编辑</a>
 				</div>
-				<div class="delete_button job_show_action_button">
+				<div class="delete_button job_show_action_button">删除
 					<form action="/admin/jobs/{{$job->id}}" method="POST" class="delete-form">
 						{{ method_field('DELETE') }}
 						{{ csrf_field() }}
-						<button class="full_a">删除</button>
+						<button class="button_normal delete_function_button">删除</button>
 					</form>
 				</div>
 				@endif
@@ -78,4 +78,5 @@
 		</div>
 	</div>
 </div>
+<script src="/js/delete_function.js"></script>
 @endsection('content')
