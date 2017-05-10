@@ -867,7 +867,14 @@ p.p_company_info
     height: 280px;
     margin: 0 auto;
     margin-bottom: 50px;
-    border-left: 5px solid rgba(0,0,0,0.3);
+    border-left: 7px solid rgba(0,0,0,0.2);
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+.index_single_item:hover
+{
+    border-left: 7px solid rgba(0,146,210,1);
 }
 .index_single_item a
 {
@@ -907,7 +914,7 @@ p.p_company_info
     font-size: 18px;
 border-left: 1px solid rgba(0,0,0,.1);
 border-right: 1px solid rgba(0,0,0,.1);
-    left: 30%;
+    left: 40%;
 }
 span.numofpeople
 {
