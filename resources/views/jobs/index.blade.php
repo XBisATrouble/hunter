@@ -35,7 +35,7 @@
 			<p class="gray">
 				工作发布于 :
 				<br>{{ $job->created_at }}</p>
-			<p class="gray" style="height: 150px;">
+			<p class="gray" style="height: 90px;">
 				工作简介 :
 				<br>{!! mb_substr($job->description,0,300,"utf-8").'...' !!}</p>
 		</div>

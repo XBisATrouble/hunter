@@ -586,6 +586,10 @@ textarea.job_description:focus
     color: #fff;
     background-color: rgba(0,146,210,1);
 }
+.main_company_right_banner .index_single_item
+{
+    width: 880px;
+}
 
 
 
@@ -910,7 +914,7 @@ p.p_company_info
     overflow: hidden;
 
     width: 1300px;
-    height: 280px;
+    height: 220px;
     margin: 0 auto;
     margin-bottom: 50px;
 
@@ -941,15 +945,15 @@ p.p_company_info
     float: left;
 
     width: 900px;
-    height: 280px;
-    padding: 20px 20px 20px 50px;
+    height: 220px;
+    padding: 0 20px 0 50px;
 }
 .index_single_item_peopleinfo
 {
     float: right;
 
     width: 180px;
-    height: 280px;
+    height: 220px;
 }
 .index_single_item_jobinfo_numofpeople
 {

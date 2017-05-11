@@ -28,7 +28,7 @@
                     <a href="/admin/jobs/create">发布职位</a>
                 </li>
                 <li>
-                    <a href="/admin">首页</a>
+                    <a href="/admin" class="full_a">首页</a>
                 </li>
                 <li class="icon" style="padding: 15px 25px">
                     <img src="/dist/icon.png"></li>
