@@ -586,6 +586,10 @@ textarea.job_description:focus
     color: #fff;
     background-color: rgba(0,146,210,1);
 }
+.main_company_right_banner .index_single_item
+{
+    width: 880px;
+}
 
 
 
