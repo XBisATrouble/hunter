@@ -1,5 +1,4 @@
 @extends('layouts.adminApp')
-<link rel="stylesheet" href="/css/app.css">
 @section('content')
 <div class="main_content">
 <div class="online_offline_nav">
