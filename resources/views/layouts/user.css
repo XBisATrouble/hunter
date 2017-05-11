@@ -131,6 +131,43 @@ a.full_a
     background-color: rgba(255,255,255,1);
     box-shadow: 0 0 5px 1px rgba(22,22,22,.1);
 }
+.user_main_job_level1
+{
+    width: 1000px;
+    height: 200px;
+    background-color: red;
+}
+.user_main_job_level2
+{
+    width: 1000px;
+    height: 200px;
+    background-color: pink;
+}
+.user_main_job_level3
+{
+    width: 1000px;
+    height: 200px;
+    background-color: #eee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .user_bottom_banner
 {
     width: 100%;
