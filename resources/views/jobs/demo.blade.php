@@ -1,5 +1,5 @@
 @extends('layouts.adminApp')
-<link rel="stylesheet" href="/css/app.css">
+
 @section('content')
 <div class="main_content">
 <div class="online_offline_nav">
@@ -14,7 +14,7 @@
 		<div class="index_single_item_jobinfo">
 			<div class="index_single_item_jobinfo_numofpeople">
 				收到
-				<span class="numofpeople">{{ $job->resumes_count }}</span>
+				<span class="numofpeople">5</span>
 				份简历
 			</div>
 			<div class="index_single_item_jobinfo_edit_button index_single_item_jobinfo_button">
@@ -30,15 +30,12 @@
 				<br>{{ $job->created_at }}</p>
 			<p class="gray" style="height: 150px;">
 				工作简介 :
-				<br>{!! substr($job->description,0,400).'...' !!}</p>
+				<br>{!! $job->description !!}</p>
 		</div>
 		<div class="index_single_item_peopleinfo"></div>
 		<div class="index_single_item_peopleinfo"></div>
 	</div>
 	<div class="line_gray"></div>
 	@endforeach
-	<div class="paginate">
-		{{ $jobs->links() }}
-	</div>
 </div>
 @endsection('content')

@@ -41,10 +41,7 @@ span.morebig
 
     color: #fff;
 }
-button.button_normal
-{
-    
-}
+
 a.full_a
 {
     display: inline-block;
@@ -486,14 +483,14 @@ textarea.job_description:focus
 {
     float: left;
 
-    width: 300px;
+    width: 280px;
     height: 100%;
 }
 .main_compnay_left_nav
 {
     overflow: hidden
 
-    width: 300px;
+    width: 280px;
 
     height: 100%;
 
@@ -505,7 +502,7 @@ textarea.job_description:focus
     font-size: 18px;
     line-height: 60px;
 
-    width: 300px;
+    width: 280px;
     height: 60px;
     margin-bottom: 20px;
     padding-left: 20px;
@@ -530,7 +527,7 @@ textarea.job_description:focus
 
     width: 920px;
     height: 100%;
-    padding-left: 80px;
+    padding-left: 40px;
 }
 .main_company_right_banner_nav
 {
@@ -720,12 +717,12 @@ p.job_description
     font-size: 18px;
     line-height: 36px;
 
-    width: 900px;
-    min-height: 250px;
-
-    max-height: 280px;
     overflow: scroll;
     overflow-x: hidden;
+
+    width: 900px;
+    min-height: 250px;
+    max-height: 280px;
 }
 p.job_advantage
 {
@@ -829,14 +826,15 @@ p.p_company_info
     line-height: 30px;
 
     float: left;
+    overflow: hidden;
 
     width: 120px;
     height: 30px;
-    overflow: hidden;
-    color: #fff;
+
     cursor: pointer;
     text-align: center;
 
+    color: #fff;
     border-radius: 3px;
     background-color: rgba(0,146,210,1);
 }
@@ -868,7 +866,42 @@ p.p_company_info
 
 
 
-
+.online_offline_nav
+{
+    position: relative;
+    top: 30px;
+    width: 100%;
+    height: 80px;
+}
+.online_offline_nav_list
+{
+    width: 1300px;
+    height: 80px;
+    margin: 0 auto;
+}
+.online_offline_nav_list > li a
+{
+    color: rgba(255,255,255,1);
+}
+.online_offline_nav_list > li
+{
+    height: 50px;
+    width: 650px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    color: rgba(0,0,0,.5);
+    border-bottom:1px solid rgba(0,0,0,.3);
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+    background-color: rgba(50,50,50,1)
+}
+.online_offline_nav_list > li:hover
+{
+    border-bottom: 1px solid rgba(0,146,210,1);
+}
 .index_single_item
 {
     position: relative;
@@ -880,10 +913,12 @@ p.p_company_info
     height: 280px;
     margin: 0 auto;
     margin-bottom: 50px;
-    border-left: 7px solid rgba(0,0,0,0.2);
+
     -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+
+    border-left: 7px solid rgba(0,0,0,.2);
 }
 .index_single_item:hover
 {
@@ -892,8 +927,8 @@ p.p_company_info
 .index_single_item a
 {
     -webkit-transition: all .1s;
-    -o-transition: all .1s;
-    transition: all .1s;
+         -o-transition: all .1s;
+            transition: all .1s;
 }
 .index_single_item a:hover
 {
@@ -918,39 +953,63 @@ p.p_company_info
 }
 .index_single_item_jobinfo_numofpeople
 {
-    position: absolute;
-    height: 50px; 
-    width: 180px;
-    line-height: 50px;
-    font-weight: 500;color: rgba(0,0,0,.5);
-    text-align: center;
     font-size: 18px;
-border-left: 1px solid rgba(0,0,0,.1);
-border-right: 1px solid rgba(0,0,0,.1);
+    font-weight: 500;
+    line-height: 50px;
+
+    position: absolute;
     left: 40%;
+
+    width: 180px;
+    height: 50px;
+
+    text-align: center;
+
+    color: rgba(0,0,0,.5);
+    border-right: 1px solid rgba(0,0,0,.1);
+    border-left: 1px solid rgba(0,0,0,.1);
 }
 span.numofpeople
 {
-    padding: 0 10px;
-    color: rgba(0,146,210,1);
     font-size: 26px;
+
+    padding: 0 10px;
+
+    color: rgba(0,146,210,1);
 }
 .index_single_item_jobinfo_button
 {
-    position: absolute;
-    width: 100px;
-    cursor: pointer;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: #fff;
     font-size: 15px;
+    line-height: 40px;
+
+    position: absolute;
+
+    width: 100px;
+    height: 40px;
+
+    cursor: pointer;
+    -webkit-transition: all .1s;
+         -o-transition: all .1s;
+            transition: all .1s;
+    text-align: center;
+
+    color: #fff;
     border-radius: 5px;
     background-color: rgba(0,146,210,1);
 }
 .index_single_item_jobinfo_edit_button
 {
     left: 85%;
+}
+.index_single_item_jobinfo_offline_button
+{
+    left: 70%;
+
+    background-color: #ff6f00;
+}
+.index_single_item_jobinfo_button:hover
+{
+    opacity: .9;
 }
 .index_single_item_jobinfo_button a:hover
 {

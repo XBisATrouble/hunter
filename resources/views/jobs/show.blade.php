@@ -7,8 +7,7 @@
 			<div class="job_simple_des_tag">
 				<p class="job_name">{{ $job->name }}</p>
 				<p class="job_from">
-					Hunter
-					<!-- {{ $job->classes->name }} --></p>
+					Hunter</p>
 				<div class="job_simple_des_tag_tan"></div>
 			</div>
 			<p class="job_salary">
