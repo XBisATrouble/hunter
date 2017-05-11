@@ -6,6 +6,7 @@
 	<ul class="online_offline_nav_list">
 		<li><a href="" class="full_a">正在招聘</a></li>
 		<li><a href="" class="full_a">已下线</a></li>
+		<!-- ^^^^^^^^^^^^^^^^连接在这^^^^^^^^^^^^^^^^^^^ -->
 	</ul>
 </div>
 	@foreach($jobs as $job)
