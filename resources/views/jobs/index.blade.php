@@ -37,7 +37,7 @@
 				<br>{{ $job->created_at }}</p>
 			<p class="gray" style="height: 90px;">
 				工作简介 :
-				<br>{!! mb_substr($job->description,0,300,"utf-8").'...' !!}</p>
+				<br>{!! mb_substr($job->description,0,150,"utf-8").'...' !!}</p>
 		</div>
 		<div class="index_single_item_peopleinfo"></div>
 		<div class="index_single_item_peopleinfo"></div>
