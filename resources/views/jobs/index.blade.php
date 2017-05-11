@@ -3,8 +3,8 @@
 <div class="main_content">
 <div class="online_offline_nav">
 	<ul class="online_offline_nav_list">
-		<li><a href="" class="full_a">正在招聘</a></li>
-		<li><a href="" class="full_a">已下线</a></li>
+		<li><a href="/admin/jobs" class="full_a">正在招聘</a></li>
+		<li><a href="/admin/jobs/offline" class="full_a">已下线</a></li>
 		<!-- ^^^^^^^^^^^^^^^^连接在这^^^^^^^^^^^^^^^^^^^ -->
 	</ul>
 </div>
@@ -37,7 +37,7 @@
 				<br>{{ $job->created_at }}</p>
 			<p class="gray" style="height: 150px;">
 				工作简介 :
-				<br>{!! substr($job->description,0,400).'...' !!}</p>
+				<br>{!! mb_substr($job->description,0,300,"utf-8").'...' !!}</p>
 		</div>
 		<div class="index_single_item_peopleinfo"></div>
 		<div class="index_single_item_peopleinfo"></div>

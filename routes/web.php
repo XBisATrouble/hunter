@@ -32,6 +32,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('/', 'DashboardController@index');
     $router->post('/register','RegisterController@register');
 
+    $router->get('/jobs/offline','JobsController@showOffline')->name('jobs.offline');
     $router->get('/jobs/{id}/offline','JobsController@offLine');
     $router->get('/jobs/{id}/online','JobsController@onLine');
     Route::resource('jobs','JobsController',['names' => [

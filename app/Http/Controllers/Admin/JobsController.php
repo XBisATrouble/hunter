@@ -25,8 +25,14 @@ class JobsController extends Controller
      */
     public function index()
     {
-        $jobs=$this->jobRepositories->getJobsFeedByAuth(Auth::guard('admin')->user()->id);
+        $jobs=$this->jobRepositories->getJobsFeedByAuthOnline(Auth::guard('admin')->user()->id);
         return view('jobs.index',compact('jobs'));
+    }
+
+    public function showOffline()
+    {
+        $jobs=$this->jobRepositories->getJobsFeedByAuthOffline(Auth::guard('admin')->user()->id);
+        return view('jobs.offline',compact('jobs'));
     }
 
     /**
@@ -161,6 +167,6 @@ class JobsController extends Controller
     public function onLine($id)
     {
         $this->jobRepositories->jobOnline($id);
-        return redirect('/admin/jobs');
+        return redirect('/admin/jobs/offline');
     }
 }

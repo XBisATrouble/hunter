@@ -28,4 +28,14 @@ class Job extends Model
     {
         return $this->belongsToMany(Topic::class)->withTimestamps();
     }
+
+    public function scopeOnline($query)
+    {
+        return $query->where('is_online','1');
+    }
+
+    public function scopeOffline($query)
+    {
+        return $query->where('is_online','0');
+    }
 }

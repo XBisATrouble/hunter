@@ -29,9 +29,14 @@ class JobRepository
         return Job::latest('updated_at')->with('publish')->get();
     }
 
-    public function getJobsFeedByAuth($auth)
+    public function getJobsFeedByAuthOnline($auth)
     {
-        return Job::where('publisher_id',$auth)->latest('updated_at')->with('publish')->paginate(3);
+        return Job::Online()->where('publisher_id',$auth)->latest('updated_at')->with('publish')->paginate(3);
+    }
+
+    public function getJobsFeedByAuthOffline($auth)
+    {
+        return Job::Offline()->where('publisher_id',$auth)->latest('updated_at')->with('publish')->paginate(3);
     }
 
     public function getClassById($id)
