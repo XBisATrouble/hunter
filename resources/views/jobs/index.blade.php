@@ -19,10 +19,18 @@
 			<div class="index_single_item_jobinfo_edit_button index_single_item_jobinfo_button">
 				<a href="/admin/jobs/{{$job->id}}/edit" class="full_a">查看简历</a>
 			</div>
+			@if($job->is_online==1)
 			<div class="index_single_item_jobinfo_offline_button index_single_item_jobinfo_button">
 				<a href="jobs/{{ $job->id }}/offline" class="full_a">下线</a>
 				<!-- ^^^^^^^^^^^^^^^^下线功能^^^^^^^^^^^^^^^^^^^ -->
 			</div>
+			@endif
+			@if($job->is_online!=1)
+			<div class="index_single_item_jobinfo_offline_button index_single_item_jobinfo_button">
+				<a href="jobs/{{ $job->id }}/online" class="full_a">上线</a>
+				<!-- ^^^^^^^^^^^^^^^^下线功能^^^^^^^^^^^^^^^^^^^ -->
+			</div>
+			@endif
 			<a class="gray big" href="jobs/{{$job->id}}">{{ $job->name }}</a>
 			<p class="gray">
 				工作发布于 :

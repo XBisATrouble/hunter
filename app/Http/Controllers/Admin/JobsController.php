@@ -156,6 +156,11 @@ class JobsController extends Controller
     public function offLine($id)
     {
         $this->jobRepositories->jobOffline($id);
-        return view('/');
+        return redirect('/admin/jobs');
+    }
+    public function onLine($id)
+    {
+        $this->jobRepositories->jobOnline($id);
+        return redirect('/admin/jobs');
     }
 }
