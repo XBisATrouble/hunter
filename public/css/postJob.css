@@ -910,7 +910,7 @@ p.p_company_info
     overflow: hidden;
 
     width: 1300px;
-    height: 280px;
+    height: 220px;
     margin: 0 auto;
     margin-bottom: 50px;
 
@@ -941,8 +941,8 @@ p.p_company_info
     float: left;
 
     width: 900px;
-    height: 280px;
-    padding: 20px 20px 20px 50px;
+    height: 220px;
+    padding: 0 20px 0 50px;
 }
 .index_single_item_peopleinfo
 {
