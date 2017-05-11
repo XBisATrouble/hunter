@@ -41,14 +41,6 @@
 			</div>
 			<div class="actions">
 				@if(Auth::guard('admin')->check() && Auth::guard('admin')->user()->owns($job))
-{{--<<<<<<< HEAD--}}
-					{{--<span class="edit"><a href="/admin/jobs/{{$job->id}}/edit">编辑</a></span>--}}
-					{{--<form action="/admin/jobs/{{$job->id}}" method="POST" class="delete-form">--}}
-						{{--{{ method_field('DELETE') }}--}}
-						{{--{{ csrf_field() }}--}}
-						{{--<button class="button is-naked delete-button">删除</button>--}}
-					{{--</form>--}}
-{{--=======--}}
 				<div class="edit_button job_show_action_button">
 					<a href="/admin/jobs/{{$job->id}}/edit" class="full_a">编辑</a>
 				</div>

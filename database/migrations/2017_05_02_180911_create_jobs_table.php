@@ -23,9 +23,11 @@ class CreateJobsTable extends Migration
             $table->string('experience');
             $table->string('education');
             $table->string('advantage');
-            $table->string('description');
+            $table->text('description');
             $table->string('address');
             $table->string('publisher_id');
+            $table->integer('is_online')->default(1);
+            $table->integer('resumes_count')->default(0);
             $table->timestamps();
         });
     }

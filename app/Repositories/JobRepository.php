@@ -31,7 +31,7 @@ class JobRepository
 
     public function getJobsFeedByAuth($auth)
     {
-        return Job::where('publisher_id',$auth)->latest('updated_at')->with('publish')->get();
+        return Job::where('publisher_id',$auth)->latest('updated_at')->with('publish')->paginate(3);
     }
 
     public function getClassById($id)
