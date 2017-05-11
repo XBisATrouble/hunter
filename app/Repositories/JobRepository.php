@@ -41,4 +41,28 @@ class JobRepository
         $class[2]=Job_class::find(Job_class::find(Job_class::find($id)->father_id)->father_id)->name;
         return $class;
     }
+
+    public function jobOnline($id)
+    {
+        $job=$this->byId($id);
+        $job->is_online=1;
+        if ($job->save())
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public function jobOffline($id)
+    {
+        $job=$this->byId($id);
+        $job->is_online=0;
+        if ($job->save())
+        {
+            return true;
+        }
+        else
+            return false;
+    }
 }

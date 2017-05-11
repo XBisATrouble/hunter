@@ -20,7 +20,7 @@
 				<a href="/admin/jobs/{{$job->id}}/edit" class="full_a">查看简历</a>
 			</div>
 			<div class="index_single_item_jobinfo_offline_button index_single_item_jobinfo_button">
-				<a href="" class="full_a">下线</a>
+				<a href="jobs/{{ $job->id }}/offline" class="full_a">下线</a>
 				<!-- ^^^^^^^^^^^^^^^^下线功能^^^^^^^^^^^^^^^^^^^ -->
 			</div>
 			<a class="gray big" href="jobs/{{$job->id}}">{{ $job->name }}</a>

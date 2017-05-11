@@ -152,4 +152,10 @@ class JobsController extends Controller
         preg_match($pattern,$salary,$matches);
         return $matches;
     }
+
+    public function offLine($id)
+    {
+        $this->jobRepositories->jobOffline($id);
+        return view('/');
+    }
 }
