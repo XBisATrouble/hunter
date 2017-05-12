@@ -13,9 +13,7 @@
 
 use Illuminate\Support\Facades\Input;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
@@ -23,6 +21,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('email/verify/succeed/{token}',['as'=>'email.verify.succeed','uses'=>'EmailController@successVerify']);
 Route::get('email/verify/{token}',['as'=>'email.verify','uses'=>'EmailController@verify']);
+
+Route::get('/jobs','JobsController@index');
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 {

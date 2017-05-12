@@ -39,7 +39,7 @@
                     <option selected="selected">{{ $class[1] }}</option>
                 </select>
                 <select class="job_select job_level_3" name="job_level_3">
-                    <option selected="selected">{{ $class[0] }}</option>
+                    <option selected="selected" value="{{ $class[3] }}">{{ $class[0] }}</option>
                 </select>
                 <br>
                 <img src="/dist/exp.png">
