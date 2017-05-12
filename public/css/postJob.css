@@ -488,7 +488,7 @@ textarea.job_description:focus
 }
 .main_compnay_left_nav
 {
-    overflow: hidden
+    overflow: hidden;
 
     width: 280px;
 

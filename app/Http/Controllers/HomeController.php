@@ -2,27 +2,35 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\JobRepository;
+use App\Repositories\JobsClassRepository;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    protected $job;
+    protected $class;
+
     /**
-     * Create a new controller instance.
-     *
-     * @return void
+     * HomeController constructor.
+     * @param JobRepository $job
+     * @param JobsClassRepository $class
      */
-    public function __construct()
+    public function __construct(JobRepository $job,JobsClassRepository $class)
     {
-        $this->middleware('auth');
+        $this->job = $job;
+        $this->class=$class;
     }
 
     /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        return view('home');
+        $jobs=$this->job->getJobsFeed();
+        $class1s=$this->class->getClass1Feed();
+        $class2s=$this->class->getClass2Feed();
+        $class3s=$this->class->getClass3Feed();
+        return view('index',compact('jobs','class1s','class2s','class3s'));
     }
 }

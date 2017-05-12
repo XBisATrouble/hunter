@@ -26,7 +26,7 @@ class JobRepository
 
     public function getJobsFeed()
     {
-        return Job::latest('updated_at')->with('publish')->get();
+        return Job::latest('updated_at')->with('publish')->paginate(6);
     }
 
     public function getJobsFeedByAuthOnline($auth)

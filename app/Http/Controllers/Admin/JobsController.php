@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\StoreJobRequest;
 use App\Job;
+use App\Markdown\Markdown;
 use App\Repositories\JobRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -12,10 +13,12 @@ use Illuminate\Support\Facades\Auth;
 class JobsController extends Controller
 {
     protected $jobRepositories;
+    protected $markdown;
 
-    public function __construct()
+    public function __construct(Markdown $markdown)
     {
         $this->jobRepositories=new JobRepository();
+        $this->markdown=$markdown;
         $this->middleware('auth.admin:admin');
     }
     /**
@@ -80,7 +83,8 @@ class JobsController extends Controller
     public function show($id)
     {
         $job = $this->jobRepositories->byId($id);
-        return view('jobs.show',compact('job'));
+        $html=$this->markdown->markdown($job->description);
+        return view('jobs.show',compact('job','html'));
     }
 
     /**

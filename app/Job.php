@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Job extends Model
@@ -37,5 +38,23 @@ class Job extends Model
     public function scopeOffline($query)
     {
         return $query->where('is_online','0');
+    }
+
+    public function getCreatedAtAttribute($date)
+    {
+        if (Carbon::now() > Carbon::parse($date)->addDays(10)) {
+            return Carbon::parse($date);
+        }
+
+        return Carbon::parse($date)->diffForHumans();
+    }
+
+    public function getUpdatedAtAttribute($date)
+    {
+        if (Carbon::now() > Carbon::parse($date)->addDays(10)) {
+            return Carbon::parse($date);
+        }
+
+        return Carbon::parse($date)->diffForHumans();
     }
 }
