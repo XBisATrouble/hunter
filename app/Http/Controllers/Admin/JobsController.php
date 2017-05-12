@@ -29,13 +29,13 @@ class JobsController extends Controller
     public function index()
     {
         $jobs=$this->jobRepositories->getJobsFeedByAuthOnline(Auth::guard('admin')->user()->id);
-        return view('jobs.index',compact('jobs'));
+        return view('admin.jobs.index',compact('jobs'));
     }
 
     public function showOffline()
     {
         $jobs=$this->jobRepositories->getJobsFeedByAuthOffline(Auth::guard('admin')->user()->id);
-        return view('jobs.offline',compact('jobs'));
+        return view('admin.jobs.offline',compact('jobs'));
     }
 
     /**
@@ -45,7 +45,7 @@ class JobsController extends Controller
      */
     public function create()
     {
-        return view('jobs.create');
+        return view('admin.jobs.create');
     }
 
     /**
@@ -84,7 +84,7 @@ class JobsController extends Controller
     {
         $job = $this->jobRepositories->byId($id);
         $html=$this->markdown->markdown($job->description);
-        return view('jobs.show',compact('job','html'));
+        return view('admin.jobs.show',compact('job','html'));
     }
 
     /**
@@ -100,7 +100,7 @@ class JobsController extends Controller
         $class=$this->jobRepositories->getClassById($job->class_id);
         if (Auth::guard('admin')->user()->owns($job))
         {
-            return view('jobs.edit',compact('job','matches','class'));
+            return view('admin.jobs.edit',compact('job','matches','class'));
         }
         return back();
     }
@@ -129,7 +129,7 @@ class JobsController extends Controller
             'publisher_id'=>Auth::guard('admin')->user()->id,
         ]);
 
-        return redirect()->route('jobs.show', [$job->id]);
+        return redirect()->route('admin.jobs.show', [$job->id]);
     }
 
     /**

@@ -2,23 +2,40 @@
 
 namespace App\Http\Controllers;
 
-use App\Job_class;
+use App\Repositories\JobRepository;
 use Illuminate\Http\Request;
 
 class JobsController extends Controller
 {
-    public function typeClass()
+    protected $job;
+
+    /**
+     * JobsController constructor.
+     * @param $job
+     */
+    public function __construct(JobRepository $job)
     {
-        return Job_class::where('levels','1')->get();
+        $this->job = $job;
     }
 
-    public function typeDivision($id)
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        return Job_class::where(['levels'=>'2','father_id'=>$id])->get();
+        $jobs=$this->job->getJobsFeed();
+        return view('jobs.index',compact('jobs'));
     }
 
-    public function typeSection($id)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        return Job_class::where(['levels'=>'3','father_id'=>$id])->get();
     }
 }

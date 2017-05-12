@@ -44,6 +44,7 @@ class JobRepository
         $class[0]=Job_class::find($id)->name;
         $class[1]=Job_class::find(Job_class::find($id)->father_id)->name;
         $class[2]=Job_class::find(Job_class::find(Job_class::find($id)->father_id)->father_id)->name;
+        $class[3]=Job_class::find($id)->id;
         return $class;
     }
 

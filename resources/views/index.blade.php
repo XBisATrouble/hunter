@@ -37,7 +37,7 @@
 			<div class="index_single_item">
 				<div class="index_single_item_jobinfo">
 					<div class="per50">
-						<a class="big blue" href="">{{ $job->name }}</a>
+						<a class="big blue" href="/">{{ $job->name }}</a>
 						<p class="gray margin15">公司名称 : {{ $job->publish->name }}</p>
 						<p class="gray margin15">学历要求 : {{ $job->education }}</p>
 						<p class="gray margin15">工作地点 : {{ $job->province }}</p>
