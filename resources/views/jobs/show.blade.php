@@ -26,7 +26,6 @@
 				:
 			</p>
 			<p class="job_description">{!! $job->description !!}</p>
-			<p class="job_creatat">工作发布于 : {{ $job->created_at }}</p>
 			<div class="line"></div>
 			<div class="job_company_description">
 				<div class="company_brief">
@@ -50,6 +49,7 @@
 						<button class="button_normal delete_function_button">删除</button>
 					</form>
 				</div>
+				<p class="job_creatat">工作发布于 : {{ $job->created_at }}</p>
 				@endif
 			</div>
 		</div>

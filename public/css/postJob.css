@@ -761,7 +761,7 @@ p.job_advantage
     float: right;
 
     width: 400px;
-    height: 50%;
+    height: 432px;
 
     color: rgba(0,0,0,.4);
     border-bottom: 1px solid rgba(0,146,210,1);
@@ -791,9 +791,8 @@ p.job_advantage
 
     width: 400px;
     height: 80px;
-    margin-top: 70px;
-    margin-bottom: 70px;
     padding: 0 80px;
+    margin: 30px 0;
 }
 p.p_company_info
 {
