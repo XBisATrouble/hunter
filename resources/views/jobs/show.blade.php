@@ -60,11 +60,11 @@
 				<span class="float_left">{{ Auth::guard('admin')->user()->name }}</span>
 			</div>
 			<div>
-				<p class="job_recommend_banner_company_type p_company_info">发布工作个数 : 500</p>
-				<p class="job_recommend_banner_company_mainjob p_company_info">公司主营方向 : 电商</p>
-				<p class="job_recommend_banner_company_phone p_company_info">公司规模 : 3000人</p>
-				<p class="job_recommend_banner_company_phone p_company_info">面试轮数 : 5</p>
-				<p class="job_recommend_banner_company_phone p_company_info">联系电话 : 010-01010101</p>
+				<p class="job_recommend_banner_company_type p_company_info">发布工作个数 : {{ $job->publish->job_count }}</p>
+				<p class="job_recommend_banner_company_mainjob p_company_info">公司主营方向 : {{ $job->publish->direction }}</p>
+				<p class="job_recommend_banner_company_phone p_company_info">公司规模 : {{ $job->publish->people_number }}人</p>
+				<p class="job_recommend_banner_company_phone p_company_info">公司首页 : <a href="{{ $job->publish->home_url }}">{{ $job->publish->name }}</a> </p>
+				<p class="job_recommend_banner_company_phone p_company_info">联系电话 : {{ $job->publish->phone }}</p>
 			</div>
 		</div>
 	</div>
