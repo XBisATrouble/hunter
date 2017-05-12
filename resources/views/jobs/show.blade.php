@@ -25,7 +25,7 @@
 				<span class="strong">工作简介</span>
 				:
 			</p>
-			<p class="job_description">{!! $job->description !!}</p>
+			<p>{!! $html !!}</p>
 			<div class="line"></div>
 			<div class="job_company_description">
 				<div class="company_brief">

@@ -242,6 +242,8 @@ a.full_a
     width: 1400px;
     min-height: 1200px;
     margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 50px;
 
     background-color: #fff;
     box-shadow: 0 0 8px 3px rgba(22,22,22,.1);
@@ -488,7 +490,7 @@ textarea.job_description:focus
 }
 .main_compnay_left_nav
 {
-    overflow: hidden
+    overflow: hidden;
 
     width: 280px;
 
@@ -615,7 +617,7 @@ textarea.job_description:focus
     float: left;
 
     width: 900px;
-    height: 100%;
+    min-height: 1200px;
 }
 .job_simple_des_tag
 {

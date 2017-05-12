@@ -54,7 +54,9 @@
         </div>
     </div>
 
-    <div class="main_banner">@yield('content')</div>
+    <div class="main_banner">
+        @yield('content')
+    </div>
     <div class="botoom_banner">
         <div class="bottom_content"></div>
     </div>
