@@ -1,13 +1,17 @@
 @extends('layouts.adminApp')
 @section('content')
 <div class="main_content">
-<div class="online_offline_nav">
-	<ul class="online_offline_nav_list">
-		<li><a href="/admin/jobs" class="full_a">正在招聘</a></li>
-		<li><a href="/admin/jobs/offline" class="full_a">已下线</a></li>
-		<!-- ^^^^^^^^^^^^^^^^连接在这^^^^^^^^^^^^^^^^^^^ -->
-	</ul>
-</div>
+	<div class="online_offline_nav">
+		<ul class="online_offline_nav_list">
+			<li>
+				<a href="/admin/jobs" class="full_a">正在招聘</a>
+			</li>
+			<li>
+				<a href="/admin/jobs/offline" class="full_a">已下线</a>
+			</li>
+			<!-- ^^^^^^^^^^^^^^^^连接在这^^^^^^^^^^^^^^^^^^^ -->
+		</ul>
+	</div>
 	@foreach($jobs as $job)
 	<div class="index_single_item">
 		<div class="index_single_item_jobinfo">
@@ -44,8 +48,8 @@
 	</div>
 	<div class="line_gray"></div>
 	@endforeach
-	<div class="paginate">
-		{{ $jobs->links() }}
+	<div class="paginate_banner">
+		<div class="paginate">{{ $jobs->links() }}</div>
 	</div>
 </div>
 @endsection('content')
