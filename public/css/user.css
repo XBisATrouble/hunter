@@ -94,7 +94,7 @@ div.per50
 }
 .big
 {
-    font-size: 28px;
+    font-size: 24px;
 }
 .user_nav_banner
 {
@@ -232,7 +232,7 @@ div.per50
 {
     float: left;
     top: 50px;
-    margin-top: 20px;
+    margin-top: 50px;
 
     overflow: hidden;
 
@@ -273,12 +273,12 @@ div.per50
 .user_main_single_jobinfo_button
 {
     font-size: 14px;
-    line-height: 40px;
+    line-height: 32px;
 
     position: relative;
 
     width: 90px;
-    height: 40px;
+    height: 32px;
 
     cursor: pointer;
     -webkit-transition: all .1s;
