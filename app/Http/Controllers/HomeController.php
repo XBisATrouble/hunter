@@ -27,10 +27,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $jobs=$this->job->getJobsFeed();
         $class1s=$this->class->getClass1Feed();
         $class2s=$this->class->getClass2Feed();
         $class3s=$this->class->getClass3Feed();
+        $class=request('class');
+        if (!is_null($class))
+        {
+            $jobs=$this->job->byClass($class);
+            return view('index',compact('jobs','class1s','class2s','class3s'));
+        }
+        $jobs=$this->job->getJobsFeed();
+
         return view('index',compact('jobs','class1s','class2s','class3s'));
     }
 }

@@ -24,6 +24,25 @@ class JobRepository
         return Job::find($id);
     }
 
+    public function byClass($name)
+    {
+        $classId=Job_class::where('name',$name)->first()->id;
+        $classLevel=Job_class::where('name',$name)->first()->levels;
+        if ($classLevel==3)
+            return Job::where('class_id',$classId)->latest('updated_at')->with('publish')->paginate(6);
+        if ($classLevel==2)
+        {
+            $classesId=Job_class::where('father_id',$classId)->pluck('id');
+            return Job::whereIn('class_id',$classesId)->latest('updated_at')->with('publish')->paginate(6);
+        }
+        if ($classLevel==1)
+        {
+            $classesId_2=Job_class::where('father_id',$classId)->pluck('id');
+            $classesId_3=Job_class::whereIn('father_id',$classesId_2)->pluck('id');
+            return Job::whereIn('class_id',$classesId_3)->latest('updated_at')->with('publish')->paginate(6);
+        }
+    }
+
     public function getJobsFeed()
     {
         return Job::latest('updated_at')->with('publish')->paginate(6);
