@@ -5,7 +5,7 @@
     <title>Hunter</title>
     <link rel="stylesheet" type="text/css" href="/css/normallize.css">
     <link rel="stylesheet" type="text/css" href="/css/user.css">
-    <!-- 	<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <!--    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
 -->
 </head>
 <body>
@@ -17,8 +17,9 @@
         </ul>
         @if(Auth::check())
         <ul class="user_nav_user_function">
-            <li>
-                <img src="{{ Auth::user()->avatar }}"></img>
+            <li class="avatar">
+                <div class="avatar_banner">
+                    <img src="{{ Auth::user()->avatar }}"></div>
             </li>
             <li>我的关注</li>
             <li>简历管理</li>
@@ -32,16 +33,18 @@
         </ul>
         @else
         <ul class="user_nav_user_function">
-            <li><a href="/login">登陆</a></li>
-            <li><a href="/register">注册</a></li>
+            <li>
+                <a href="/login">登陆</a>
+            </li>
+            <li>
+                <a href="/register">注册</a>
+            </li>
         </ul>
         @endif
     </div>
 </div>
 
-<div class="user_main_banenr">
-    @yield('content')
-</div>
+<div class="user_main_banenr">@yield('content')</div>
 
 <div class="user_bottom_banner">
     <div class="user_bottom_content"></div>

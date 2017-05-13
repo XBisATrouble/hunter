@@ -150,6 +150,25 @@ div.per50
 
     text-align: center;
 }
+.avatar_banner
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user_nav_user_function > li.avatar{
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user_nav_user_function > li.avatar img
+{
+    height: 40px;
+    width: 40px;
+}
 .user_main_banenr
 {
     width: 100%;
