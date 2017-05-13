@@ -32,7 +32,9 @@
 					<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 				</ul>
 			</div>
-
+        <div class="full_small_nav">
+            热门职位
+        </div>
 			@foreach($jobs as $job)
 			<div class="index_single_item">
 				<div class="index_single_item_jobinfo">
@@ -55,6 +57,8 @@
 				<div class="paginate">{{ $jobs->links() }}</div>
 			</div>
 		</div>
-		<div class="user_main_right_content"></div>
+		<div class="user_main_right_content">
+			div
+		</div>
 	</div>
 @endsection
