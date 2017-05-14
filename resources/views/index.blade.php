@@ -39,13 +39,13 @@
 			<div class="user_single_item">
 				<div class="user_single_item_jobinfo">
 					<div class="per50">
-						<a class="big blue" href="/">{{ $job->name }}</a>
+						<a class="big blue" href="jobs/{{ $job->id }}">{{ $job->name }}</a>
 						<p class="gray margin15">公司名称 : {{ $job->publish->name }}</p>
 						<p class="gray margin15">学历要求 : {{ $job->education }}</p>
 						<p class="gray margin15">工作地点 : {{ $job->province }}</p>
 					</div>
 					<div class="per50">
-						<div class="user_main_single_jobinfo_button">工作详情</div>
+						<div class="user_main_single_jobinfo_button"><a href="jobs/{{ $job->id }}">工作详情</a></div>
 						<p class="orange margin15">薪资 : {{ $job->salary }}</p>
 						<p class="gray margin15">工作经验 : {{ $job->experience }}</p>
 						<p class="gray margin15">发布时间 : {{ $job->updated_at }}</p>

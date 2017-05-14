@@ -45,7 +45,7 @@
                     <a class="full_a" href="">我的关注</a>
                 </li>
                 <li>
-                    <a class="full_a" href="">简历管理</a>
+                    <a class="full_a" href="/resumes">简历管理</a>
                 </li>
                 <li>
                     <a class="full_a" id="logout" href="{{ url('/logout') }}"
