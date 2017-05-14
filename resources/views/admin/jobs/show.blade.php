@@ -2,14 +2,13 @@
 <script type="text/javascript" src="/js/city.js"></script>
 @section('content')
 <div class="main_content">
+	<div class="job_simple_des_tag">
+		<p class="job_name">{{ $job->name }}</p>
+		<p class="job_from">Hunter</p>
+		<div class="job_simple_des_tag_tan"></div>
+	</div>
 	<div class="job_des_moduel moduel">
 		<div class="job_simple_des">
-			<div class="job_simple_des_tag">
-				<p class="job_name">{{ $job->name }}</p>
-				<p class="job_from">
-					Hunter</p>
-				<div class="job_simple_des_tag_tan"></div>
-			</div>
 			<p class="job_salary">
 				<img src="/dist/sal.png">{{ $job->salary }}</p>
 			<p class="job_location">
@@ -42,8 +41,10 @@
 				<div class="edit_button job_show_action_button">
 					<a href="/admin/jobs/{{$job->id}}/edit" class="full_a">编辑</a>
 				</div>
-				<div class="delete_button job_show_action_button">删除
-					<form action="/admin/jobs/{{$job->id}}" method="POST" class="delete-form">
+				<div class="delete_button job_show_action_button">
+					删除
+					<form action="/admin/jobs/{{$job->
+						id}}" method="POST" class="delete-form">
 						{{ method_field('DELETE') }}
 						{{ csrf_field() }}
 						<button class="button_normal delete_function_button">删除</button>
@@ -63,7 +64,10 @@
 				<p class="job_recommend_banner_company_type p_company_info">发布工作个数 : {{ $job->publish->job_count }}</p>
 				<p class="job_recommend_banner_company_mainjob p_company_info">公司主营方向 : {{ $job->publish->direction }}</p>
 				<p class="job_recommend_banner_company_phone p_company_info">公司规模 : {{ $job->publish->people_number }}人</p>
-				<p class="job_recommend_banner_company_phone p_company_info">公司首页 : <a href="{{ $job->publish->home_url }}">{{ $job->publish->name }}</a> </p>
+				<p class="job_recommend_banner_company_phone p_company_info">
+					公司首页 :
+					<a href="{{ $job->publish->home_url }}">{{ $job->publish->name }}</a>
+				</p>
 				<p class="job_recommend_banner_company_phone p_company_info">联系电话 : {{ $job->publish->phone }}</p>
 			</div>
 		</div>

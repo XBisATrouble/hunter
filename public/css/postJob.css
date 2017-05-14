@@ -242,7 +242,6 @@ a.full_a
     width: 1400px;
     min-height: 1200px;
     margin: 0 auto;
-    overflow: hidden;
     padding-bottom: 50px;
 
     background-color: #fff;
@@ -493,7 +492,6 @@ textarea.job_description:focus
     overflow: hidden;
 
     width: 280px;
-
     height: 100%;
 
     border-right: 1px solid rgba(22,22,22,.1);
@@ -610,6 +608,10 @@ textarea.job_description:focus
 
 .job_des_moduel
 {
+    position: relative;
+
+    overflow: hidden;
+
     padding: 50px 30px;
 }
 .job_simple_des
@@ -622,7 +624,8 @@ textarea.job_description:focus
 .job_simple_des_tag
 {
     position: relative;
-    left: -50px;
+    top: 20px;
+    left: -20px;
 
     width: 950px;
     height: 100px;
@@ -630,6 +633,11 @@ textarea.job_description:focus
 
     background-color: rgba(0,146,210,1);
     box-shadow: 0 0 6px 1px rgba(22,22,22,.2);
+}
+.job_simple_des_tag p
+{
+    margin: 0;
+    padding: 0;
 }
 .job_simple_des_tag_tan
 {
@@ -746,8 +754,12 @@ p.job_advantage
 }
 .company_brief
 {
-    float: left;
     font-size: 16px;
+
+    float: left;
+    overflow: scroll;
+    overflow-x: hidden;
+
     width: 500px;
     height: 250px;
 }
@@ -760,7 +772,9 @@ p.job_advantage
 }
 .job_recommend_banner
 {
-    float: right;
+    position: absolute;
+    top: -50px;
+    right: 40px;
 
     width: 400px;
     height: 432px;
@@ -777,7 +791,6 @@ p.job_advantage
 .company_avatar_banner
 {
     float: left;
-    overflow: hidden;
 
     width: 80px;
     height: 80px;
@@ -793,8 +806,9 @@ p.job_advantage
 
     width: 400px;
     height: 80px;
+    margin-top: 50PX;
+    margin-bottom: 30PX;
     padding: 0 80px;
-    margin: 30px 0;
 }
 p.p_company_info
 {
@@ -1067,6 +1081,7 @@ span.numofpeople
 {
     position: relative;
     top: 110px;
+
     width: 900px;
     height: 40px;
     padding-left: 50px;

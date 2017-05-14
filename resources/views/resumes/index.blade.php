@@ -3,7 +3,7 @@
 		<div class="user_main_content">
 		<div class="resume_model_edit">
 			<ul class="resume_model_edit_list">
-				<li>基本信息<div class="checkcube"></div></li>
+				<li>基本信息</li>
 				<li>个人照片<div class="checkcube"></div></li>
 				<li>教育经历<div class="checkcube"></div></li>
 				<li>工作经历<div class="checkcube"></div></li>
@@ -18,4 +18,5 @@
 		</div>
 			<div class="resume_model"></div>
 		</div>
+		<script src="/js/user_function.js"></script>
 @endsection
