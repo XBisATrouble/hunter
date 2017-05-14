@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('email/verify/succeed/{token}',['as'=>'email.verify.succeed','uses'=>'EmailController@successVerify']);
 Route::get('email/verify/{token}',['as'=>'email.verify','uses'=>'EmailController@verify']);
 
-Route::get('/jobs','JobsController@index');
+Route::resource('jobs','JobsController');
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 {
@@ -35,7 +35,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('/jobs/offline','JobsController@showOffline')->name('jobs.offline');
     $router->get('/jobs/{id}/offline','JobsController@offLine');
     $router->get('/jobs/{id}/online','JobsController@onLine');
-    Route::resource('jobs','JobsController',['names' => [
+    $router->resource('jobs','JobsController',['names' => [
         'create' => 'jobs.create',
         'show' => 'jobs.show',
         'index'=>'jobs.index',

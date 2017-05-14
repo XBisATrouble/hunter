@@ -11,6 +11,7 @@ namespace App\Repositories;
 
 use App\Job;
 use App\Job_class;
+use App\Models\Admin;
 
 class JobRepository
 {
@@ -22,6 +23,12 @@ class JobRepository
     public function byId($id)
     {
         return Job::find($id);
+    }
+
+    public function byNameOrProvinceOrCompany($keyword)
+    {
+        $company=Admin::where('name','like','%'.$keyword.'%')->pluck('id');
+        return Job::where('name','like','%'.$keyword.'%')->orWhere('province','like','%'.$keyword.'%')->orWhereIn('publisher_id',$company)->get();
     }
 
     public function byClass($name)
