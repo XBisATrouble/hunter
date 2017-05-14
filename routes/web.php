@@ -23,6 +23,7 @@ Route::get('email/verify/succeed/{token}',['as'=>'email.verify.succeed','uses'=>
 Route::get('email/verify/{token}',['as'=>'email.verify','uses'=>'EmailController@verify']);
 
 Route::resource('jobs','JobsController');
+Route::resource('resumes','ResumesController');
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 {
