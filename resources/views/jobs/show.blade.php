@@ -53,10 +53,13 @@
 				<p class="job_recommend_banner_company_phone p_company_info">联系电话 : {{ $job->publish->phone }}</p>
 			</div>
 		</div>
-		<div class="panel-body">
-			<a href="/job/{{ $job->id }}/follow" class="btn btn-default">
-				关注该问题
-			</a>
+	</div>
+	<div class="job_des_moduel_buttons">
+		<div class="job_des_moduel_buttons_banner">
+			<div class="normal_button {{ Auth::user()->followed($job->id)?'followed_button':'follow_button' }}">
+				<a href="/job/{{ $job->id }}/follow">{{ Auth::user()->followed($job->id)?'已关注':'关注该工作' }}</a>
+			</div>
+			<div class="sendresume_button normal_button">投简历</div>
 		</div>
 	</div>
 </div>
