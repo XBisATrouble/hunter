@@ -56,8 +56,8 @@
 		<div class="job_recommend_banner">
 			<div class="company_avatar">
 				<div class="company_avatar_banner">
-					<img src="{{ Auth::guard('admin')->user()->avatar }}"></div>
-				<span class="float_left">{{ Auth::guard('admin')->user()->name }}</span>
+					<img src="{{ $job->publish->avatar }}"></div>
+				<span class="float_left">{{ $job->publish->name }}</span>
 			</div>
 			<div>
 				<p class="job_recommend_banner_company_type p_company_info">发布工作个数 : {{ $job->publish->job_count }}</p>
