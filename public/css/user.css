@@ -142,6 +142,24 @@ div.per50
 {
     margin-bottom: 50px;
 }
+.right_padding
+{
+    padding-right: 20px;
+}
+.left_padding
+{
+    padding-left: 20px;
+}
+.left_border
+{
+    border-left: 1px solid rgba(0,0,0,.2);
+}
+.right_border
+{
+    border-right: 1px solid rgba(0,0,0,.2);
+}
+
+
 .user_nav_banner
 {
     position: fixed;
@@ -489,7 +507,7 @@ input.search_input:focus
 
     position: absolute;
     top: 0;
-    right: 40%;
+    right: 42%;
 
     width: 200px;
     height: 30px;
@@ -513,6 +531,25 @@ input.search_input:focus
     color: #fff;
     border-radius: 5px;
     background-color: rgba(0,146,210,1);
+}
+.index_single_item_jobinfo_company_avatar
+{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+}
+.index_single_item_jobinfo_company_info
+{
+    padding-left: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    height: 140px;
+    width: 270px;
 }
 
 
