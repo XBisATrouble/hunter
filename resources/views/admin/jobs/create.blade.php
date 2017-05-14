@@ -45,7 +45,7 @@
 					<select class="job_select job_experience" name="job_experience">
 						<option selected="selected">工作经验要求</option>
 						<option>应届</option>
-						<option>3年以下</option>
+						<option>三年以下</option>
 						<option>三年至五年</option>
 						<option>五年至十年</option>
 						<option>十年以上</option>

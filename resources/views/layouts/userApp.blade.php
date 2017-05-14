@@ -8,7 +8,7 @@
 <body>
     <div class="user_nav_banner">
         <div class="user_nav_content">
-            <form action="/api/results" method="get">
+            <form action="/results" method="get">
                 <ul class="user_nav_search_function">
                     <li id="web_icon">
                         <img src="/dist/icon.png"></li>

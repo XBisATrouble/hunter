@@ -20,5 +20,3 @@ Route::get('/user', function (Request $request) {
 Route::get('/jobType','JobsController@typeClass');
 Route::get('/jobType/{id}','JobsController@typeDivision');
 Route::get('/jobSection/{id}','JobsController@typeSection');
-
-Route::get('/results','SearchController@searchJobsIndex');
