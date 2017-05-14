@@ -155,7 +155,7 @@
 		<div class="full_small_nav mid_marginbottom gray_bgcolor"></div>
 		@foreach($jobs as $job)
 		<div class="index_single_item">
-			<div class="index_single_item_jobinfo orange">
+			<div class="index_single_item_jobinfo orange"> 
 				<div class="per50 right_padding">
 					<div class="per50">
 						<a class="big blue" href="/">{{ $job->name }}</a>
