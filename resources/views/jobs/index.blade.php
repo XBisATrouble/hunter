@@ -1,36 +1,186 @@
 @extends('layouts.userApp')
 @section('content')
-<div class="main_content">
-	@foreach($jobs as $job)
-	<div class="index_single_item">
-		<div class="index_single_item_jobinfo">
-			<div class="index_single_item_jobinfo_numofpeople">
-				收到
-				<span class="numofpeople">{{ $job->resumes_count }}</span>
-				份简历
-			</div>
-			<div class="index_single_item_jobinfo_edit_button index_single_item_jobinfo_button">
-				<a href="/admin/jobs/{{$job->id}}/edit" class="full_a">查看简历</a>
-			</div>
-			@if($job->is_online==1)
-			<div class="index_single_item_jobinfo_offline_button index_single_item_jobinfo_button">
-				<a href="jobs/{{ $job->id }}/offline" class="full_a">下线</a>
-				<!-- ^^^^^^^^^^^^^^^^下线功能^^^^^^^^^^^^^^^^^^^ -->
-			</div>
-			@endif
-			<a class="gray big" href="jobs/{{$job->id}}">{{ $job->name }}</a>
-			<p class="gray">
-				工作发布于 :
-				<br>{{ $job->created_at }}</p>
-			<p class="gray" style="height: 90px;">
-				工作简介 :
-				<br>{!! mb_substr($job->description,0,150,"utf-8").'...' !!}</p>
+<div class="user_main_content">
+	<div class="user_main_left_content">
+		<div class="user_main_job_level1">
+			<ul class="user_main_job_keylist">
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+			</ul>
 		</div>
-		<div class="index_single_item_peopleinfo"></div>
-		<div class="index_single_item_peopleinfo"></div>
+		<div class="user_main_job_level2">
+			<ul class="user_main_job_keylist">
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+			</ul>
+		</div>
+		<div class="user_main_job_key">
+			<ul class="user_main_job_keylist">
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<a href="">
+					<li id="">测试</li>
+				</a>
+				<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+			</ul>
+		</div>
+		<div class="full_small_nav mid_marginbottom gray_bgcolor"></div>
+		@foreach($jobs as $job)
+		<div class="index_single_item">
+			<div class="index_single_item_jobinfo orange">
+				<div class="per50 right_padding">
+					<div class="per50">
+						<a class="big blue" href="/">{{ $job->name }}</a>
+						<p class="gray margin15">公司名称 : {{ $job->publish->name }}</p>
+						<p class="gray margin15">学历要求 : {{ $job->education }}</p>
+						<p class="gray margin15">工作地点 : {{ $job->province }}</p>
+					</div>
+					<div class="per50">
+						<div class="user_main_single_jobinfo_button">工作详情</div>
+						<p class="orange margin15">薪资 : {{ $job->salary }}</p>
+						<p class="gray margin15">工作经验 : {{ $job->experience }}</p>
+						<p class="gray margin15">发布时间 : {{ $job->updated_at }}</p>
+					</div>
+				</div>
+				<div class="per50 left_border left_padding">
+					<a class="blue big text_align_r" href="">{{ $job->publish->name }}</a>
+					<div class="index_single_item_jobinfo_company_avatar"></div>
+					<div class="index_single_item_jobinfo_company_info"></div>
+				</div>
+			</div>
+		</div>
+		<div class="line_gray"></div>
+		@endforeach
+		<div class="paginate">{{ $jobs->links() }}</div>
 	</div>
-	<div class="line_gray"></div>
-	@endforeach
-	<div class="paginate">{{ $jobs->links() }}</div>
+	<div class="user_main_right_content"></div>
 </div>
 @endsection('content')

@@ -32,12 +32,12 @@
 					<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 				</ul>
 			</div>
-        <div class="full_small_nav">
+        <div class="full_small_nav black_bgcolor">
             热门职位
         </div>
 			@foreach($jobs as $job)
-			<div class="index_single_item">
-				<div class="index_single_item_jobinfo">
+			<div class="user_single_item">
+				<div class="user_single_item_jobinfo">
 					<div class="per50">
 						<a class="big blue" href="/">{{ $job->name }}</a>
 						<p class="gray margin15">公司名称 : {{ $job->publish->name }}</p>
@@ -58,7 +58,7 @@
 			</div>
 		</div>
 		<div class="user_main_right_content">
-			div
+			
 		</div>
 	</div>
 @endsection
