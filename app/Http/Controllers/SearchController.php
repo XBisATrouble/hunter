@@ -21,7 +21,7 @@ class SearchController extends Controller
     public function searchJobsIndex()
     {
         $q=request('q');
-        $jobs=$this->job->byNameOrProvinceOrCompany($q);
-        return $jobs;
+        $jobs=$this->job->byNameOrProvinceOrCompanyOrEducationOrExperience($q);
+        return view('jobs.index',compact('jobs'));
     }
 }

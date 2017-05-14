@@ -25,10 +25,15 @@ class JobRepository
         return Job::find($id);
     }
 
-    public function byNameOrProvinceOrCompany($keyword)
+    public function byNameOrProvinceOrCompanyOrEducationOrExperience($keyword)
     {
         $company=Admin::where('name','like','%'.$keyword.'%')->pluck('id');
-        return Job::where('name','like','%'.$keyword.'%')->orWhere('province','like','%'.$keyword.'%')->orWhereIn('publisher_id',$company)->get();
+        return Job::where('name','like','%'.$keyword.'%')
+            ->orWhere('province','like','%'.$keyword.'%')
+            ->orWhere('education','like','%'.$keyword.'%')
+            ->orWhere('experience','like','%'.$keyword.'%')
+            ->orWhereIn('publisher_id',$company)
+            ->paginate(6);
     }
 
     public function byClass($name)

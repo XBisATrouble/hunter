@@ -25,6 +25,8 @@ Route::get('email/verify/{token}',['as'=>'email.verify','uses'=>'EmailController
 Route::resource('jobs','JobsController');
 Route::resource('resumes','ResumesController');
 
+Route::get('/results','SearchController@searchJobsIndex');
+
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 {
     $router->post('login', 'LoginController@login');
