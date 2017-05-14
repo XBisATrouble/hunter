@@ -40,4 +40,14 @@ class JobsClassRepository
     {
         return Job_class::where('levels','3')->get();
     }
+
+    public function getClass2ByClass1($id)
+    {
+        return Job_class::where('father_id',$id)->get();
+    }
+
+    public function getClass3ByClass2($id)
+    {
+        return Job_class::where('father_id',$id)->get();
+    }
 }

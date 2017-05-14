@@ -9,19 +9,19 @@
 <body>
 <div class="user_nav_banner">
     <div class="user_nav_content">
-        <form>
+        <form action="api/results" method="get">
             <ul class="user_nav_search_function">
             <li id="web_icon"><img src="/dist/icon.png"></li>
-            <li><a href="" class="full_a">首页</a></li>
-            <li><a href="" class="full_a">测试</a></li>
-            <li><a href="" class="full_a">求职</a></li>
-            <li><a href="" class="full_a">面经</a></li>
-            <li><a href="" class="full_a">关于</a></li>
+            <li><a href="/home" class="full_a">首页</a></li>
+            <li><a href="/test" class="full_a">测试</a></li>
+            <li><a href="/jobs" class="full_a">求职</a></li>
+            <li><a href="/experience" class="full_a">面经</a></li>
+            <li><a href="/about" class="full_a">关于</a></li>
                 <li>
-                    <input class="search_input" type="text" name="search_key" placeholder="搜索工作">
+                    <input class="search_input" type="text" name="q" placeholder="搜索工作,公司或地点">
                 </li>
                 <li id="search_button">
-                    <a class="full_a" href=""><img src="/dist/search.png"></a>
+                    <button class="full_a"><img src="/dist/search.png"></button>
                 </li>
             </ul>
         </form>
