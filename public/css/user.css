@@ -220,9 +220,13 @@ button.serach_button_submit
 }
 input.search_input
 {
+    font-weight: 300;
     width: 240px;
     height: 30px;
     padding: 0 10px;
+    font-size: 14px;
+    color: rgba(150,150,150,1);
+    letter-spacing: 2px;
 
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 5px;
@@ -722,21 +726,25 @@ input.search_input:focus
 .resume_model
 {
     width: 78%;
-    min-height: 1200px;
+    overflow: hidden;
+    min-height: 800px;
     background-color: #fff;
     box-shadow: 0 0 5px 1px rgba(100,100,100,.1);
 }
 .resume_model_edit
 {
     width: 20%;
-    min-height: 1000px;
+    overflow: hidden;
+    min-height: 800px;
     max-height: 1200px;
     background-color: #fff;
     box-shadow: 0 0 5px 1px rgba(100,100,100,.1);
 }
 .resume_model_edit_list
 {
+    float: left;
     width: 100%;
+    overflow: hidden;
     padding: 20px 20px 0 20px;
     min-height: 40px;
 }
