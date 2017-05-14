@@ -54,5 +54,11 @@
 			</div>
 		</div>
 	</div>
+	<div class="job_des_moduel_buttons">
+		<div class="job_des_moduel_buttons_banner">
+			<div class="follow_button normal_button">关注该工作</div>
+			<div class="sendresume_button normal_button">投简历</div>
+		</div>
+	</div>
 	</div>
 @endsection('content')
