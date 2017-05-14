@@ -422,3 +422,32 @@ textarea {
     -webkit-appearance: button; /* 1 */
     font: inherit; /* 2 */
 }
+
+::-webkit-scrollbar {
+    width: 6px!important;
+    height: 6px!important;
+}
+body::-webkit-scrollbar {
+    width: 6 px!important;
+    height: 6px!important;
+}
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.22)!important;
+    border-radius: 8px!important;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #343434 !important;
+    min-height: 50px;
+    border-radius: 5px!important;
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {}
+}
+body {
+    animation-name: fadein;
+    animation-duration: 0.4s;
+}
+

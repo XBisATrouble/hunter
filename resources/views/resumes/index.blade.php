@@ -18,4 +18,5 @@
 		</div>
 			<div class="resume_model"></div>
 		</div>
+		<script src="/js/user_function.js"></script>
 @endsection
