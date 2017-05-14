@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Job extends Model
 {
     protected $fillable=[
-        'name','salary','province','city','class_id','experience','education','advantage','description','address','publisher_id'
+        'name','salary','province','city','class_id','experience','education','advantage','description','address','publisher_id','followers_count'
     ];
 
     protected $hidden=[
@@ -56,5 +56,10 @@ class Job extends Model
         }
 
         return Carbon::parse($date)->diffForHumans();
+    }
+
+    public function followers()
+    {
+        return $this->belongsToMany(User::class,'user_job')->withTimestamps();
     }
 }

@@ -44,3 +44,5 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
         'index'=>'jobs.index',
     ]]);
 });
+
+Route::get('job/{job}/follow','JobFollowController@follow');

@@ -53,6 +53,11 @@
 				<p class="job_recommend_banner_company_phone p_company_info">联系电话 : {{ $job->publish->phone }}</p>
 			</div>
 		</div>
+		<div class="panel-body">
+			<a href="/job/{{ $job->id }}/follow" class="btn btn-default">
+				关注该问题
+			</a>
+		</div>
 	</div>
-	</div>
+</div>
 @endsection('content')
