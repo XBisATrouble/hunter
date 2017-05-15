@@ -11,7 +11,8 @@
         "guzzlehttp/guzzle": "~6.0",
         "laracasts/flash": "2.0.*",
         "laravel/framework": "5.3.*",
-        "naux/sendcloud": "1.1.*"
+        "naux/sendcloud": "1.1.*",
+        "uxweb/sweet-alert": "~1.4"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

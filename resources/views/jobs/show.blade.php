@@ -1,6 +1,8 @@
 @extends('layouts.userApp')
 @section('content')
 <div class="main_content">
+	<script src="/js/sweetalert.min.js"></script>
+	@include('sweet::alert')
 	<div class="job_simple_des_tag">
 		<p class="job_name">{{ $job->name }}</p>
 		<p class="job_from">Hunter</p>
@@ -63,7 +65,9 @@
 			<div id="app">
 				<job-follow-button job="{{ $job->id }}" user="{{ Auth::user()->id }}"></job-follow-button>
 			</div>
-			<div class="sendresume_button normal_button">投简历</div>
+			<div class="sendresume_button normal_button">
+				<a href="/resume/{{ $job->id }}/post">投送简历</a>
+			</div>
 		</div>
 		@else
 		<div class="job_des_moduel_buttons_banner">

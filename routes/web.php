@@ -13,7 +13,9 @@
 
 use Illuminate\Support\Facades\Input;
 
-Route::get('/', 'HomeController@index');
+Route::get('/', function (){
+    return view('welcome');
+});
 
 Auth::routes();
 
@@ -24,6 +26,7 @@ Route::get('email/verify/{token}',['as'=>'email.verify','uses'=>'EmailController
 
 Route::resource('jobs','JobsController');
 Route::resource('resumes','ResumesController');
+Route::resource('discuss','DiscussController');
 
 Route::get('/results','SearchController@searchJobsIndex');
 
@@ -48,3 +51,5 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 Route::get('job/{job}/follow','JobFollowController@follow');
 Route::get('user/followed','UserController@followed');
 Route::get('user','UserController@index');
+
+Route::get('resume/{resume}/post','JobPostController@post');

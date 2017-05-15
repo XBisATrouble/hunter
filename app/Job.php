@@ -62,4 +62,9 @@ class Job extends Model
     {
         return $this->belongsToMany(User::class,'user_job')->withTimestamps();
     }
+
+    public function posted()
+    {
+        return $this->belongsToMany(Resume::class,'resume_job')->withTimestamps();
+    }
 }

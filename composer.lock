@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c7dcf063ae029e9c75c92cf2eb9aaa5",
+    "content-hash": "706e2b973fdbf75216dea26f66e89b22",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -123,16 +123,16 @@
         },
         {
             "name": "caouecs/laravel-lang",
-            "version": "3.0.25",
+            "version": "3.0.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caouecs/Laravel-lang.git",
-                "reference": "4787a876ec8234f5e8fa8c0b2aee400d5732d631"
+                "reference": "a56d4e7a1961002cc4728fc3ef36628c0a643114"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/caouecs/Laravel-lang/4787a876ec8234f5e8fa8c0b2aee400d5732d631.zip",
-                "reference": "4787a876ec8234f5e8fa8c0b2aee400d5732d631",
+                "url": "https://files.phpcomposer.com/files/caouecs/Laravel-lang/a56d4e7a1961002cc4728fc3ef36628c0a643114.zip",
+                "reference": "a56d4e7a1961002cc4728fc3ef36628c0a643114",
                 "shasum": ""
             },
             "require-dev": {
@@ -159,7 +159,7 @@
                 "laravel",
                 "lpm"
             ],
-            "time": "2017-03-22T16:40:16+00:00"
+            "time": "2017-05-13T15:32:59+00:00"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -1302,16 +1302,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.3",
+            "version": "v0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e"
+                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/bobthecow/psysh/1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e.zip",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
+                "url": "https://files.phpcomposer.com/files/bobthecow/psysh/17cf432bb80d9198df239b80d00a29155bd74d82.zip",
+                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82",
                 "shasum": ""
             },
             "require": {
@@ -1371,7 +1371,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-03-19T21:40:44+00:00"
+            "time": "2017-05-12T15:41:55+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -1457,16 +1457,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.7",
+            "version": "v5.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4"
+                "reference": "9a06dc570a0367850280eefd3f1dc2da45aef517"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/swiftmailer/swiftmailer/56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4.zip",
-                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
+                "url": "https://files.phpcomposer.com/files/swiftmailer/swiftmailer/9a06dc570a0367850280eefd3f1dc2da45aef517.zip",
+                "reference": "9a06dc570a0367850280eefd3f1dc2da45aef517",
                 "shasum": ""
             },
             "require": {
@@ -1507,7 +1507,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2017-04-20T17:32:18+00:00"
+            "time": "2017-05-01T15:54:03+00:00"
         },
         {
             "name": "symfony/class-loader",
@@ -2344,6 +2344,57 @@
                 "dump"
             ],
             "time": "2017-01-24T13:02:38+00:00"
+        },
+        {
+            "name": "uxweb/sweet-alert",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uxweb/sweet-alert.git",
+                "reference": "d32915471455061d6257448cbb8de16ecc521331"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/uxweb/sweet-alert/d32915471455061d6257448cbb8de16ecc521331.zip",
+                "reference": "d32915471455061d6257448cbb8de16ecc521331",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/session": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "UxWeb\\SweetAlert\\": "src/SweetAlert/"
+                },
+                "files": [
+                    "src/SweetAlert/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Uziel Bueno",
+                    "email": "ux.webs@gmail.com"
+                }
+            ],
+            "description": "A simple PHP package to show Sweet Alerts with the Laravel Framework",
+            "keywords": [
+                "alert",
+                "laravel",
+                "notifier",
+                "sweet"
+            ],
+            "time": "2017-03-27T03:54:49+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

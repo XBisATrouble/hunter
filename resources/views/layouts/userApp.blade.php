@@ -5,6 +5,7 @@
     <title>Hunter</title>
     <link rel="stylesheet" type="text/css" href="/css/normallize.css">
     <link rel="stylesheet" type="text/css" href="/css/user.css"></head>
+    <link rel="stylesheet" href="/css/sweetalert.css">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Scripts -->
@@ -31,7 +32,7 @@
                         <a href="/jobs" class="full_a">求职</a>
                     </li>
                     <li>
-                        <a href="" class="full_a">面经</a>
+                        <a href="/discuss" class="full_a">面经</a>
                     </li>
                     <li>
                         <a href="" class="full_a">关于</a>
