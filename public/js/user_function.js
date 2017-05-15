@@ -5,13 +5,15 @@
 })();
 
 (function check_box_function() {
-	var trigger = document.querySelector('.checkcube');
 
-	trigger.addEventListener('click', (e) => {
-		if (e.target.className = "checkcube") {
-			e.target.className = "checkcube checkcube_checked";
-		}else{
-			e.target.className = "checkcube";
-		}
-	});
+	var trigger = document.querySelectorAll('.checkcube');
+	for (temp of trigger) {
+		temp.onclick = (e) => {
+			if (e.target.classList.length == 1) {
+				e.target.classList.add('checkcube_checked');
+			} else {
+				e.target.classList.remove('checkcube_checked');
+			}
+		};
+	}
 })();
