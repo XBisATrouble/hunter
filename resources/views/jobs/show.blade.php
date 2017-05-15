@@ -65,7 +65,7 @@
 			<div id="app">
 				<job-follow-button job="{{ $job->id }}" user="{{ Auth::user()->id }}"></job-follow-button>
 			</div>
-			<div class="sendresume_button normal_button">
+			<div class="sendresume_button normal_button" >
 				<a href="/resume/{{ $job->id }}/post">投送简历</a>
 			</div>
 		</div>
