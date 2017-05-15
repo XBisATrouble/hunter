@@ -20,3 +20,36 @@ Route::get('/user', function (Request $request) {
 Route::get('/jobType','JobsController@typeClass');
 Route::get('/jobType/{id}','JobsController@typeDivision');
 Route::get('/jobSection/{id}','JobsController@typeSection');
+
+Route::post('/job/follower',function (Request $request){
+    $followed=\App\Follow::where('job_id',$request->get('job'))
+        ->where('user_id',$request->get('user'))
+        ->count();
+    if ($followed)
+    {
+        return response()->json(['followed'=>true]);
+    }
+    else
+    {
+        return response()->json(['followed'=>false]);
+    }
+})->middleware('api');
+
+Route::post('/job/follow',function (Request $request){
+    $followed=\App\Follow::where('job_id',$request->get('job'))
+        ->where('user_id',$request->get('user'))
+        ->first();
+    if ($followed!==null)
+    {
+        $followed->delete();
+        return response()->json(['followed'=>false]);
+    }
+    else
+    {
+        \App\Follow::create([
+            'job_id'=>$request->get('job'),
+            'user_id'=>$request->get('user')
+        ]);
+        return response()->json(['followed'=>true]);
+    }
+})->middleware('api');
