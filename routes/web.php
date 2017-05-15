@@ -46,3 +46,4 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 });
 
 Route::get('job/{job}/follow','JobFollowController@follow');
+Route::get('user/followed','UserController@followed');

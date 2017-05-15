@@ -42,7 +42,7 @@
                         <img src="{{ Auth::user()->avatar }}"></div>
                 </li>
                 <li>
-                    <a class="full_a" href="">我的关注</a>
+                    <a class="full_a" href="/user/followed">我的关注</a>
                 </li>
                 <li>
                     <a class="full_a" href="/resumes">简历管理</a>
