@@ -1134,8 +1134,15 @@ p.p_company_info
     margin: 0 auto;
 }
 
+/*--------------------------------------------------*/
+.user_main_block_content
+{
+    overflow: hidden;
 
+    width: 1400px;
+    height: 160px;
+    padding: 40px 50px 0 50px;
 
-
-
-
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px rgba(22,22,22,.1);
+}

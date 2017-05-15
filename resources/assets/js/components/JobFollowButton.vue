@@ -1,6 +1,7 @@
 <template>
     <button
-            class="normal_button followed_button"
+            class="normal_button follow_button"
+            v-bind:class="{'followed_button':followed}"
             v-text="text"
             v-on:click="follow"
     ></button>

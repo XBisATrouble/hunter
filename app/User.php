@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','avatar','confirmation_token'
+        'name', 'email', 'password','avatar','confirmation_token','api_token',
     ];
 
     /**
@@ -27,9 +27,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function resumes()
+    public function resume()
     {
-        return $this->hasMany(Resume::class);
+        return $this->hasOne(Resume::class);
     }
 
     public function follows()

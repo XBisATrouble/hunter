@@ -33,7 +33,7 @@ Route::post('/job/follower',function (Request $request){
     {
         return response()->json(['followed'=>false]);
     }
-})->middleware('api');
+})->middleware('auth:api');
 
 Route::post('/job/follow',function (Request $request){
     $followed=\App\Follow::where('job_id',$request->get('job'))
@@ -52,4 +52,4 @@ Route::post('/job/follow',function (Request $request){
         ]);
         return response()->json(['followed'=>true]);
     }
-})->middleware('api');
+})->middleware('auth:api');
