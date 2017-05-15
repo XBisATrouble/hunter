@@ -70,7 +70,9 @@
 			</div>
 		</div>
 		@else
-		123
+		<div class="job_des_moduel_buttons_banner">
+		<div class="sendresume_button normal_button">登录投简历</div>
+		</div>
 		@endif
 	</div>
 </div>

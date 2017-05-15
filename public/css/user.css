@@ -40,6 +40,12 @@ span.morebig
 
     color: #fff;
 }
+a
+{
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+}
 a.full_a
 {
     display: inline-block;
@@ -210,9 +216,10 @@ div.per50
 }
 #search_button img
 {
-    cursor: pointer;
     width: 30px;
     height: 30px;
+
+    cursor: pointer;
 }
 button.serach_button_submit
 {
@@ -220,14 +227,16 @@ button.serach_button_submit
 }
 input.search_input
 {
+    font-size: 14px;
     font-weight: 300;
+
     width: 240px;
     height: 30px;
     padding: 0 10px;
-    font-size: 14px;
-    color: rgba(150,150,150,1);
+
     letter-spacing: 2px;
 
+    color: rgba(150,150,150,1);
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 5px;
     outline: none;
@@ -371,13 +380,52 @@ input.search_input:focus
 
     color: rgba(0,0,0,.8);
 }
+.li_nohover_bgcolor:hover
+{
+    color: rgba(0,0,0,.8) !important;
+    background-color: rgba(0,0,0,0) !important;
+}
+
 .user_main_job_keylist li:hover
 {
     color: rgba(241,241,241,1);
     background-color: rgba(0,146,210,1);
 }
+.user_main_job_keylist_order
+{
+    display: flex;
+    overflow: hidden;
 
+    width: 900px;
+    min-height: 40px;
+    max-height: 144px;
 
+    flex-wrap: wrap;
+}
+.user_main_job_keylist_order a
+{
+    display: inline-block;
+    padding: 0 10px;
+}
+.user_main_job_keylist_order li
+{
+    min-width: 70px;
+    font-size: 15px;
+    line-height: 40px;
+
+    height: 40px;
+    padding: 0 10px;
+
+    -webkit-transition: all .1s;
+         -o-transition: all .1s;
+            transition: all .1s;
+    text-align: center;
+}
+.user_main_job_keylist_order a:hover
+{
+    color: #fff;
+    background-color: rgba(0,146,210,1);
+}
 
 
 
@@ -412,10 +460,6 @@ input.search_input:focus
          -o-transition: all .1s;
             transition: all .1s;
 }
-.user_single_item a:hover
-{
-    color: rgba(0,146,210,1);
-}
 .user_single_item_jobinfo
 {
     position: relative;
@@ -447,7 +491,10 @@ input.search_input:focus
     border-radius: 5px;
     background-color: rgba(0,146,210,.8);
 }
-
+.user_main_single_jobinfo_button a:hover
+{
+    color:rgba(255,255,255,1);
+}
 
 
 
@@ -491,10 +538,6 @@ input.search_input:focus
          -o-transition: all .1s;
             transition: all .1s;
 }
-.index_single_item a:hover
-{
-    color: rgba(0,146,210,1);
-}
 .index_single_item_jobinfo
 {
     position: relative;
@@ -536,25 +579,6 @@ input.search_input:focus
     color: #fff;
     border-radius: 5px;
     background-color: rgba(0,146,210,1);
-}
-.index_single_item_jobinfo_company_avatar
-{
-    position: absolute;
-    width: 140px;
-    height: 140px;
-    right: 0;
-    bottom: 0;
-    background-color: red;
-}
-.index_single_item_jobinfo_company_info
-{
-    padding-left: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: pink;
-    height: 140px;
-    width: 270px;
 }
 
 
@@ -725,65 +749,80 @@ input.search_input:focus
 
 .resume_model
 {
-    width: 78%;
     overflow: hidden;
+
+    width: 78%;
     min-height: 800px;
+
     background-color: #fff;
     box-shadow: 0 0 5px 1px rgba(100,100,100,.1);
 }
 .resume_model_edit
 {
-    width: 20%;
     overflow: hidden;
+
+    width: 20%;
     min-height: 800px;
     max-height: 1200px;
+
     background-color: #fff;
     box-shadow: 0 0 5px 1px rgba(100,100,100,.1);
 }
 .resume_model_edit_list
 {
+    position: relative;
     float: left;
-    width: 100%;
     overflow: hidden;
-    padding: 20px 20px 0 20px;
+
+    width: 100%;
     min-height: 40px;
+    padding: 20px 20px 0 20px;
 }
 .resume_model_edit_list > li
 {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-bottom: 20px;
     line-height: 40px;
+
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
     padding-left: 10px;
+
     border-bottom: 1px solid rgba(241,241,241,1);
 }
 .checkcube
 {
-    cursor: pointer;
-    right: 10px;
-    top: 10px;
     position: absolute;
+    top: 10px;
+    right: 10px;
+
     width: 20px;
     height: 20px;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
+
+    cursor: pointer;
+    -webkit-transition: all .4s;
+         -o-transition: all .4s;
+            transition: all .4s;
+
     border: 3px solid rgba(241,241,241,1);
 }
 .checkcube_checked
 {
     top: 10px;
+
+    width: 20px;
+    height: 12px;
+
     -webkit-transform: rotate(-50deg);
-    -ms-transform: rotate(-50deg);
-    -o-transform: rotate(-50deg);
-    transform: rotate(-50deg);
+        -ms-transform: rotate(-50deg);
+         -o-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+
     border-top: 3px solid rgba(0,146,210,0);
     border-right: 3px solid rgba(0,146,210,0);
-    border-left: 3px solid rgba(0,146,210,1);
     border-bottom: 3px solid rgba(0,146,210,1);
-    height: 12px;
-    width: 20px;
+    border-left: 3px solid rgba(0,146,210,1);
 }
 
 
@@ -1031,18 +1070,26 @@ p.p_company_info
 }
 .normal_button
 {
+    font-size: 24px;
+    line-height: 60px;
+
     width: 200px;
     height: 60px;
     margin-bottom: 30px;
-    border-radius: 5px;
-    font-size: 24px;
-    color: #fff;
-    line-height: 60px;
-    text-align: center;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
+
     cursor: pointer;
+    -webkit-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+    text-align: center;
+
+    color: #fff;
+    border: 1px solid rgba(255,255,255,1);
+    border-radius: 5px;
+}
+.normal_button:focus
+{
+    outline: none;
 }
 .normal_button:hover
 {
@@ -1064,26 +1111,28 @@ p.p_company_info
 
 .job_des_moduel_buttons
 {
-    width: 400px;
     position: absolute;
     top: 500px;
     right: 40px;
+
+    width: 400px;
     height: 200px;
 }
 .job_des_moduel_buttons_banner
 {
-    padding-top: 30px;
     overflow: hidden;
+
     width: 200px;
     height: 200px;
     margin: 0 auto;
+    padding-top: 30px;
 }
 
 
 .main_content
 {
-    z-index: 1;
     position: relative;
+    z-index: 1;
 
     width: 1400px;
     min-height: 800px;
