@@ -5,6 +5,14 @@
     <title>Hunter</title>
     <link rel="stylesheet" type="text/css" href="/css/normallize.css">
     <link rel="stylesheet" type="text/css" href="/css/user.css"></head>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Scripts -->
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
 <body>
     <div class="user_nav_banner">
         <div class="user_nav_content">
@@ -42,7 +50,7 @@
                         <img src="{{ Auth::user()->avatar }}"></div>
                 </li>
                 <li>
-                    <a class="full_a" href="">我的关注</a>
+                    <a class="full_a" href="/user/followed">我的关注</a>
                 </li>
                 <li>
                     <a class="full_a" href="/resumes">简历管理</a>
@@ -73,5 +81,6 @@
         <div class="user_bottom_content"></div>
     </div>
     <script src="/js/user_function.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>

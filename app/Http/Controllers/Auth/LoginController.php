@@ -82,4 +82,19 @@ class LoginController extends Controller
             $credentials, $request->has('remember')
         );
     }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->flush();
+
+        $request->session()->regenerate();
+
+        return back();
+    }
 }

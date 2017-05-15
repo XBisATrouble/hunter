@@ -31,4 +31,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Resume::class);
     }
+
+    public function follows()
+    {
+        return $this->belongsToMany(Job::class,'user_job')->withTimestamps();
+    }
+
+    public function followThis($job)
+    {
+        $this->follows()->toggle($job);
+    }
+
+    public function followed($job)
+    {
+        return !!$this->follows()->where('job_id',$job)->count();
+    }
 }

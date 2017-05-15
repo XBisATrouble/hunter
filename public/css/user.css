@@ -1057,6 +1057,11 @@ p.p_company_info
     background-color: rgba(0,146,210,1);
 }
 
+.followed_button
+{
+    background-color: rgba(180,180,180,1);
+}
+
 .job_des_moduel_buttons
 {
     width: 400px;

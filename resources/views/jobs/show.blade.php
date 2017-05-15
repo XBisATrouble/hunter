@@ -50,15 +50,24 @@
 					公司首页 :
 					<a href="{{ $job->publish->home_url }}">{{ $job->publish->name }}</a>
 				</p>
-				<p class="job_recommend_banner_company_phone p_company_info">联系电话 : {{ $job->publish->phone }}</p>
+				<p class="job_recommend_banner_company_phone p_company_info">联系电话 : {{ $job->publish->phone }} </p>
 			</div>
 		</div>
 	</div>
 	<div class="job_des_moduel_buttons">
+		@if(Auth::check())
 		<div class="job_des_moduel_buttons_banner">
-			<div class="follow_button normal_button">关注该工作</div>
+			{{--<div class="normal_button {{ Auth::user()->followed($job->id)?'followed_button':'follow_button' }}">--}}
+				{{--<a href="/job/{{ $job->id }}/follow">{{ Auth::user()->followed($job->id)?'已关注':'关注该工作' }}</a>--}}
+			{{--</div>--}}
+			<div id="app">
+				<job-follow-button job="{{ $job->id }}" user="{{ Auth::user()->id }}"></job-follow-button>
+			</div>
 			<div class="sendresume_button normal_button">投简历</div>
 		</div>
+		@else
+		123
+		@endif
 	</div>
-	</div>
+</div>
 @endsection('content')

@@ -58,7 +58,7 @@
 			</div>
 		</div>
 		<div class="user_main_right_content">
-			
+
 		</div>
 	</div>
 @endsection
