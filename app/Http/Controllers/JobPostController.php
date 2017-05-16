@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Notifications\NewResumePostNotification;
 use App\Repositories\JobRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -39,6 +40,7 @@ class JobPostController extends Controller
         }
         //Auth::user()->resume->postThis($job);      //此方法不能实现企业与简历关联
         Auth::user()->resume->postThisV2($jobModel);
+        $jobModel->publish->notify(new NewResumePostNotification());
         $jobModel->increment('resumes_count');
         Alert::success('投送成功!')->persistent("关闭");
         return back();

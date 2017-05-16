@@ -7,6 +7,15 @@
     <link rel="stylesheet" type="text/css" href="/css/normallize.css">
     <link rel="stylesheet" type="text/css" href="/css/postJob.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Scripts -->
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>;
+        Laravel.apiToken = "{{ Auth::check() ? 'Bearer '.Auth::user()->api_token : 'Bearer ' }}";
+    </script>
 </head>
 <body>
     <div class="nav_banner">
@@ -39,8 +48,9 @@
                 <li>
                     <a href="">{{ Auth::guard('admin')->user()->name }}</a>
                     <ul class="nav_user_menu">
-                        <li>示例连接</li>
-                        <li>示例连接</li>
+                        <li>
+                            <a href="/admin/notifications">我的消息</a>
+                        </li>
                         <li>
                             <a id="logout" href="{{ url('/logout') }}"
                         onclick="event.preventDefault();
