@@ -32,6 +32,11 @@ class User extends Authenticatable
         return $this->hasOne(Resume::class);
     }
 
+    public function hasResume()
+    {
+        return !!$this->resume()->count();
+    }
+
     public function follows()
     {
         return $this->belongsToMany(Job::class,'user_job')->withTimestamps();
@@ -39,7 +44,7 @@ class User extends Authenticatable
 
     public function followThis($job)
     {
-        $this->follows()->toggle($job);
+        return $this->follows()->toggle($job);
     }
 
     public function followed($job)

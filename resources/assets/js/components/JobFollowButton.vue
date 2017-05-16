@@ -9,9 +9,9 @@
 
 <script>
     export default {
-        props:['job','user'],
+        props:['job'],
         mounted() {
-            this.$http.post('/api/job/follower',{'job':this.job,'user':this.user}).then(response => {
+            this.$http.post('/api/job/follower',{'job':this.job}).then(response => {
                 this.followed=response.data.followed
             })
         },
@@ -27,7 +27,7 @@
         },
         methods:{
             follow(){
-                this.$http.post('/api/job/follow',{'job':this.job,'user':this.user}).then(response => {
+                this.$http.post('/api/job/follow',{'job':this.job}).then(response => {
                     this.followed=response.data.followed
                 })
             }

@@ -22,4 +22,13 @@ class Resume extends Model
     {
         return $this->post()->toggle($job);
     }
+
+    public function postThisV2($job)
+    {
+        return Post::create([
+            'resume_id'=>$this->id,
+            'job_id'=>$job->id,
+            'admin_id'=>$job->publish->id
+        ]);
+    }
 }

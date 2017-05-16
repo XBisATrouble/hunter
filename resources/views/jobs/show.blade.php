@@ -63,15 +63,23 @@
 				{{--<a href="/job/{{ $job->id }}/follow">{{ Auth::user()->followed($job->id)?'已关注':'关注该工作' }}</a>--}}
 			{{--</div>--}}
 			<div id="app">
-				<job-follow-button job="{{ $job->id }}" user="{{ Auth::user()->id }}"></job-follow-button>
+				<job-follow-button job="{{ $job->id }}"></job-follow-button>
 			</div>
-			<div class="sendresume_button normal_button" >
+			@if(Auth::user()->hasResume())
+			<div class="normal_button {{ $job->hasPosted(Auth::user()->resume->id) ? 'followed_button' : 'sendresume_button ' }}">
+				<a href="/resume/{{ $job->id }}/post">{{ $job->hasPosted(Auth::user()->resume->id) ? '已投送' : '投送简历' }}</a>
+			</div>
+			@else
+			<div class="normal_button sendresume_button">
 				<a href="/resume/{{ $job->id }}/post">投送简历</a>
 			</div>
+			@endif
 		</div>
 		@else
 		<div class="job_des_moduel_buttons_banner">
-		<div class="sendresume_button normal_button">登录投简历</div>
+		<div class="sendresume_button normal_button">
+			<a href="/login">登录投简历</a>
+		</div>
 		</div>
 		@endif
 	</div>

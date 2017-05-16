@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use App\Job;
+use App\Post;
+use App\Resume;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -31,5 +34,15 @@ class Admin extends Authenticatable
     public function owns(Model $model)
     {
         return $this->id == $model->publisher_id;
+    }
+
+    public function jobs()
+    {
+        return $this->hasMany(Job::class,'publisher_id','id');
+    }
+
+    public function resumes()
+    {
+        return $this->hasMany(Post::class);
     }
 }

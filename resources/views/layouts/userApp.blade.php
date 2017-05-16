@@ -35,7 +35,7 @@
                         <a href="/discuss" class="full_a">面经</a>
                     </li>
                     <li>
-                        <a href="" class="full_a">关于</a>
+                        <a href="/about" class="full_a">关于</a>
                     </li>
                     <li>
                         <input class="search_input" type="text" name="q" placeholder="搜索职位,公司或地点"></li>

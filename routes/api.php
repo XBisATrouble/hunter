@@ -22,9 +22,8 @@ Route::get('/jobType/{id}','JobsController@typeDivision');
 Route::get('/jobSection/{id}','JobsController@typeSection');
 
 Route::post('/job/follower',function (Request $request){
-    $followed=\App\Follow::where('job_id',$request->get('job'))
-        ->where('user_id',$request->get('user'))
-        ->count();
+    $user = Auth::guard('api')->user();
+    $followed=$user->followed($request->get('job'));
     if ($followed)
     {
         return response()->json(['followed'=>true]);
@@ -36,20 +35,16 @@ Route::post('/job/follower',function (Request $request){
 })->middleware('auth:api');
 
 Route::post('/job/follow',function (Request $request){
-    $followed=\App\Follow::where('job_id',$request->get('job'))
-        ->where('user_id',$request->get('user'))
-        ->first();
-    if ($followed!==null)
+    $user = Auth::guard('api')->user();
+    $job=\App\Job::find($request->get('job'));
+    $followed=$user->followThis($job->id);
+
+    if (count($followed['detached']) > 0)
     {
-        $followed->delete();
+        $job->decrement('followers_count');
         return response()->json(['followed'=>false]);
     }
-    else
-    {
-        \App\Follow::create([
-            'job_id'=>$request->get('job'),
-            'user_id'=>$request->get('user')
-        ]);
-        return response()->json(['followed'=>true]);
-    }
+
+    $job->increment('followers_count');
+    return response()->json(['followed'=>true]);
 })->middleware('auth:api');

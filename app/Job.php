@@ -67,4 +67,9 @@ class Job extends Model
     {
         return $this->belongsToMany(Resume::class,'resume_job')->withTimestamps();
     }
+
+    public function hasPosted($resume)
+    {
+        return !!$this->posted()->where('resume_id',$resume)->count();
+    }
 }

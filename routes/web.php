@@ -13,8 +13,9 @@
 
 use Illuminate\Support\Facades\Input;
 
-Route::get('/', function (){
-    return view('welcome');
+Route::get('/','HomeController@index');
+Route::get('/about',function (){
+    return view('about');
 });
 
 Auth::routes();
