@@ -87,6 +87,12 @@
 					document.querySelector('.resume_user_essay_info_banner').style.setProperty('display','none');
 				}
 			}
-		};
+		}
 	}
+
+	let button = document.querySelector('.submit_resume_button_trigger');
+
+	button.onclick = ()=>{
+		document.querySelector('.submit_resume_button').click();
+	};
 })();

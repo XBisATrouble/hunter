@@ -868,6 +868,20 @@ input.search_input:focus
 
     border-bottom: 1px solid rgba(241,241,241,1);
 }
+.submit_resume_button_trigger
+{
+    width: 180px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    height: 40px;
+    text-align:center;
+    cursor: pointer;
+    color: #fff;
+    line-height: 40px;
+    font-size: 18px;
+    background-color: rgba(0,146,210,1);
+}
 
 
 
