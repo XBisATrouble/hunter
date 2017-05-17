@@ -47,7 +47,8 @@ input:focus
 {
     outline: none;
 }
-input.nomarginbottom,textarea.nomarginbottom
+input.nomarginbottom,
+textarea.nomarginbottom
 {
     margin-bottom: 0;
 }
@@ -119,13 +120,13 @@ div.per20
     width: 20%;
     height: 100%;
 }
-div.per30
+div.per33
 {
     position: relative;
 
     float: left;
 
-    width: 30%;
+    width: 33%;
     height: 100%;
 }
 div.per50
@@ -550,7 +551,6 @@ input.search_input:focus
 
     position: relative;
 
-    width: 90px;
     height: 32px;
 
     cursor: pointer;
@@ -563,16 +563,36 @@ input.search_input:focus
     border-radius: 5px;
     background-color: rgba(0,146,210,.8);
 }
-#user_main_single_advance
+.user_main_single_advance
 {
     line-height: 32px;
 
-    width: 280px;
-    max-height: 32px;
+    position: absolute;
+    left: 37%;
+    max-width: 220px;
+
+    height: 32px;
     padding: 0 10px;
 
+    -webkit-transition: all .1s;
+         -o-transition: all .1s;
+            transition: all .1s;
+
     color: rgba(255,255,255,.8);
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0,146,210,1)
+}
+.user_main_single_advance_tag_tan
+{
+    position: absolute;
+    left: -15px;
+    top: 0;
+
+    width: 0;
+    height: 0;
+
+    border-width: 16px 15px 16px 0;
+    border-style: solid;
+    border-color: transparent rgba(0,146,210,1) transparent transparent;
 }
 .user_main_single_jobinfo_button a:hover
 {
@@ -630,6 +650,10 @@ input.search_input:focus
     width: 900px;
     height: 130px;
     padding: 0 20px 0 50px;
+}
+.index_single_item_jobinfo .small
+{
+    width: 100px;
 }
 .index_single_item_jobinfo_salary
 {
@@ -865,7 +889,6 @@ input.search_input:focus
 }
 .resume_model_edit_list > li
 {
-    cursor: pointer;
     line-height: 40px;
 
     position: relative;
@@ -875,20 +898,25 @@ input.search_input:focus
     margin-bottom: 20px;
     padding-left: 10px;
 
+    cursor: pointer;
+
     border-bottom: 1px solid rgba(241,241,241,1);
 }
 .submit_resume_button_trigger
 {
+    font-size: 18px;
+    line-height: 40px;
+
     width: 180px;
+    height: 40px;
     margin: 0 auto;
     margin-top: 20px;
-    border-radius: 5px;
-    height: 40px;
-    text-align:center;
+
     cursor: pointer;
+    text-align: center;
+
     color: #fff;
-    line-height: 40px;
-    font-size: 18px;
+    border-radius: 5px;
     background-color: rgba(0,146,210,1);
 }
 
@@ -1008,6 +1036,7 @@ input.search_input:focus
     padding: 50px;
 
     cursor: pointer;
+
     background-color: #eee;
 }
 
