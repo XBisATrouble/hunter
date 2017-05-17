@@ -14,7 +14,8 @@ li
 div,
 li,
 ul,
-input
+input,
+textarea
 {
     box-sizing: border-box;
     margin: 0;
@@ -39,6 +40,10 @@ select
     outline: none;
 }
 input:focus
+{
+    outline: none;
+}
+textarea:focus
 {
     outline: none;
 }
@@ -550,6 +555,17 @@ input.search_input:focus
     border-radius: 5px;
     background-color: rgba(0,146,210,.8);
 }
+#user_main_single_advance
+{
+    line-height: 32px;
+
+    width: 280px;
+    max-height: 32px;
+    padding: 0 10px;
+
+    color: rgba(255,255,255,.8);
+    background-color: rgba(0,0,0,.2);
+}
 .user_main_single_jobinfo_button a:hover
 {
     color: rgba(255,255,255,1);
@@ -578,7 +594,7 @@ input.search_input:focus
     overflow: hidden;
 
     width: 900px;
-    height: 180px;
+    height: 130px;
     margin-bottom: 50px;
 
     -webkit-transition: all .2s;
@@ -604,7 +620,7 @@ input.search_input:focus
     float: left;
 
     width: 900px;
-    height: 180px;
+    height: 130px;
     padding: 0 20px 0 50px;
 }
 .index_single_item_jobinfo_salary
@@ -852,34 +868,35 @@ input.search_input:focus
 
     border-bottom: 1px solid rgba(241,241,241,1);
 }
-.single_info_banner
+.submit_resume_button_trigger
 {
-    width: 100%;
-    padding: 30px;
+    width: 180px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    height: 40px;
+    text-align:center;
+    cursor: pointer;
+    color: #fff;
+    line-height: 40px;
+    font-size: 18px;
+    background-color: rgba(0,146,210,1);
+}
 
-    color: rgba(0,0,0,.5);
-    overflow: hidden;
-}
-.resume_user_base_info_banner
-{
-    height: 355px;
-}
-.resume_user_base_info
-{
-    padding-left: 50px;
-    border-left: 5px solid rgba(0,0,0,.2);
-}
-.resume_user_pic
-{
-    padding: 50px;
 
-    background-color: #eee;
-}
+
+
+
+
+
 .single_info_banner input
 {
+    font-size: 14px;
+
     width: 350px;
     height: 35px;
     margin-bottom: 25px;
+    margin-left: 20px;
     padding: 0 10px;
 
     -webkit-transition: all .1s;
@@ -889,7 +906,25 @@ input.search_input:focus
     color: rgba(0,0,0,.5);
     border: 1px solid rgba(0,0,0,.2);
     border-radius: 3px;
-    margin-left: 20px;
+}
+.single_info_banner textarea
+{
+    font-size: 16px;
+
+    width: 80%;
+    height: 120px;
+    margin-top: 20px;
+    padding: 10px 10px;
+
+    resize: none;
+    -webkit-transition: all .1s;
+         -o-transition: all .1s;
+            transition: all .1s;
+    letter-spacing: 1px;
+
+    color: rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3px;
 }
 .single_info_banner input.small
 {
@@ -907,6 +942,63 @@ input.search_input:focus
 {
     border: 1px solid rgba(0,146,210,.6);
     box-shadow: 0 0 3px 1px rgba(0,146,210,.6);
+}
+.single_info_banner textarea:focus
+{
+    border: 1px solid rgba(0,146,210,.6);
+    box-shadow: 0 0 3px 1px rgba(0,146,210,.6);
+}
+.single_info_banner
+{
+    overflow: hidden;
+
+    width: 100%;
+    padding: 30px;
+
+    color: rgba(0,0,0,.5);
+}
+.resume_user_base_info_banner
+{
+    height: 355px;
+}
+.resume_user_edu_info_banner,
+.resume_user_project_info_banner,
+.resume_user_schoolexp_info_banner,
+.resume_user_company_info_banner,
+{
+    height: 260px;
+}
+.resume_user_hope_info_banner
+{
+    height: 155px;
+}
+.resume_user_price_info_banner,
+.resume_user_self_info_banner,
+.resume_user_essay_info_banner,
+.resume_user_skill_info_banner
+{
+    height: 225px;
+}
+.resume_user_base_info,
+.resume_user_project_info,
+.resume_user_edu_info,
+.resume_user_hope_info,
+.resume_user_schoolexp_info,
+.resume_user_company_info,
+.resume_user_price_info,
+.resume_user_skill_info,
+.resume_user_self_info,
+.resume_user_essay_info
+{
+    padding-left: 50px;
+
+    border-left: 5px solid rgba(0,0,0,.2);
+}
+.resume_user_pic
+{
+    padding: 50px;
+
+    background-color: #eee;
 }
 
 
@@ -1293,6 +1385,9 @@ p.p_company_info
 
 .user_bottom_banner
 {
+    position: relative;
+    top: 60px;
+
     width: 100%;
 
     background-color: rgba(22,22,22,1);
