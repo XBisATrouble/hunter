@@ -89,4 +89,15 @@ class LoginController extends Controller
             $credentials, $request->has('remember')
         );
     }
+
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->flush();
+
+        $request->session()->regenerate();
+
+        return redirect('/home');
+    }
 }

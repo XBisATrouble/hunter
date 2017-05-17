@@ -39,8 +39,8 @@ class JobPostController extends Controller
             return back();
         }
         //Auth::user()->resume->postThis($job);      //此方法不能实现企业与简历关联
-        Auth::user()->resume->postThisV2($jobModel);
-        $jobModel->publish->notify(new NewResumePostNotification());
+        $newPostResume=Auth::user()->resume->postThisV2($jobModel);
+        $jobModel->publish->notify(new NewResumePostNotification($newPostResume));
         $jobModel->increment('resumes_count');
         Alert::success('投送成功!')->persistent("关闭");
         return back();
