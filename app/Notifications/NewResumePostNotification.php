@@ -2,6 +2,8 @@
 
 namespace App\Notifications;
 
+use App\Job;
+use App\Post;
 use Auth;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
@@ -12,14 +14,15 @@ class NewResumePostNotification extends Notification
 {
     use Queueable;
 
+    protected $post;
+
     /**
-     * Create a new notification instance.
-     *
-     * @return void
+     * NewResumePostNotification constructor.
+     * @param Post $post
      */
-    public function __construct()
+    public function __construct(Post $post)
     {
-        //
+        $this->post=$post;
     }
 
     /**
@@ -35,8 +38,12 @@ class NewResumePostNotification extends Notification
 
     public function toDatabase($notifiable)
     {
+        $job=Job::find($this->post->job_id)->name;
         return [
             'name'=>Auth::user()->name,
+            'job_id'=>$this->post->job_id,
+            'resume_id'=> $this->post->resume_id,
+            'job'=>$job,
         ];
     }
     

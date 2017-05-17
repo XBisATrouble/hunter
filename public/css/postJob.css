@@ -1203,3 +1203,34 @@ span.numofpeople
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
+.notification
+{
+    padding-left: 250px;
+    padding-right: 250px;
+
+}
+.notification_head
+{
+    padding:30px 40px 0px 40px;
+}
+.notification_head > img
+{
+    margin-right: 7px;
+}
+.notification_content
+{
+    margin: 0 35px 0px 35px;
+}
+.notification_content > li > img
+{
+    margin-right: 7px;
+}
+.notification_message
+{
+    margin: 5px 0 0 0 ;
+}
+
+.notification_message > a
+{
+    color:dodgerblue;
+}

@@ -89,22 +89,33 @@
 				<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 			</ul>
 		</div>
+		@if(isset($q))
 		<div class="full_small_nav mid_marginbottom">
 			<div class="user_main_job_key">
 				<ul class="user_main_job_keylist">
-					<li class="black">排序方式：</li>
+					<li class="black">当前搜索内容：</li>
 					<a href="">
-						<li id="">相关度</li>
-					</a>
-					<a href="">
-						<li id="">日期</li>
-					</a>
-					<a href="">
-						<li id="">公司</li>
+						<li id="" style="color: rgba(241,241,241,1);background-color: rgba(0,146,210,1);">{{ $q==null?'不限':$q }}</li>
 					</a>
 				</ul>
 			</div>
 		</div>
+		@else
+			<div class="full_small_nav mid_marginbottom">
+				<div class="user_main_job_key">
+					<ul class="user_main_job_keylist">
+						<li class="black">排序方式：</li>
+						<a href="">
+							<li id="">默认排序</li>
+						</a>
+						<a href="">
+							<li id="">时间</li>
+						</a>
+					</ul>
+				</div>
+			</div>
+		@endif
+
 		@foreach($jobs as $job)
 		<div class="index_single_item">
 			<div class="index_single_item_jobinfo orange">

@@ -22,6 +22,6 @@ class SearchController extends Controller
     {
         $q=request('q');
         $jobs=$this->job->byNameOrProvinceOrCompanyOrEducationOrExperience($q);
-        return view('jobs.index',compact('jobs'));
+        return view('jobs.index',compact('jobs','q'));
     }
 }

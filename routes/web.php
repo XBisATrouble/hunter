@@ -49,6 +49,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     ]]);
 
     $router->get('notifications','NotificationsController@index');
+    $router->resource('resumes','ResumesController');
 });
 
 Route::get('job/{job}/follow','JobFollowController@follow');

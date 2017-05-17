@@ -21,32 +21,31 @@
     <div class="nav_banner">
         <div class="nav">
             <ul class="nav_list">
-                <li>
-                    <a href="">面试管理</a>
+                <li class="icon" style="padding: 15px 25px">
+                    <img src="/dist/icon.png">
                 </li>
                 <li>
-                    <a href="">简历管理</a>
-                </li>
-                <li>
-                    <a href="">找简历</a>
-                </li>
-                <li>
-                    <a href="/admin/jobs">职位管理</a>
+                    <a href="/admin" class="full_a">首页</a>
                 </li>
                 <li>
                     <a href="/admin/jobs/create">发布职位</a>
                 </li>
                 <li>
-                    <a href="/admin" class="full_a">首页</a>
+                    <a href="/admin/jobs">职位管理</a>
                 </li>
-                <li class="icon" style="padding: 15px 25px">
-                    <img src="/dist/icon.png"></li>
+                <li>
+                    <a href="/admin/resumes">简历管理</a>
+                </li>
+                <li>
+                    <a href="">面试管理</a>
+                </li>
             </ul>
             <ul class="nav_user_function">
                 <li class="avatar">
-                    <img src="{{ Auth::guard('admin')->user()->avatar }}"></li>
+                    <img src="{{ Auth::guard('admin')->user()->avatar }}">
+                </li>
                 <li>
-                    <a href="">{{ Auth::guard('admin')->user()->name }}</a>
+                    {{ Auth::guard('admin')->user()->name }}
                     <ul class="nav_user_menu">
                         <li>
                             <a href="/admin/notifications">我的消息</a>
