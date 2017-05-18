@@ -1326,3 +1326,30 @@ span.numofpeople
 {
     color: #4b4b4b;
 }
+
+
+
+/*resume single*/
+.resume_banner
+{
+    width: 1100px;
+    min-height: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.resume_left_banner
+{
+    width: 300px;
+    min-height: 1200px;
+    float: left;
+    background-color: #254665;
+    overflow: hidden;
+}
+.resume_right_banner
+{
+    min-height: 1200px;
+    width: 800px;
+    background-color: #fff;
+    float: right;
+    overflow: hidden;
+}
