@@ -137,11 +137,11 @@
 					<div class="user_main_single_jobinfo_button small">
 						<a href="jobs/{{ $job->id }}">工作详情</a>
 					</div>
-					<p class="blue margin15">
-					<span class="gray">查看公司工作 : </span>
+					<p class="blue margin15" >
+						<span class="gray">查看公司工作 :</span>
 						<a href="/results?q={{ $job->
-							publish->name }}" style=" color: rgba(0,146,210,1)">{{ $job->publish->name }}
-						</a>
+							publish->name }}" class="inline_block_a" style="color: rgba(0,146,210,1)">
+							百度百科有限公司</a>
 					</p>
 					<p class="gray margin15">发布时间 : {{ $job->updated_at }}</p>
 				</div>
