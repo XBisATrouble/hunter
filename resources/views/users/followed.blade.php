@@ -1,9 +1,9 @@
 @extends('layouts.userApp')
 @section('content')
-    <div class="user_main_content">
-        <div class="user_main_left_content">
-            @foreach($jobs as $job)
-                <div class="index_single_item">
+<div class="user_main_content">
+    <div class="user_main_left_content">
+        @foreach($jobs as $job)
+        <div class="index_single_item">
             <div class="index_single_item_jobinfo orange">
                 <div class="user_main_single_advance">
                     {{ $job->advantage }}
@@ -24,7 +24,7 @@
                         <a href="jobs/{{ $job->id }}">工作详情</a>
                     </div>
                     <p class="blue margin15">
-                    <span class="gray">查看公司工作 : </span>
+                        <span class="gray">查看公司工作 :</span>
                         <a href="/results?q={{ $job->
                             publish->name }}" style=" color: rgba(0,146,210,1)">{{ $job->publish->name }}
                         </a>
@@ -34,8 +34,8 @@
             </div>
         </div>
         <div class="line_gray"></div>
-            @endforeach
-        </div>
-        <div class="user_main_right_content"></div>
+        @endforeach
     </div>
+    <div class="user_main_right_content"></div>
+</div>
 @endsection('content')
