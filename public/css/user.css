@@ -452,16 +452,15 @@ input.search_input:focus
 
     color: rgba(0,0,0,.8);
 }
-.li_nohover_bgcolor:hover
-{
-    color: rgba(0,0,0,.8) !important;
-    background-color: rgba(0,0,0,0) !important;
-}
-
 .user_main_job_keylist li:hover
 {
     color: rgba(241,241,241,1);
     background-color: rgba(0,146,210,1);
+}
+.li_nohover_bgcolor:hover
+{
+    color: rgba(0,0,0,.8) !important;
+    background-color: rgba(0,0,0,0) !important;
 }
 .user_main_job_keylist_order
 {

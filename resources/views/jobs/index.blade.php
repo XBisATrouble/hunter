@@ -93,7 +93,7 @@
 		<div class="full_small_nav mid_marginbottom">
 			<div class="user_main_job_key">
 				<ul class="user_main_job_keylist">
-					<li class="black">当前搜索内容：</li>
+					<li class="black li_nohover_bgcolor">当前搜索内容：</li>
 					<a href="">
 						<li id="" style="color: rgba(241,241,241,1);background-color: rgba(0,146,210,1);">{{ $q==null?'不限':$q }}</li>
 					</a>
@@ -104,7 +104,7 @@
 		<div class="full_small_nav mid_marginbottom">
 			<div class="user_main_job_key">
 				<ul class="user_main_job_keylist">
-					<li class="black">排序方式：</li>
+					<li class="black li_nohover_bgcolor">排序方式：</li>
 					<a href="">
 						<li id="">默认排序</li>
 					</a>
