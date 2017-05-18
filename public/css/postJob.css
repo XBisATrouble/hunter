@@ -1211,12 +1211,17 @@ span.numofpeople
 }
 .notification_head
 {
-    padding:30px 40px 0px 40px;
+    padding:30px 40px 20px 40px;
 }
 .notification_head > img
 {
     margin-right: 7px;
 }
+.notification_banner
+{
+    float: left;
+}
+
 .notification_content
 {
     margin: 0 35px 0px 35px;
@@ -1227,10 +1232,14 @@ span.numofpeople
 }
 .notification_message
 {
-    margin: 5px 0 0 0 ;
+    margin: 10px 0 0 0 ;
 }
 
 .notification_message > a
 {
     color:dodgerblue;
+}
+.notification_banner > a
+{
+    color:#4b4b4b;
 }

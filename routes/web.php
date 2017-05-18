@@ -33,8 +33,8 @@ Route::get('/results','SearchController@searchJobsIndex');
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 {
-    $router->post('login', 'LoginController@login');
-    $router->post('logout', 'LoginController@logout');
+    $router->post('/login', 'LoginController@login');
+    $router->post('/logout', 'LoginController@logout');
 
     $router->get('/', 'DashboardController@index');
     $router->post('/register','RegisterController@register');
@@ -49,6 +49,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     ]]);
 
     $router->get('notifications','NotificationsController@index');
+    $router->get('notifications/all','NotificationsController@all');
     $router->resource('resumes','ResumesController');
 });
 

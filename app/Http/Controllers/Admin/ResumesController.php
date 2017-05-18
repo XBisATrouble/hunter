@@ -15,4 +15,9 @@ class ResumesController
     {
         return view('admin.resumes.index');
     }
+
+    public function show()
+    {
+        return view('admin.resumes.show');
+    }
 }

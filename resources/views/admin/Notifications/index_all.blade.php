@@ -15,15 +15,15 @@
             </div>
             <div class="line" style="border-bottom:1px solid rgba(0,0,0,.2)"></div>
             <div class="notification_body">
-                @if($admin->unreadNotifications->count()!=0)
-                    @foreach($admin->unreadNotifications as $notification)
-                        <div class="notification_content">
-                            @include('admin/notifications/'.snake_case(class_basename($notification->type)))
-                        </div>
-                        <div class="line" style="border-bottom:1px solid rgba(0,0,0,.2)"></div>
-                    @endforeach
+                @if($admin->Notifications->count()!=0)
+                @foreach($admin->Notifications as $notification)
+                    <div class="notification_content">
+                        @include('admin/notifications/'.snake_case(class_basename($notification->type)))
+                    </div>
+                    <div class="line" style="border-bottom:1px solid rgba(0,0,0,.2)"></div>
+                @endforeach
                 @else
-                    <p align="center">暂无未读消息</p>
+                    <h1>暂无消息</h1>
                 @endif
             </div>
         </div>

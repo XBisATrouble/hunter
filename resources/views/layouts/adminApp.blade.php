@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>企业网申主页</title>
+    <title>企业网申主页{{ Auth::guard('admin')->user()->unreadNotifications->count()==0?'':'('.Auth::guard('admin')->user()->unreadNotifications->count().')条新消息' }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/normallize.css">
     <link rel="stylesheet" type="text/css" href="/css/postJob.css">
@@ -51,11 +51,11 @@
                             <a href="/admin/notifications">我的消息</a>
                         </li>
                         <li>
-                            <a id="logout" href="{{ url('/logout') }}"
+                            <a id="logout" href="{{ url('/admin/logout') }}"
                         onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">退出</a>
 
-                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+                            <form id="logout-form" action="{{ url('/admin/logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
                         </li>
                     </ul>
                 </li>
