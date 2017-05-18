@@ -665,6 +665,14 @@ input.search_input:focus
     height: 180px;
     padding: 0 20px 0 30px;
 }
+.user_single_item_jobinfo p
+{
+    height: 21px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 15px;
+    padding-right: 10px;
+}
 
 .user_main_single_jobinfo_button
 {
