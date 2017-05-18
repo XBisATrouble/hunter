@@ -33,4 +33,10 @@ class Resume extends Model
             'admin_id'=>$job->publish->id
         ]);
     }
+
+    public function getGenderAttribute($value)
+    {
+        $gender = ['1'=>'男','0'=>'女',''=>null];
+        return $gender[$value];
+    }
 }

@@ -16,15 +16,15 @@ class CreateResumesTable extends Migration
         Schema::create('resumes', function (Blueprint $table) {
             $table->increments('id');
             $table->smallInteger('gender')->default(1);
-            $table->string('birthday');
-            $table->string('city');
-            $table->string('edulevel');
+            $table->string('birthday')->nullable();
+            $table->string('city')->nullable();
+            $table->string('edulevel')->nullable();
             $table->string('photo')->nullable();
-            $table->string('school');
-            $table->string('major');
-            $table->string('major_rank');
-            $table->string('edu_start');
-            $table->string('edu_end');
+            $table->string('school')->nullable();
+            $table->string('major')->nullable();
+            $table->string('major_rank')->nullable();
+            $table->string('edu_start')->nullable();
+            $table->string('edu_end')->nullable();
             $table->string('job_company')->nullable();
             $table->string('job_position')->nullable();
             $table->string('job_start')->nullable();

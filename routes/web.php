@@ -57,6 +57,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 Route::get('job/{job}/follow','JobFollowController@follow');
 Route::get('user/followed','UserController@followed');
 Route::get('user','UserController@index');
-Route::get('user/avatar','UserController@avatarupload');
+Route::post('user/avatar','UserController@avatarUpload');
 
 Route::get('resume/{resume}/post','JobPostController@post');
+Route::post('resume/photo','JobPostController@photo');

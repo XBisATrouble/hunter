@@ -53,7 +53,8 @@
 					<br>
 					我的性别 :
 					<select name="gender">
-						<option selected="selected" value="1">男</option>
+						<option selected="selected" value="1">{{ $resume->gender }}</option>
+						<option value="1">男</option>
 						<option value="0">女</option>
 					</select>
 					<br>
@@ -72,13 +73,17 @@
 					</select>
 					<br>
 					所在城市 :
-					<input type="text" name="city">
+					<input type="text" name="city" value="{{ $resume->city }}">
 					<br>
 					最高学历 :
-					<input type="text" name="edulevel"></div>
+					<input type="text" name="edulevel" value="{{ $resume->edulevel }}"></div>
 				<div class="resume_user_pic per20">
-					<img id="preview" />
-					<input class="resume_user_pic_submit" accept="image/*" type="file" name="photo" onchange="imgPreview(this)" style="display: none;"></div>
+					{{--<img id="preview" />--}}
+					{{--<input class="resume_user_pic_submit" accept="image/*" type="file" name="photo" onchange="imgPreview(this)" style="display: none;">--}}
+					<div id="app">
+						<resume-photo avatar="{{ $resume->photo }}"></resume-photo>
+					</div>
+				</div>
 			</div>
 			<div class="resume_user_edu_info_banner single_info_banner" style="display: none;">
 				<div class="resume_user_edu_info per80">

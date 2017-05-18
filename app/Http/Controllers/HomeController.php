@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Repositories\JobRepository;
 use App\Repositories\JobsClassRepository;
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -38,6 +39,8 @@ class HomeController extends Controller
         }
         $jobs=$this->job->getJobsFeed();
 
-        return view('index',compact('jobs','class1s','class2s','class3s'));
+        $resume=Auth::check()?Auth::user()->resume:null;
+
+        return view('index',compact('jobs','class1s','class2s','class3s','resume'));
     }
 }

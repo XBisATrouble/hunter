@@ -17,4 +17,12 @@ class ResumeRepository
     {
         return Resume::create($attributes);
     }
+
+    public function update(array $attributes,$id)
+    {
+        $resume = Resume::find($id);
+        $resume->update($attributes);
+        $resume->save();
+        return $resume;
+    }
 }

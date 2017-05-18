@@ -26,7 +26,8 @@ class ResumesController extends Controller
      */
     public function index()
     {
-        return view('resumes.index');
+        $resume=Auth::check()?Auth::user()->resume:null;
+        return view('resumes.index',compact('resume'));
     }
 
     /**
@@ -80,7 +81,7 @@ class ResumesController extends Controller
             'papers'=>$request->get('papers'),
             'user_id'=>Auth::user()->id,
         ];
-        $resume=$this->resume->create($data);
+        $resume=$this->resume->update($data,Auth::user()->resume->id);
 
         return $resume->id;
     }
