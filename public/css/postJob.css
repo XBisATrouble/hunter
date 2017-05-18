@@ -189,7 +189,7 @@ a.full_a
 }
 .nav_user_function > li:hover .nav_user_menu
 {
-    height: 100px;
+    height: 150px;
 
     opacity: 1;
 }
@@ -1352,4 +1352,12 @@ span.numofpeople
     background-color: #fff;
     float: right;
     overflow: hidden;
+}
+.resume_schoolexp,
+.resume_projectexp,
+.resume_jobexp
+{
+    width: 100%;
+    min-height: 400px;
+    background-color: red;
 }

@@ -8,6 +8,10 @@
 		<div class="resume_skill"></div>
 		<div class="resume_selfdes"></div>
 	</div>
-	<div class="resume_right_banner"></div>
+	<div class="resume_right_banner">
+		<div class="resume_schoolexp"></div>
+		<div class="resume_projectexp "></div>
+		<div class="resume_jobexp "></div>
+	</div>
 </div>
 @endsection('content')
