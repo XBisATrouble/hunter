@@ -220,7 +220,10 @@
 					<textarea type="text" name="user_essay" class="mid" placeholder="论文发表链接,或文献名称" style="margin-bottom: 0;"></textarea>
 					<br></div>
 			</div>
-			<div class="submit_resume_button_trigger">更新我的简历</div>
+			<div class="button_banner">
+				<div class="submit_resume_button_trigger">更新我的简历</div>
+				<div class="see_resume_button">查看我的简历</div>
+			</div>
 			<button class="submit_resume_button" style="display: none;"></button>
 		</form>
 	</div>

@@ -155,19 +155,19 @@
 	<div class="user_main_right_content">
 		<div class="user_main_right_content_tittle">我的简历</div>
 		<div class="user_main_right_content_pic">
-			<img src="/dist/des.png">
-		</div>
-		<div class="p">恽涵</div>
-		<div class="p">三到五年经验</div>
-		<div class="p">重庆邮电大学毕业</div>
-		<div class="p">建筑工程师专业</div>
+			<img src="/dist/des.png"></div>
+		<div class="p">姓名 : 恽涵</div>
+		<div class="p">经验 : 三到五年</div>
+		<div class="p">专业 : 建筑工程师</div>
+		<div class="p">毕业 : 重庆邮电大学</div>
 		<div class="user_main_right_content_user_info">
 			<div class="user_main_right_content_user_info_item">
 				<div class="round"></div>
 				<span class="strong" style="color: rgba(0,0,0,.7);">项目经历</span>
 				<div class="user_main_right_content_user_projectexp">
 					独立完成过淘宝项目,
-					独立完成过淘宝项目
+					独立完成过淘宝项目,
+					123456
 				</div>
 			</div>
 			<div class="user_main_right_content_user_jobexp user_main_right_content_user_info_item">
