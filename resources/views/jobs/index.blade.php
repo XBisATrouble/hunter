@@ -133,12 +133,12 @@
 					<p class="gray margin15">工作经验 : {{ $job->experience }}</p>
 					<p class="orange margin15">薪资 : {{ $job->salary }}</p>
 				</div>
-				<div class="per33" style="border-left: 5px solid rgba(0,0,0,.2);padding-left: 50px;">
+				<div class="per33" style="border-left: 2px solid rgba(0,0,0,.2);padding-left: 50px;">
 					<div class="user_main_single_jobinfo_button small">
 						<a href="jobs/{{ $job->id }}">工作详情</a>
 					</div>
 					<p class="blue margin15">
-					<span class="gray">点击进入公司主页 : </span>
+					<span class="gray">查看公司工作 : </span>
 						<a href="/results?q={{ $job->
 							publish->name }}" style=" color: rgba(0,146,210,1)">{{ $job->publish->name }}
 						</a>
