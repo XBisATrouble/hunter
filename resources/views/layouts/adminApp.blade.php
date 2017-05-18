@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>企业网申主页{{ Auth::guard('admin')->user()->unreadNotifications->count()==0?'':'('.Auth::guard('admin')->user()->unreadNotifications->count().')条新消息' }}</title>
+    <title>企业网申主页{{ Auth::guard('admin')->user()->unreadNotifications->count()==0?'':'('.Auth::guard('admin')->user()->unreadNotifications->count().')条新消息' }}</title> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/normallize.css">
     <link rel="stylesheet" type="text/css" href="/css/postJob.css">
@@ -22,8 +22,7 @@
         <div class="nav">
             <ul class="nav_list">
                 <li class="icon" style="padding: 15px 25px">
-                    <img src="/dist/icon.png">
-                </li>
+                    <img src="/dist/icon.png"></li>
                 <li>
                     <a href="/admin" class="full_a">首页</a>
                 </li>
@@ -42,13 +41,14 @@
             </ul>
             <ul class="nav_user_function">
                 <li class="avatar">
-                    <img src="{{ Auth::guard('admin')->user()->avatar }}">
-                </li>
+                    <img src="{{ Auth::guard('admin')->user()->avatar }}"></li>
                 <li>
-                    {{ Auth::guard('admin')->user()->name }}
+                    {{ Auth::guard('admin')->
+                    user()->name }}
                     <ul class="nav_user_menu">
                         <li>
-                            <a href="/admin/notifications">我的消息</a>
+                            <a href="/admin/notifications">消息</a>
+                            <div class="numofmeg">5</div>
                         </li>
                         <li>
                             <a href="/admin/info">公司资料</a>
@@ -66,9 +66,7 @@
         </div>
     </div>
 
-    <div class="main_banner">
-        @yield('content')
-    </div>
+    <div class="main_banner">@yield('content')</div>
     <div class="botoom_banner">
         <div class="bottom_content"></div>
     </div>
