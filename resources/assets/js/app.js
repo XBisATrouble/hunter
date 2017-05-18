@@ -15,6 +15,8 @@ require('./bootstrap');
 
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('job-follow-button', require('./components/JobFollowButton.vue'));
+Vue.component('user-avatar', require('./components/Avatar.vue'));
+Vue.component('resume-photo', require('./components/Photo.vue'));
 
 const app = new Vue({
     el: '#app'

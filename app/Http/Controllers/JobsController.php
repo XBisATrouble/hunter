@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Markdown\Markdown;
 use App\Repositories\JobRepository;
 use App\Repositories\JobsClassRepository;
-use Illuminate\Http\Request;
+use Auth;
 
 /**
  * Class JobsController
@@ -47,7 +47,9 @@ class JobsController extends Controller
     public function index()
     {
         $jobs=$this->job->getJobsFeed();
-        return view('jobs.index',compact('jobs'));
+        $resume=Auth::check()?Auth::user()->resume:null;
+
+        return view('jobs.index',compact('jobs','resume'));
     }
 
     /**

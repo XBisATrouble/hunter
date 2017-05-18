@@ -1,8 +1,12 @@
 @extends('layouts.userApp')
 @section('content')
-    <div class="user_main_content">
-        <div class="user_main_block_content">
-
-        </div>
+    <div id="app">
+        <user-avatar avatar="{{ $user->avatar }}"></user-avatar>
+    </div>
+    <div>
+        {{ $user->name }}
+    </div>
+    <div>
+        {{ $user->email }}
     </div>
 @endsection('content')

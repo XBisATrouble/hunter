@@ -51,10 +51,13 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('notifications','NotificationsController@index');
     $router->get('notifications/all','NotificationsController@all');
     $router->resource('resumes','ResumesController');
+    $router->get('info','AdminController@index');
 });
 
 Route::get('job/{job}/follow','JobFollowController@follow');
 Route::get('user/followed','UserController@followed');
 Route::get('user','UserController@index');
+Route::post('user/avatar','UserController@avatarUpload');
 
 Route::get('resume/{resume}/post','JobPostController@post');
+Route::post('resume/photo','JobPostController@photo');

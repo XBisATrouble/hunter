@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Notifications\NewResumePostNotification;
 use App\Repositories\JobRepository;
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Alert;
@@ -11,14 +12,16 @@ use Alert;
 class JobPostController extends Controller
 {
     protected $jobRepository;
+    protected $user;
 
     /**
      * JobPostController constructor.
      * @param $jobRepository
      */
-    public function __construct(JobRepository $jobRepository)
+    public function __construct(JobRepository $jobRepository,UserRepository $user)
     {
         $this->jobRepository = $jobRepository;
+        $this->user=$user;
     }
 
     /**
@@ -44,5 +47,18 @@ class JobPostController extends Controller
         $jobModel->increment('resumes_count');
         Alert::success('投送成功!')->persistent("关闭");
         return back();
+    }
+
+    public function photo(Request $request)
+    {
+        $file=$request->file('img');
+        $destinationPath='images/photo/';
+        $filename=Auth::user()->id.'_'.time().$file->getClientOriginalName();
+        $file->move($destinationPath,$filename);
+        $resume=$this->user->byId(Auth::user()->id)->resume;
+        $resume->photo='/'.$destinationPath.$filename;
+        $resume->save();
+
+        return ['url' => $resume->photo];
     }
 }

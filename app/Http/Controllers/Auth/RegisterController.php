@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Resume;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -71,6 +72,9 @@ class RegisterController extends Controller
             'confirmation_token' => str_random(40),
             'password' => bcrypt($data['password']),
             'api_token' => str_random(60),
+        ]);
+        $resume=Resume::create([
+            'user_id'=> $user->id,
         ]);
         $this->sendVerifyEmailTo($user);
         return $user;

@@ -51,6 +51,9 @@
                             <div class="numofmeg">5</div>
                         </li>
                         <li>
+                            <a href="/admin/info">公司资料</a>
+                        </li>
+                        <li>
                             <a id="logout" href="{{ url('/admin/logout') }}"
                         onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">退出</a>

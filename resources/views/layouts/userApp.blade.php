@@ -48,8 +48,11 @@
             @if(Auth::check())
             <ul class="user_nav_user_function">
                 <li class="avatar">
-                    <div class="avatar_banner">
-                        <img src="{{ Auth::user()->avatar }}"></div>
+                    <a href="/user">
+                        <div class="avatar_banner">
+                            <img src="{{ Auth::user()->avatar }}">
+                        </div>
+                    </a>
                 </li>
                 <li>
                     <a class="full_a" href="/user/followed">我的关注</a>

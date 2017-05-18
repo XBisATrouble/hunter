@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\JobRepository;
 use Illuminate\Http\Request;
+use Auth;
 
 class SearchController extends Controller
 {
@@ -22,6 +23,7 @@ class SearchController extends Controller
     {
         $q=request('q');
         $jobs=$this->job->byNameOrProvinceOrCompanyOrEducationOrExperience($q);
-        return view('jobs.index',compact('jobs','q'));
+        $resume=Auth::check()?Auth::user()->resume:null;
+        return view('jobs.index',compact('jobs','q','resume'));
     }
 }
