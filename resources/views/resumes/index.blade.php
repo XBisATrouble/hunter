@@ -85,10 +85,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="resume_user_edu_info_banner single_info_banner" style="display: none;">
+			<div class="resume_user_edu_info_banner single_info_banner" {{ $resume->school != '' ? 'style="display: block;"':'style="display: none;"'}}>
 				<div class="resume_user_edu_info per80">
 					学校 :
-					<input type="text" name="school" class="mid" placeholder="填写所有高校;包括研究生高校">
+					<input type="text" name="school" class="mid" placeholder="填写所有高校;包括研究生高校" value="{{ $resume->school }}">
 					<br>
 					专业 :
 					<input type="text" name="major" class="small" style="margin-right: 20px;">

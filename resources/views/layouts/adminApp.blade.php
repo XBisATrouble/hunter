@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>企业网申主页{{ Auth::guard('admin')->user()->unreadNotifications->count()==0?'':'('.Auth::guard('admin')->user()->unreadNotifications->count().')条新消息' }}</title> 
+    <title>企业网申主页{{ Auth::guard('admin')->user()->unreadNotifications->count()==0?'':'（'.Auth::guard('admin')->user()->unreadNotifications->count().'条新消息）' }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/normallize.css">
     <link rel="stylesheet" type="text/css" href="/css/postJob.css">
@@ -48,11 +48,13 @@
                     <ul class="nav_user_menu">
                         <li>
                             <a href="/admin/notifications">消息</a>
-                            <div class="numofmeg">5</div>
+                            @if(Auth::guard('admin')->user()->unreadNotifications->count()!=0)
+                                <div class="numofmeg">{{ Auth::guard('admin')->user()->unreadNotifications->count() }}</div>
+                            @endif
                         </li>
-                        <li>
-                            <a href="/admin/info">公司资料</a>
-                        </li>
+                        {{--<li>--}}
+                            {{--<a href="/admin/info">公司资料</a>--}}
+                        {{--</li>--}}
                         <li>
                             <a id="logout" href="{{ url('/admin/logout') }}"
                         onclick="event.preventDefault();

@@ -141,7 +141,7 @@
 						<span class="gray">查看公司工作 :</span>
 						<a href="/results?q={{ $job->
 							publish->name }}" class="inline_block_a" style="color: rgba(0,146,210,1)">
-							百度百科有限公司
+							{{ $job->publish->name }}
 						</a>
 					</p>
 					<p class="gray margin15">发布时间 : {{ $job->updated_at }}</p>
