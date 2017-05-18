@@ -182,13 +182,16 @@ div.per80
 }
 .inline_block_a
 {
+    line-height: 21px;
+
     position: relative;
     top: 3px;
-    width: 50%;
-    overflow: hidden;
+
     display: inline-block;
+    overflow: hidden;
+
+    width: 50%;
     height: 21px;
-    line-height: 21px;
 }
 .text_align_l
 {
@@ -402,12 +405,118 @@ input.search_input:focus
 }
 .user_main_right_content
 {
-    width: 350px;
-    height: 700px;
+    overflow: scroll;
+    overflow-x: hidden;
+    position: relative;
 
+    width: 350px;
+    min-height: 500px;
+    max-height: 1200px;
+    padding: 30px;
+
+    color: rgba(0,0,0,.7);
+    border-radius: 3px;
     background-color: #fff;
     box-shadow: 0 0 5px 1px rgba(22,22,22,.1);
 }
+.user_main_right_content .p
+{
+    line-height: 30px;
+
+    float: right;
+
+    width: 50%;
+    height: 30px;
+    margin-top: 20px;
+}
+.user_main_right_content_tittle
+{
+    font-size: 24px;
+    line-height: 50px;
+
+    width: 100%;
+    height: 50px;
+
+    text-align: center;
+    letter-spacing: 5px;
+
+    color: rgba(241,241,241,1);
+    background-color: rgba(22,22,22,1);
+}
+.user_main_right_content_pic
+{
+    float: left;
+    clear: both;
+
+    width: 45%;
+    height: 180px;
+    margin-top: 20px;
+
+    background-color: #eee;
+}
+.user_main_right_content_user_info
+{
+    float: left;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 200px;
+    margin-top: 30px;
+}
+.user_main_right_content_user_info_item
+{
+    position: relative;
+    width: 100%;
+    min-height: 180px;
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
+    border-left: 2px solid rgba(0,0,0,.2);
+}
+.user_main_right_content_user_info_item .round
+{
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    background-color: rgba(0,146,210,1);
+    border-radius: 50%;
+    top: 32px;
+    left: -4px;
+}
+.user_main_right_content_user_projectexp,
+.user_main_right_content_user_jobexp,
+.user_main_right_content_user_selfdes
+{
+    padding-right: 30px;
+    color: rgba(0,0,0,.5);
+}
+.resume_small_edit_button
+{
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0,146,210,1);
+    color: rgba(241,241,241,1);
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    margin-top: 50px;
+}
+.resume_small_edit_button:hover
+{
+    background-color: rgba(0,146,210,.8);
+}
+
+
+
+
+
+
+
+
 .user_main_job_level1
 {
     width: 900px;
@@ -558,9 +667,9 @@ input.search_input:focus
     font-size: 14px;
     line-height: 32px;
 
-width: 120px;
     position: relative;
 
+    width: 120px;
     height: 32px;
 
     cursor: pointer;
@@ -579,8 +688,8 @@ width: 120px;
 
     position: absolute;
     left: 37%;
-    max-width: 220px;
 
+    max-width: 220px;
     height: 32px;
     padding: 0 10px;
 
@@ -589,13 +698,13 @@ width: 120px;
             transition: all .1s;
 
     color: rgba(255,255,255,.8);
-    background-color: rgba(0,146,210,1)
+    background-color: rgba(0,146,210,1);
 }
 .user_main_single_advance_tag_tan
 {
     position: absolute;
-    left: -15px;
     top: 0;
+    left: -15px;
 
     width: 0;
     height: 0;
@@ -1043,7 +1152,6 @@ width: 120px;
 }
 .resume_user_pic
 {
-
     cursor: pointer;
 
     background-color: #eee;
