@@ -1362,13 +1362,19 @@ span.numofpeople
 }
 .resume_schoolexp,
 .resume_projectexp,
-.resume_jobexp
+.resume_jobexp,
+.resume_priceandessay
 {
-    letter-spacing: 1px;
-    color: rgba(0,0,0,.7);
-    padding: 30px;
+    font-size: 14px;
+    line-height: 28px;
+
     width: 100%;
-    min-height: 400px;
+    min-height: 300px;
+    padding: 30px;
+
+    letter-spacing: 1px;
+
+    color: rgba(0,0,0,.7);
 }
 .resume_base,
 .resume_skill,
@@ -1391,20 +1397,23 @@ span.numofpeople
 }
 .resume_exptittle
 {
-    width: 100%;
-    height: 50px;
     font-size: 24px;
     line-height: 40px;
-    color: #254665;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #254665;
+
+    width: 100%;
+    height: 50px;
     margin-bottom: 30px;
+    padding-bottom: 10px;
+
+    color: #254665;
+    border-bottom: 3px solid #254665;
 }
 .resume_exptittle img
 {
+    float: left;
+
     width: 40px;
     height: 40px;
-    float: left;
     margin-right: 10px;
 }
 .resume_avatar
@@ -1423,6 +1432,11 @@ span.numofpeople
     border-radius: 50%;
     background-color: #fff;
 }
+.resume_avatar img
+{
+    width: 100%;
+    height: 100%;
+}
 .resume_hope
 {
     font-size: 14px;
@@ -1440,9 +1454,10 @@ span.numofpeople
 .resume_skill,
 .resume_selfdes
 {
+    font-size: 14px;
+
     width: 90%;
     margin: 0 auto;
-    font-size: 14px;
 
     color: rgba(241,241,241,1);
     border-top: 5px solid #fff;
@@ -1476,7 +1491,127 @@ span.numofpeople
 .resume_selfdes
 {
     line-height: 32px;
-    letter-spacing: 1px;
-    padding: 20px;
+
     min-height: 210px;
+    padding: 20px;
+
+    letter-spacing: 1px;
+}
+
+
+
+/*resume thumb*/
+.admin_resume_thumb_banner
+{
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.admin_resume_nav
+{
+    width: 100%;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 24px;
+    line-height: 50px;text-align: center;
+    height: 50px;
+    background-color: rgba(22,22,22,1);
+    margin-bottom: 50px;
+}
+
+.admin_resume_thumb
+{
+    float: left;
+    overflow: hidden;
+    width: 800px;
+margin-bottom: 50px;
+box-sizing: content-box;
+    height: 190px;
+
+    border-radius: 2px;
+}
+.resume_base_thumb_pic
+{
+    float: left;
+
+    width: 180px;
+    height: 190px;
+
+}
+.resume_avatar_thumb
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    border: 5px solid rgba(0,0,0,.1);
+    border-radius: 50%;
+    background-color: #fff;
+}
+.resume_base_thumb
+{
+    font-size: 14px;
+
+    float: left;
+
+    width: 250px;
+    height: 100%;
+
+    color: #254665;
+}
+.resume_base_thumb p
+{
+    font-size: 14px;
+    line-height: 50px;
+
+    display: block;
+
+    box-sizing: border-box;
+    height: 50px;
+    margin: 10px 0;
+    padding-left: 20px;
+    color: #254665;
+}
+.resume_base_thumb img
+{
+    float: left;
+
+    width: 40px;
+    min-height: 40px;
+    margin-right: 20px;
+}
+.resume_info_button
+{
+    font-size: 16px;
+    line-height: 40px;
+
+    width: 150px;
+    height: 40px;
+    margin-left: 25px;
+
+    -webkit-transition: all .1s;
+         -o-transition: all .1s;
+            transition: all .1s;
+    text-align: center;
+
+    border-radius: 5px;
+    background-color: rgba(0,146,210,1);
+}
+.resume_info_button:hover
+{
+    background-color: rgba(0,146,210,.9);
+}
+.action_button_banner
+{
+    width: 120px;
+    height: 100%;
+    float: right;
 }
