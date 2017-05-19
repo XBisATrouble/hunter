@@ -10,7 +10,7 @@
                     <div class="user_main_single_advance_tag_tan"></div>
                 </div>
                 <div class="per33">
-                    <a class="big blue" href="jobs/{{ $job->id }}">{{ $job->name }}</a>
+                    <a class="big blue" href="/jobs/{{ $job->id }}">{{ $job->name }}</a>
                     <p class="gray margin15">学历要求 : {{ $job->education }}</p>
                     <p class="gray margin15">工作地点 : {{ $job->province }}</p>
                 </div>

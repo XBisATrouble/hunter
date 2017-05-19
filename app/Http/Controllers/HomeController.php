@@ -32,14 +32,13 @@ class HomeController extends Controller
         $class2s=$this->class->getClass2Feed();
         $class3s=$this->class->getClass3Feed();
         $class=request('class');
+        $resume=Auth::check()?Auth::user()->resume:null;
         if (!is_null($class))
         {
             $jobs=$this->job->byClass($class);
-            return view('index',compact('jobs','class1s','class2s','class3s'));
+            return view('index',compact('jobs','class1s','class2s','class3s','resume'));
         }
         $jobs=$this->job->getJobsFeed();
-
-        $resume=Auth::check()?Auth::user()->resume:null;
 
         return view('index',compact('jobs','class1s','class2s','class3s','resume'));
     }

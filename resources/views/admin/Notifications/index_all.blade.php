@@ -18,16 +18,10 @@
                 </a>
             </div>
         </div>
-        <div class="line_top""></div>
+        <div class="line_top"></div>
         <div class="notification_body">
             @if($admin->Notifications->count()!=0)
                 @foreach($admin->Notifications as $notification)
-            <div class="notification_content">
-                @include('admin/notifications/'.snake_case(class_basename($notification->type)))
-            </div>
-            <div class="notification_content">
-                @include('admin/notifications/'.snake_case(class_basename($notification->type)))
-            </div>
             <div class="notification_content">
                 @include('admin/notifications/'.snake_case(class_basename($notification->type)))
             </div>
