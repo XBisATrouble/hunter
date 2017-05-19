@@ -92,4 +92,5 @@
         </div>
     </div>
 </div>
+<script src="/js/admin.index.js"></script>
 @endsection
