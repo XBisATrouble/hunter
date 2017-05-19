@@ -12,7 +12,6 @@
         "laracasts/flash": "2.0.*",
         "laravel/framework": "5.3.*",
         "naux/sendcloud": "1.1.*",
-        "overtrue/laravel-ueditor": "~1.0",
         "uxweb/sweet-alert": "~1.4"
     },
     "require-dev": {

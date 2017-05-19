@@ -27,7 +27,6 @@ Route::get('email/verify/{token}',['as'=>'email.verify','uses'=>'EmailController
 
 Route::resource('jobs','JobsController');
 Route::resource('resumes','ResumesController');
-Route::resource('discuss','DiscussController');
 
 Route::get('/results','SearchController@searchJobsIndex');
 

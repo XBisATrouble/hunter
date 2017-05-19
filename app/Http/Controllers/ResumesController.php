@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Markdown\Markdown;
 use App\Repositories\ResumeRepository;
 use Illuminate\Http\Request;
 use Auth;
@@ -9,12 +10,14 @@ use Auth;
 class ResumesController extends Controller
 {
     protected $resume;
+    protected $markdown;
     /**
      * ResumesController constructor.
      */
-    public function __construct(ResumeRepository $resume)
+    public function __construct(ResumeRepository $resume,Markdown $markdown)
     {
         $this->resume=$resume;
+        $this->markdown=$markdown;
         $this->middleware('auth');
     }
 
@@ -97,6 +100,9 @@ class ResumesController extends Controller
         if ($id!=Auth::user()->resume->id)
             return view('errors.503');
         $resume=Auth::user()->resume;
+        $resume->shcool_description=$this->markdown->markdown($resume->shcool_description);
+        $resume->project_description=$this->markdown->markdown($resume->project_description);
+        $resume->job_description=$this->markdown->markdown($resume->job_description);
         return view('resumes.show',compact('resume'));
     }
 

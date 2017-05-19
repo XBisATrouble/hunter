@@ -34,35 +34,17 @@
 		<div class="resume_schoolexp">
 			<div class="resume_exptittle">
 				<img src="/dist/resume/exp_big.png">校内经历</div>
-				熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.
+			{!! $resume->job_description !!}
 		</div>
 		<div class="resume_projectexp ">
 			<div class="resume_exptittle">
 				<img src="/dist/resume/exp_big.png">项目经历</div>
-				熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.
+			{!! $resume->job_description !!}
 		</div>
 		<div class="resume_jobexp ">
 			<div class="resume_exptittle">
 				<img src="/dist/resume/exp_big.png">工作经历</div>
-				熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.
+			{!! $resume->job_description !!}
 		</div>
 		<div class="resume_priceandessay">
 			<div class="resume_exptittle">

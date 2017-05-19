@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5dc9eee656697ee5d1521891f1df7c94",
+    "content-hash": "706e2b973fdbf75216dea26f66e89b22",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -123,16 +123,16 @@
         },
         {
             "name": "caouecs/laravel-lang",
-            "version": "3.0.28",
+            "version": "3.0.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caouecs/Laravel-lang.git",
-                "reference": "a56d4e7a1961002cc4728fc3ef36628c0a643114"
+                "reference": "1d067ce80eeebc80728c9b30fb6d8bb33e67dca3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/caouecs/Laravel-lang/a56d4e7a1961002cc4728fc3ef36628c0a643114.zip",
-                "reference": "a56d4e7a1961002cc4728fc3ef36628c0a643114",
+                "url": "https://files.phpcomposer.com/files/caouecs/Laravel-lang/1d067ce80eeebc80728c9b30fb6d8bb33e67dca3.zip",
+                "reference": "1d067ce80eeebc80728c9b30fb6d8bb33e67dca3",
                 "shasum": ""
             },
             "require-dev": {
@@ -159,7 +159,7 @@
                 "laravel",
                 "lpm"
             ],
-            "time": "2017-05-13T15:32:59+00:00"
+            "time": "2017-05-17T10:39:20+00:00"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -1156,45 +1156,6 @@
             "time": "2017-03-05T18:23:57+00:00"
         },
         {
-            "name": "overtrue/laravel-ueditor",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/overtrue/laravel-ueditor.git",
-                "reference": "7bb62c59f939811c0065e1986a72df8c3607d72a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/overtrue/laravel-ueditor/7bb62c59f939811c0065e1986a72df8c3607d72a.zip",
-                "reference": "7bb62c59f939811c0065e1986a72df8c3607d72a",
-                "shasum": ""
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "^1.10"
-            },
-            "suggest": {
-                "overtrue/laravel-filesystem-qiniu": "如果你想要使用七牛云存储，也许你需要安装它哦~"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Overtrue\\LaravelUEditor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "overtrue",
-                    "email": "anzhengchao@gmail.com"
-                }
-            ],
-            "description": "UEditor integration for Laravel.",
-            "time": "2017-04-17T10:14:31+00:00"
-        },
-        {
             "name": "paragonie/random_compat",
             "version": "v2.0.10",
             "source": {
@@ -1341,16 +1302,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.4",
+            "version": "v0.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82"
+                "reference": "38a9d21406597a0440690eafbcb0222f528c8ac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/bobthecow/psysh/17cf432bb80d9198df239b80d00a29155bd74d82.zip",
-                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82",
+                "url": "https://files.phpcomposer.com/files/bobthecow/psysh/38a9d21406597a0440690eafbcb0222f528c8ac6.zip",
+                "reference": "38a9d21406597a0440690eafbcb0222f528c8ac6",
                 "shasum": ""
             },
             "require": {
@@ -1410,7 +1371,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-05-12T15:41:55+00:00"
+            "time": "2017-05-17T06:49:19+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -3451,23 +3412,23 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e"
+                "reference": "3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/sebastianbergmann/diff/13edfd8706462032c2f52b4b862974dd46b71c9e.zip",
-                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e",
+                "url": "https://files.phpcomposer.com/files/sebastianbergmann/diff/3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2.zip",
+                "reference": "3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
             },
             "type": "library",
             "extra": {
@@ -3499,7 +3460,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2015-12-08T07:14:41+00:00"
+            "time": "2017-05-18T13:44:30+00:00"
         },
         {
             "name": "sebastian/environment",
