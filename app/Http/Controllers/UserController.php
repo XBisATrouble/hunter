@@ -32,7 +32,9 @@ class UserController extends Controller
     public function index()
     {
         $user=Auth::user();
-        return view('users.index',compact('user'));
+        $jobs=Auth::user()->resume->post;
+        $follows=Auth::user()->follows;
+        return view('users.index',compact('user','jobs','follows'));
     }
 
     public function avatarUpload(AvatarRequest $request)

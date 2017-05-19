@@ -7,39 +7,39 @@
 			<li>个人照片</li>
 			<li>
 				教育经历
-				<div class="checkcube"></div>
+				<div class="checkcube {{ $resume->school==''?'':'checkcube_checked' }}"></div>
 			</li>
 			<li>
 				工作经历
-				<div class="checkcube"></div>
+				<div class="checkcube {{ $resume->job_company==''?'':'checkcube_checked' }}"></div>
 			</li>
 			<li>
 				校内经历
-				<div class="checkcube"></div>
+				<div class="checkcube {{ $resume->school_name==''?'':'checkcube_checked' }}"></div>
 			</li>
 			<li>
 				项目经历
-				<div class="checkcube"></div>
+				<div class="checkcube {{ $resume->project_name==''?'':'checkcube_checked' }}"></div>
 			</li>
 			<li>
 				求职意向
-				<div class="checkcube"></div>
+				<div class="checkcube {{ $resume->expected_work_place==''?'':'checkcube_checked' }}"></div>
 			</li>
 			<li>
 				获奖情况
-				<div class="checkcube"></div>
+				<div class="checkcube {{ $resume->awards==''?'':'checkcube_checked' }}"></div>
 			</li>
 			<li>
 				个人技能
-				<div class="checkcube"></div>
+				<div class="checkcube {{ $resume->skills==''?'':'checkcube_checked' }}"></div>
 			</li>
 			<li>
 				自我评价
-				<div class="checkcube"></div>
+				<div class="checkcube {{ $resume->evaluations==''?'':'checkcube_checked' }}"></div>
 			</li>
 			<li>
 				论文发表
-				<div class="checkcube"></div>
+				<div class="checkcube {{ $resume->papers==''?'':'checkcube_checked' }}"></div>
 			</li>
 		</ul>
 	</div>
@@ -85,16 +85,17 @@
 					</div>
 				</div>
 			</div>
-			<div class="resume_user_edu_info_banner single_info_banner" {{ $resume->school != '' ? 'style="display: block;"':'style="display: none;"'}}>
+			<div class="resume_user_edu_info_banner single_info_banner" style="{{ $resume->school==''?'display:none':'display:block' }}">
 				<div class="resume_user_edu_info per80">
 					学校 :
 					<input type="text" name="school" class="mid" placeholder="填写所有高校;包括研究生高校" value="{{ $resume->school }}">
 					<br>
 					专业 :
-					<input type="text" name="major" class="small" style="margin-right: 20px;">
+					<input type="text" name="major" class="small" style="margin-right: 20px;" value="{{ $resume->major }}">
 					专业排名 :
 					<select name="major_rank">
-						<option selected="selected" value="1%">1%</option>
+						<option selected="selected" value="{{ $resume->major_rank }}">{{ $resume->major_rank }}</option>
+						<option value="1%">1%</option>
 						<option value="5%">5%</option>
 						<option value="15%">15%</option>
 						<option value="25%">25%</option>
@@ -102,92 +103,92 @@
 					</select>
 					<br>
 					在校 :
-					<input type="text" name="edu_start" class="small" style="margin-right: 20px; margin-bottom: 0;" placeholder="就读时间">
+					<input type="text" name="edu_start" class="small" style="margin-right: 20px; margin-bottom: 0;" placeholder="就读时间" value="{{ $resume->edu_start }}">
 					到
-					<input type="text" name="edu_end" class="small" placeholder="就读时间" style="margin-bottom: 0;"></div>
+					<input type="text" name="edu_end" class="small" placeholder="就读时间" style="margin-bottom: 0;" value="{{ $resume->edu_end }}"></div>
 			</div>
-			<div class="resume_user_company_info_banner single_info_banner" style="display: none;">
+			<div class="resume_user_company_info_banner single_info_banner" style="{{ $resume->job_company==''?'display:none':'display:block' }}">
 				<div class="resume_user_company_info per80">
 					公司 :
-					<input type="text" name="job_company" class="mid" placeholder="公司名称">
+					<input type="text" name="job_company" class="mid" placeholder="公司名称" value="{{ $resume->job_company }}">
 					<br>
 					职位 :
-					<input type="text" name="job_position" class="small">
+					<input type="text" name="job_position" class="small" value="{{ $resume->position }}">
 					<br>
 					时间 :
-					<input type="text" name="job_start" class="small" style="margin-right: 20px;">
+					<input type="text" name="job_start" class="small" style="margin-right: 20px;" value="{{ $resume->job_start }}">
 					到
-					<input type="text" name="job_end" class="small">
+					<input type="text" name="job_end" class="small" value="{{ $resume->job_end }}">
 					<br>
 					描述 :
-					<input type="text" name="job_description" class="big" placeholder="对具体工作的描述" style="margin-bottom: 0;"></div>
+					<input type="text" name="job_description" class="big" placeholder="对具体工作的描述" style="margin-bottom: 0;" value="{{ $resume->job_description }}"></div>
 			</div>
-			<div class="resume_user_schoolexp_info_banner single_info_banner" style="display: none;">
+			<div class="resume_user_schoolexp_info_banner single_info_banner" style="{{ $resume->school_name==''?'display:none':'display:block' }}">
 				<div class="resume_user_schoolexp_info per80">
 					组织 :
-					<input type="text" name="school_name" class="mid" placeholder="校内组织">
+					<input type="text" name="school_name" class="mid" placeholder="校内组织" value="{{ $resume->school_name }}">
 					<br>
 					职位 :
-					<input type="text" name="school_position" class="small" placeholder="校内组织职位名称">
+					<input type="text" name="school_position" class="small" placeholder="校内组织职位名称" value="{{ $resume->school_position }}">
 					<br>
 					时间 :
-					<input type="text" name="school_start" class="small" style="margin-right: 20px;">
+					<input type="text" name="school_start" class="small" style="margin-right: 20px;" value="{{ $resume->school_start }}">
 					到
-					<input type="text" name="school_end" class="small">
+					<input type="text" name="school_end" class="small" value="{{ $resume->school_end }}">
 					<br>
 					描述 :
-					<input type="text" name="school_description" class="big" placeholder="曾担任过职位的描述" style="margin-bottom: 0;"></div>
+					<input type="text" name="school_description" class="big" placeholder="曾担任过职位的描述" style="margin-bottom: 0;" value="{{ $resume->school_description }}"></div>
 			</div>
-			<div class="resume_user_project_info_banner single_info_banner" style="display: none;">
+			<div class="resume_user_project_info_banner single_info_banner" style="{{ $resume->project_name==''?'display:none':'display:block' }}">
 				<div class="resume_user_project_info per80">
 					项目 :
-					<input type="text" name="project_name" class="mid" placeholder="负责过的项目">
+					<input type="text" name="project_name" class="mid" placeholder="负责过的项目" value="{{ $resume->project_name }}">
 					<br>
 					职位 :
-					<input type="text" name="project_position" class="small" placeholder="负责的部分">
+					<input type="text" name="project_position" class="small" placeholder="负责的部分" value="{{ $resume->project_position }}">
 					<br>
 					时间 :
-					<input type="text" name="project_start" class="small" style="margin-right: 20px;">
+					<input type="text" name="project_start" class="small" style="margin-right: 20px;" value="{{ $resume->project_start }}">
 					到
-					<input type="text" name="project_end" class="small">
+					<input type="text" name="project_end" class="small" value="{{ $resume->project_end }}">
 					<br>
 					描述 :
-					<input type="text" name="project_description" class="big" placeholder="对项目的描述" style="margin-bottom: 0;"></div>
+					<input type="text" name="project_description" class="big" placeholder="对项目的描述" style="margin-bottom: 0;" value="{{ $resume->project_description }}"></div>
 			</div>
-			<div class="resume_user_hope_info_banner single_info_banner" style="display: none;">
+			<div class="resume_user_hope_info_banner single_info_banner" style="{{ $resume->expected_work_place==''?'display:none':'display:block' }}">
 				<div class="resume_user_hope_info per80">
 					期望地点 :
-					<input type="text" name="expected_work_place" class="mid" placeholder="期望工作地点">
+					<input type="text" name="expected_work_place" class="mid" placeholder="期望工作地点" value="{{ $resume->expected_work_place }}">
 					<br>
 					期望职位 :
-					<input type="text" name="expected_work_position" class="small" placeholder="期望负责的部分" style="margin-bottom: 0;"></div>
+					<input type="text" name="expected_work_position" class="small" placeholder="期望负责的部分" style="margin-bottom: 0;" value="{{ $resume->expected_work_position }}"></div>
 			</div>
-			<div class="resume_user_price_info_banner single_info_banner" style="display: none;">
+			<div class="resume_user_price_info_banner single_info_banner" style="{{ $resume->awards==''?'display:none':'display:block' }}">
 				<div class="resume_user_price_info per80">
 					获奖经历 :
 					<br>
-					<textarea type="text" name="awards" class="mid" placeholder="获奖经历" style="margin-bottom: 0;"></textarea>
+					<textarea type="text" name="awards" class="mid" placeholder="获奖经历" style="margin-bottom: 0;">{{ $resume->awards }}</textarea>
 					<br></div>
 			</div>
-			<div class="resume_user_skill_info_banner single_info_banner" style="display: none;">
+			<div class="resume_user_skill_info_banner single_info_banner" style="{{ $resume->skills==''?'display:none':'display:block' }}">
 				<div class="resume_user_skill_info per80">
 					个人技能 :
 					<br>
-					<textarea type="text" name="sklls" class="mid" placeholder="对自己的个人技能进行描述" style="margin-bottom: 0;"></textarea>
+					<textarea type="text" name="sklls" class="mid" placeholder="对自己的个人技能进行描述" style="margin-bottom: 0;">{{ $resume->skills }}</textarea>
 					<br></div>
 			</div>
-			<div class="resume_user_self_info_banner single_info_banner" style="display: none;">
+			<div class="resume_user_self_info_banner single_info_banner" style="{{ $resume->evaluations==''?'display:none':'display:block' }}">
 				<div class="resume_user_self_info per80">
 					自我评价 :
 					<br>
-					<textarea type="text" name="evaluations" class="mid" placeholder="进行客观的自我评价" style="margin-bottom: 0;"></textarea>
+					<textarea type="text" name="evaluations" class="mid" placeholder="进行客观的自我评价" style="margin-bottom: 0;">{{ $resume->evaluations }}</textarea>
 					<br></div>
 			</div>
-			<div class="resume_user_essay_info_banner single_info_banner" style="display: none;">
+			<div class="resume_user_essay_info_banner single_info_banner" style="{{ $resume->papers==''?'display:none':'display:block' }}">
 				<div class="resume_user_essay_info per80">
 					论文发表 :
 					<br>
-					<textarea type="text" name="papers" class="mid" placeholder="论文发表链接,或文献名称" style="margin-bottom: 0;"></textarea>
+					<textarea type="text" name="papers" class="mid" placeholder="论文发表链接,或文献名称" style="margin-bottom: 0;">{{ $resume->papers }}</textarea>
 					<br></div>
 			</div>
 			<div class="button_banner">
@@ -199,31 +200,4 @@
 	</div>
 </div>
 <script src="/js/user_function.js"></script>
-<script type="text/javascript">
-    function imgPreview(fileDom){
-        //判断是否支持FileReader
-        if (window.FileReader) {
-            var reader = new FileReader();
-        } else {
-            alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
-        }
-
-        //获取文件
-        var file = fileDom.files[0];
-        var imageType = /^image\//;
-        //是否是图片
-        if (!imageType.test(file.type)) {
-            alert("请选择图片！");
-            return;
-        }
-        //读取完成
-        reader.onload = function(e) {
-            //获取图片dom
-            var img = document.getElementById("preview");
-            //图片路径设置为读取的图片
-            img.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-    }
-</script>
 @endsection
