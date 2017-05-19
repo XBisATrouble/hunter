@@ -1,6 +1,6 @@
 <div class="user_main_right_content_tittle">我的简历</div>
 <div class="user_main_right_content_pic">
-    <img src="/dist/des.png"></div>
+    <img src="{{ $resume->photo }}"></div>
 <div class="p">姓名 : {{ Auth::user()->name }}</div>
 <div class="p">性别 : {{ $resume->gender }}</div>
 <div class="p">专业 : {{ $resume->major }}</div>
