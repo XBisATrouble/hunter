@@ -156,6 +156,13 @@ div.per80
     width: 80%;
     height: 100%;
 }
+.blur
+{
+    -webkit-filter: blur(3px);
+       -moz-filter: blur(3px);
+        -ms-filter: blur(3px);
+            filter: blur(3px);
+}
 .gray
 {
     color: rgba(0,0,0,.7);
@@ -407,8 +414,9 @@ input.search_input:focus
 {
     position: relative;
 
-    overflow: scroll;
-    overflow-x: hidden;
+/*    overflow: scroll;
+    overflow-x: hidden;*/
+    overflow: hidden;
 
     width: 350px;
     min-height: 500px;
@@ -419,6 +427,15 @@ input.search_input:focus
     border-radius: 3px;
     background-color: #fff;
     box-shadow: 0 0 5px 1px rgba(22,22,22,.1);
+}
+.login_button_posa
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 .user_main_right_content .p
 {
@@ -1257,21 +1274,6 @@ input.search_input:focus
     border-left: 3px solid rgba(0,146,210,1);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .job_des_moduel
 {
     position: relative;
@@ -1418,6 +1420,7 @@ p.job_advantage
     width: 900px;
     min-height: 250px;
 }
+
 .company_brief
 {
     font-size: 16px;
@@ -1500,6 +1503,7 @@ p.p_company_info
     border-style: solid;
     border-color: rgba(22,22,22,1) transparent transparent transparent;
 }
+
 .normal_button
 {
     font-size: 24px;
@@ -1519,15 +1523,13 @@ p.p_company_info
     border: 1px solid rgba(255,255,255,1);
     border-radius: 5px;
 }
+
 .normal_button:focus
 {
+    opacity: .9;
     outline: none;
 }
-.normal_button:hover
-{
-    opacity: .9;
-}
-.sendresume_button
+.sendresume_button.normal_button:hover
 {
     background-color: #ff6f00;
 }
@@ -1618,6 +1620,7 @@ p.p_company_info
 
     background-color: #fff;
 }
+
 .resume_schoolexp,
 .resume_projectexp,
 .resume_jobexp,
@@ -1633,6 +1636,12 @@ p.p_company_info
     letter-spacing: 1px;
 
     color: rgba(0,0,0,.7);
+}
+.resume_content
+{
+    padding-left: 20px;
+
+    border-left: 1px solid #245655;
 }
 .resume_base,
 .resume_skill,
@@ -1674,6 +1683,34 @@ p.p_company_info
     height: 40px;
     margin-right: 10px;
 }
+.resume_timetittle
+{
+    font-size: 20px;
+    font-weight: 500;
+
+    position: relative;
+    top: -10px;
+    left: -23px;
+
+    margin-bottom: 20px;
+    padding-left: 25px;
+
+    color: #254665;
+}
+.resume_round
+{
+    position: absolute;
+    top: 8px;
+    left: -2px;
+
+    width: 10px;
+    height: 10px;
+
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: #245655;
+}
+
 .resume_avatar
 {
     position: relative;
@@ -1755,6 +1792,7 @@ p.p_company_info
 
     letter-spacing: 1px;
 }
+
 
 
 
