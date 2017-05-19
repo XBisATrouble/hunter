@@ -1587,7 +1587,157 @@ p.p_company_info
 
 
 
+/*resume single*/
+.resume_banner
+{
+    overflow: hidden;
 
+    width: 1100px;
+    min-height: 1200px;
+    margin: 0 auto;
+
+    background-color: #fff;
+}
+.resume_left_banner
+{
+    float: left;
+    overflow: hidden;
+
+    width: 300px;
+    min-height: 1200px;
+
+    background-color: #254665;
+}
+.resume_right_banner
+{
+    float: right;
+    overflow: hidden;
+
+    width: 800px;
+    min-height: 1200px;
+
+    background-color: #fff;
+}
+.resume_schoolexp,
+.resume_projectexp,
+.resume_jobexp
+{
+    letter-spacing: 1px;
+    color: rgba(0,0,0,.7);
+    padding: 30px;
+    width: 100%;
+    min-height: 400px;
+}
+.resume_base,
+.resume_skill,
+.resume_selfdes
+{
+    position: relative;
+}
+.resume_tittle
+{
+    font-size: 16px;
+
+    position: absolute;
+    top: -15px;
+    left: 33%;
+
+    padding: 0 10px;
+
+    color: rgba(241,241,241,1);
+    background-color: #254665;
+}
+.resume_exptittle
+{
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    line-height: 40px;
+    color: #254665;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #254665;
+    margin-bottom: 30px;
+}
+.resume_exptittle img
+{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 10px;
+}
+.resume_avatar
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    border: 5px solid #aaa;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.resume_hope
+{
+    font-size: 14px;
+
+    width: 70%;
+    height: 80px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+
+    text-align: center;
+
+    color: rgba(241,241,241,1);
+}
+.resume_base,
+.resume_skill,
+.resume_selfdes
+{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 14px;
+
+    color: rgba(241,241,241,1);
+    border-top: 5px solid #fff;
+}
+.resume_base
+{
+    height: 400px;
+    padding-top: 20px;
+}
+.resume_base p
+{
+    font-size: 14px;
+    line-height: 40px;
+
+    display: block;
+
+    box-sizing: border-box;
+    height: 50px;
+    padding: 5px 0;
+    padding-left: 20px;
+}
+.resume_base img
+{
+    float: left;
+
+    width: 40px;
+    min-height: 40px;
+    margin-right: 20px;
+}
+.resume_skill,
+.resume_selfdes
+{
+    line-height: 32px;
+    letter-spacing: 1px;
+    padding: 20px;
+    min-height: 210px;
+}
 
 
 
@@ -1633,3 +1783,6 @@ p.p_company_info
     background-color: #fff;
     box-shadow: 0 0 5px 1px rgba(22,22,22,.1);
 }
+
+
+
