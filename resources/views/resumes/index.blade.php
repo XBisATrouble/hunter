@@ -77,7 +77,7 @@
 					<br>
 					最高学历 :
 					<input type="text" name="edulevel" value="{{ $resume->edulevel }}"></div>
-				<div class="resume_user_pic per20">
+				<div class="resume_user_pic">
 					{{--<img id="preview" />--}}
 					{{--<input class="resume_user_pic_submit" accept="image/*" type="file" name="photo" onchange="imgPreview(this)" style="display: none;">--}}
 					<div id="app">
