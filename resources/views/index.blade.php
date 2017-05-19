@@ -63,6 +63,8 @@
 	<div class="user_main_right_content">
 		@if($resume!=null)
 			@include('layouts.resumeApp')
+		@else
+			@include('layouts.resumeDisableApp')
 		@endif
 	</div>
 </div>

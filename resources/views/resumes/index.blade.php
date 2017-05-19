@@ -174,7 +174,7 @@
 				<div class="resume_user_skill_info per80">
 					个人技能 :
 					<br>
-					<textarea type="text" name="sklls" class="mid" placeholder="对自己的个人技能进行描述" style="margin-bottom: 0;">{{ $resume->skills }}</textarea>
+					<textarea type="text" name="skills" class="mid" placeholder="对自己的个人技能进行描述" style="margin-bottom: 0;">{{ $resume->skills }}</textarea>
 					<br></div>
 			</div>
 			<div class="resume_user_self_info_banner single_info_banner" style="{{ $resume->evaluations==''?'display:none':'display:block' }}">
@@ -193,7 +193,7 @@
 			</div>
 			<div class="button_banner">
 				<div class="submit_resume_button_trigger">更新我的简历</div>
-				<div class="see_resume_button">查看我的简历</div>
+				<a href="resumes/{{ $resume->id }}"><div class="see_resume_button">查看我的简历</div></a>
 			</div>
 			<button class="submit_resume_button" style="display: none;"></button>
 		</form>

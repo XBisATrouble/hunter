@@ -169,6 +169,7 @@ return [
         Naux\Mail\SendCloudServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Overtrue\LaravelUEditor\UEditorServiceProvider::class,
 
         //
 

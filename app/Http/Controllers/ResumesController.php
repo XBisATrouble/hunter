@@ -83,7 +83,7 @@ class ResumesController extends Controller
         ];
         $resume=$this->resume->update($data,Auth::user()->resume->id);
 
-        return back();
+        return redirect('/resumes/'.$resume->id);
     }
 
     /**

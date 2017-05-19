@@ -2,7 +2,9 @@
 @section('content')
 <div class="resume_banner">
 	<div class="resume_left_banner">
-		<div class="resume_avatar"></div>
+		<div class="resume_avatar">
+			<img src="{{ $resume->photo }}">
+		</div>
 		<div class="resume_hope">
 			<p>{{ $resume->expected_work_place }}</p>
 			<p>{{ $resume->expected_work_position }}</p>
