@@ -76,14 +76,14 @@ class ResumesController extends Controller
             'expected_work_place'=>$request->get('expected_work_place'),
             'expected_work_position'=>$request->get('expected_work_position'),
             'awards'=>$request->get('awards'),
-            'sklls'=>$request->get('sklls'),
+            'skills'=>$request->get('skills'),
             'evaluations'=>$request->get('evaluations'),
             'papers'=>$request->get('papers'),
             'user_id'=>Auth::user()->id,
         ];
         $resume=$this->resume->update($data,Auth::user()->resume->id);
 
-        return $resume->id;
+        return back();
     }
 
     /**

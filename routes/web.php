@@ -61,3 +61,6 @@ Route::post('user/avatar','UserController@avatarUpload');
 
 Route::get('resume/{resume}/post','JobPostController@post');
 Route::post('resume/photo','JobPostController@photo');
+Route::get('test',function (){
+    return view('errors.503');
+});

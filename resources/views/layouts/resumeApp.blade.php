@@ -4,7 +4,7 @@
 <div class="p">姓名 : {{ Auth::user()->name }}</div>
 <div class="p">性别 : {{ $resume->gender }}</div>
 <div class="p">专业 : {{ $resume->major }}</div>
-<div class="p">毕业 : {{ $resume->shcool }}</div>
+<div class="p">毕业 : {{ $resume->school }}</div>
 <div class="user_main_right_content_user_info">
     <div class="user_main_right_content_user_info_item">
         <div class="round"></div>

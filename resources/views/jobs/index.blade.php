@@ -105,11 +105,11 @@
 			<div class="user_main_job_key">
 				<ul class="user_main_job_keylist">
 					<li class="black li_nohover_bgcolor">排序方式：</li>
-					<a href="">
-						<li id="">默认排序</li>
-					</a>
-					<a href="">
+					<a href="?order=time">
 						<li id="">时间</li>
+					</a>
+					<a href="?order=company">
+						<li id="">公司</li>
 					</a>
 				</ul>
 			</div>

@@ -9,4 +9,6 @@
     <div>
         {{ $user->email }}
     </div>
+
+
 @endsection('content')
