@@ -3,10 +3,6 @@ var job_level_1 = document.querySelector('.job_level_1'),
     job_level_3 = document.querySelector('.job_level_3'),
     post_job_button = document.querySelector('.post_job_button');
 
-// function demo() {
-//     console.log($('.job_province option:selected').text());
-// }
-
 
 function getJobType1() {
     var xml = new XMLHttpRequest(),
@@ -76,18 +72,6 @@ function getJobType3() {
         }
     }
 }
-
-job_level_1.addEventListener('change',()=>{
-
-});
-
-job_level_1.addEventListener('change',()=>{
-
-});
-
-job_level_1.addEventListener('change',()=>{
-
-});
 
 window.addEventListener("load", getJobType1);
 
