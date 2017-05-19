@@ -25,4 +25,9 @@ class ResumeRepository
         $resume->save();
         return $resume;
     }
+
+    public function byId($id)
+    {
+        return Resume::find($id);
+    }
 }

@@ -9,15 +9,29 @@
 namespace App\Http\Controllers\Admin;
 
 
+use App\Repositories\ResumeRepository;
+
 class ResumesController
 {
+    protected $resume;
+
+    /**
+     * ResumesController constructor.
+     * @param $resume
+     */
+    public function __construct(ResumeRepository $resume)
+    {
+        $this->resume = $resume;
+    }
+
     public function index()
     {
         return view('admin.resumes.index');
     }
 
-    public function show()
+    public function show($id)
     {
-        return view('admin.resumes.show');
+        $resume=$this->resume->byId($id);
+        return view('admin.resumes.show',compact('resume'));
     }
 }

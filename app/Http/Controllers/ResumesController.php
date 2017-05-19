@@ -94,7 +94,10 @@ class ResumesController extends Controller
      */
     public function show($id)
     {
-        //
+        if ($id!=Auth::user()->resume->id)
+            return view('errors.503');
+        $resume=Auth::user()->resume;
+        return view('resumes.show',compact('resume'));
     }
 
     /**
