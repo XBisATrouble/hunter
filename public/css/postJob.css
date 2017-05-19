@@ -260,6 +260,7 @@ a.full_a
 
     min-height: 1300px;
     padding: 50px 0;
+    overflow: hidden;
 
     border-radius: 3px;
     background-color: #eee;
@@ -271,6 +272,7 @@ a.full_a
     width: 1400px;
     min-height: 1200px;
     margin: 0 auto;
+    overflow: hidden;
     padding-bottom: 50px;
 
     background-color: #fff;
@@ -509,6 +511,11 @@ textarea.job_description:focus
 
 
 /*main_company_controll_moduel*/
+.main_company_controll
+{
+    min-height: 1200px;
+    overflow: hidden;
+}
 .main_compnay_left_banner
 {
     float: left;
@@ -1523,6 +1530,7 @@ span.numofpeople
 
 .admin_resume_thumb
 {
+    margin-top: 30px;
     float: left;
     overflow: hidden;
     width: 800px;
@@ -1614,4 +1622,9 @@ box-sizing: content-box;
     width: 120px;
     height: 100%;
     float: right;
+}
+
+.resumes_modeul
+{
+    padding-top: 50px;
 }
