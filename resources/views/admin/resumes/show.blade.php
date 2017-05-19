@@ -27,7 +27,8 @@
 			了解整个WEB开发过程和底层原理.
 		</div>
 		<div class="resume_selfdes">
-			<div class="resume_tittle">自我评价</div>.
+			<div class="resume_tittle">自我评价</div>
+			.
 			熟练运用框架开发项目.
 			了解整个WEB开发过程和底层原理.
 			热爱技术.
@@ -37,10 +38,38 @@
 	</div>
 	<div class="resume_right_banner">
 		<div class="resume_schoolexp">
-			<div class="resume_exptittle"><img src="/dist/resume/exp_big.png">校内经历</div>
+			<div class="resume_exptittle">
+				<img src="/dist/resume/exp_big.png">校内经历</div>
+				熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.
 		</div>
-		<div class="resume_projectexp "><div class="resume_exptittle"><img src="/dist/resume/exp_big.png">项目经历</div></div>
-		<div class="resume_jobexp "><div class="resume_exptittle"><img src="/dist/resume/exp_big.png">工作经历</div></div>
+		<div class="resume_projectexp ">
+			<div class="resume_exptittle">
+				<img src="/dist/resume/exp_big.png">项目经历</div>
+				熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.
+		</div>
+		<div class="resume_jobexp ">
+			<div class="resume_exptittle">
+				<img src="/dist/resume/exp_big.png">工作经历</div>
+				熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.
+		</div>
 	</div>
 </div>
 @endsection('content')
