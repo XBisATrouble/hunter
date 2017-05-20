@@ -21,7 +21,7 @@
 				份简历
 			</div>
 			<div class="index_single_item_jobinfo_edit_button index_single_item_jobinfo_button">
-				<a href="/admin/jobs/{{$job->id}}/edit" class="full_a">查看简历</a>
+				<a href="/admin/jobs/{{$job->id}}/edit" class="full_a">编辑工作</a>
 			</div>
 			@if($job->is_online==1)
 			<div class="index_single_item_jobinfo_offline_button index_single_item_jobinfo_button">

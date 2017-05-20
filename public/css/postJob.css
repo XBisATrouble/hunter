@@ -51,7 +51,7 @@ a.full_a
 }
 .gray
 {
-    color: #aaa;
+    color: rgba(0,0,0,.7);
 }
 .blue
 {
@@ -71,7 +71,7 @@ a.full_a
     width: 100%;
     height: 70px;
 
-    background-color: rgba(70,70,70,1);
+    background-color: rgba(60,60,60,1);
     box-shadow: 0 0 8px 1px rgba(22,22,22,.5);
 }
 .nav
@@ -80,7 +80,7 @@ a.full_a
     height: 70px;
     margin: 0 auto;
 
-    background-color: rgba(70,70,70,1);
+    background-color: rgba(60,60,60,1);
 }
 .nav_list
 {
@@ -270,8 +270,6 @@ a.full_a
 {
     z-index: 1;
 
-    overflow: hidden;
-
     width: 1400px;
     min-height: 1200px;
     margin: 0 auto;
@@ -305,7 +303,7 @@ a.full_a
 
 .moduel
 {
-    font-weight: 300;
+    font-weight: 500;
 
     width: 1400px;
     min-height: 1200px;
@@ -460,7 +458,7 @@ textarea.job_description:focus
 .return_index_button
 {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 60px;
 
     width: 40%;
@@ -576,6 +574,8 @@ textarea.job_description:focus
 }
 .main_company_right_banner_nav > li
 {
+    font-size: 18px;
+    font-weight: 500;
     line-height: 50px;
 
     width: 80px;
@@ -586,15 +586,17 @@ textarea.job_description:focus
          -o-transition: all .3s;
             transition: all .3s;
     text-align: center;
+    letter-spacing: 1px;
 
-    background-color: #eee;
+    color: #fff;
+    background-color: rgba(60,60,60,1);
 
     flex-grow: 1;
 }
 .main_company_right_banner_nav > li:hover
 {
-    color: #fff;
-    background-color: rgba(0,146,210,1);
+    color: rgba(60,60,60,1);
+    background-color: rgba(241,241,241,1);
 
     flex-grow: 2;
 }
@@ -991,11 +993,11 @@ p.p_company_info
          -o-transition: all .2s;
             transition: all .2s;
 
-    border-left: 7px solid rgba(0,0,0,.2);
+    border-left: 5px solid rgba(0,0,0,.2);
 }
 .index_single_item:hover
 {
-    border-left: 7px solid rgba(0,146,210,1);
+    border-left: 5px solid rgba(0,146,210,1);
 }
 .index_single_item a
 {
@@ -1113,7 +1115,7 @@ span.numofpeople
 
     height: 200px;
 
-    background-color: #e1e1e1;
+    background-color: rgba(22,22,22,1);
 }
 .bottom_content
 {
@@ -1123,7 +1125,7 @@ span.numofpeople
     height: 200px;
     margin: 0 auto;
 
-    background-color: #e1e1e1;
+    background-color: rgba(22,22,22,1);
 }
 
 .paginate_banner
@@ -1465,8 +1467,8 @@ span.numofpeople
 
     overflow: hidden;
 
-    width: 160px;
-    height: 160px;
+    width: 165px;
+    height: 250px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 30px;
@@ -1573,19 +1575,28 @@ span.numofpeople
     float: left;
     overflow: hidden;
 
-    box-sizing: content-box;
-    width: 800px;
+    box-sizing: border-box;
+    border-left: 
+    width: 900px;
     height: 190px;
     margin-top: 30px;
     margin-bottom: 50px;
 
     border-radius: 2px;
+    border-left: 5px solid rgba(0,0,0,.2);
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+}
+.admin_resume_thumb:hover
+{
+    border-left: 5px solid rgba(0,146,210,1);
 }
 .resume_base_thumb_pic
 {
     float: left;
 
-    width: 180px;
+    width: 280px;
     height: 190px;
 }
 .resume_avatar_thumb
@@ -1603,6 +1614,11 @@ span.numofpeople
     border: 5px solid rgba(0,0,0,.1);
     border-radius: 50%;
     background-color: #fff;
+}
+.resume_avatar_thumb img
+{
+    width: 100%;
+    height: 100%;
 }
 .resume_base_thumb
 {
@@ -1666,10 +1682,8 @@ span.numofpeople
     height: 100%;
 }
 
-.jobs_modeul
-{
-    padding-bottom: 50px;
-}
+.jobs_modeul,
+.interviews_modeul,
 .resumes_modeul
 {
     padding-bottom: 50px;
