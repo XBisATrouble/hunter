@@ -9,6 +9,7 @@
 namespace App\Repositories;
 
 
+use App\Post;
 use App\Resume;
 
 class ResumeRepository
@@ -34,5 +35,10 @@ class ResumeRepository
     public function idInArray($array)
     {
         return Resume::whereIn('id',$array)->take(5)->get();
+    }
+
+    public function postedByAdminId($id)
+    {
+        return Post::where('admin_id',$id)->get();
     }
 }

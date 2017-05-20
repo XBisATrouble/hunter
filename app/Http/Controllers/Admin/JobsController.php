@@ -173,4 +173,10 @@ class JobsController extends Controller
         $this->jobRepositories->jobOnline($id);
         return redirect('/admin/jobs/offline');
     }
+
+    public function resumes($id)
+    {
+        $resumes=$this->jobRepositories->byId($id)->posted;
+        return view('admin.jobs.resumes',compact('resumes'));
+    }
 }

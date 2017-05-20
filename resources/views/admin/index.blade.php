@@ -21,17 +21,17 @@
                 @foreach($jobs as $job)
                 <div class="index_single_item">
                     <div class="index_single_item_jobinfo">
-                        <a class="gray big" href="">{{ $job->name }}</a>
+                        <a class="gray big" href="/admin/jobs/{{ $job->id }}">{{ $job->name }}</a>
                         <div class="index_single_item_jobinfo_numofpeople">
                             收到
                             <span class="numofpeople">{{ $job->resumes_count }}</span>
                             份简历
                         </div>
                         <div class="index_single_item_jobinfo_edit_button index_single_item_jobinfo_button">
-                            <a href="/admin/jobs/{{$job->id}}/edit" class="full_a">查看工作</a>
+                            <a href="/admin/jobs/{{$job->id}}/edit" class="full_a">编辑职位</a>
                         </div>
                         <div class="index_single_item_jobinfo_offline_button index_single_item_jobinfo_button">
-                            <a href="jobs/{{ $job->id }}/offline" class="full_a">下线</a>
+                            <a href="/admin/jobs/{{ $job->id }}/offline" class="full_a">下线</a>
                         </div>
                         <a class="gray big" href=""></a>
                         <p class="gray">
@@ -52,32 +52,7 @@
                     <li>已收到的简历</li>
                     <li>已处理的简历</li>
                 </ul>
-                @foreach($resumes as $resume)
-                <div class="admin_resume_thumb">
-                    <div class="resume_base_thumb_pic">
-                        <div class="resume_avatar_thumb">
-                            <img src="{{ $resume->user->avatar }}">
-                        </div>
-                    </div>
-                    <div class="resume_base_thumb">
-                        <p>
-                            <img src="/dist/resume_thumb/user.png">{{ $resume->user->name }}</p>
-                        <p>
-                            <img src="/dist/resume_thumb/sch.png">{{ $resume->school }}</p>
-                        <p>
-                            <img src="/dist/resume_thumb/age.png">{{ 2017-substr($resume->birthday,0,4) }}岁</p>
-                    </div>
-                    <div class="resume_base_thumb">
-                        <p>
-                            <img src="/dist/resume_thumb/exp.png">{{ $resume->edulevel }}</p>
-                        <p>
-                            <img src="/dist/resume_thumb/major.png">{{ $resume->major }}</p>
-                        <div class="resume_info_button">
-                            <a class="full_a" href="/admin/resumes/{{ $resume->id }}">查看简历</a>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
+                @include('layouts.resumeMin')
             </div>
         </div>
     </div>
