@@ -33,6 +33,6 @@ class ResumeRepository
 
     public function idInArray($array)
     {
-        return Resume::whereIn('id',$array);
+        return Resume::whereIn('id',$array)->take(5)->get();
     }
 }
