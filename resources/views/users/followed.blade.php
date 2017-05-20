@@ -36,9 +36,12 @@
         <div class="line_gray"></div>
         @endforeach
     </div>
-    <div class="user_main_right_content">
+    <div class="user_main_right_content {{ $resume!=null?'':'blur' }}">
+        <div class="login_button_posa"></div>
         @if($resume!=null)
             @include('layouts.resumeApp')
+        @else
+            @include('layouts.resumeDisableApp')
         @endif
     </div>
 </div>

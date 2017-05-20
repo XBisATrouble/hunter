@@ -30,4 +30,9 @@ class ResumeRepository
     {
         return Resume::find($id);
     }
+
+    public function idInArray($array)
+    {
+        return Resume::whereIn('id',$array);
+    }
 }

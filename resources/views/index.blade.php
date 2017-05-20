@@ -60,7 +60,7 @@
 			<div class="paginate">{{ $jobs->links() }}</div>
 		</div>
 	</div>
-	<div class="user_main_right_content blur">
+	<div class="user_main_right_content {{ $resume!=null?'':'blur' }}">
 	<div class="login_button_posa"></div>
 		@if($resume!=null)
 			@include('layouts.resumeApp')

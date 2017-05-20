@@ -32,7 +32,7 @@
                         <a href="/jobs" class="full_a">求职</a>
                     </li>
                     <li>
-                        <a href="/discuss" class="full_a">面经</a>
+                        <a href="/questions" class="full_a">面经</a>
                     </li>
                     <li>
                         <a href="/about" class="full_a">关于</a>
