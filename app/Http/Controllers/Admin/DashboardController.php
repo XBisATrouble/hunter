@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Repositories\JobRepository;
 use App\Repositories\ResumeRepository;
 use Illuminate\Http\Request;
 
@@ -12,14 +13,16 @@ use Auth;
 class DashboardController extends Controller
 {
     protected $resume;
+    protected $job;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(ResumeRepository $resume)
+    public function __construct(ResumeRepository $resume,JobRepository $job)
     {
         $this->resume=$resume;
+        $this->job=$job;
         $this->middleware('auth.admin:admin');
     }
 
@@ -30,8 +33,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $resumes=Auth::guard('admin')->user()->resumes->pluck('resume_id');
-        $resumes=$this->resume->idInArray($resumes);
-        return view('admin/index',compact('resumes'));
+        $resumes_id=Auth::guard('admin')->user()->resumes->pluck('resume_id');
+        $resumes=$this->resume->idInArray($resumes_id);
+        $jobs=$this->job->getJobsFeedByAuthOnline(Auth::guard('admin')->user()->id);
+        return view('admin/index',compact('resumes','jobs'));
     }
 }
