@@ -163,6 +163,10 @@ div.per80
         -ms-filter: blur(3px);
             filter: blur(3px);
 }
+.display_none
+{
+    display: none;
+}
 .gray
 {
     color: rgba(0,0,0,.7);
@@ -410,6 +414,10 @@ input.search_input:focus
     background-color: #fff;
     box-shadow: 0 0 5px 1px rgba(22,22,22,.1);
 }
+.user_main_right_content_banner
+{
+    position: relative; 
+}
 .user_main_right_content
 {
     position: relative;
@@ -428,13 +436,29 @@ input.search_input:focus
     background-color: #fff;
     box-shadow: 0 0 5px 1px rgba(22,22,22,.1);
 }
+.login_button_posa_banner
+{
+    width: 350px;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 .login_button_posa
 {
     position: absolute;
+    font-weight: 700;
+    font-size: 20px;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 45%;
+    left: 18%;
+    line-height: 40px;
+    text-align: center;
+color: rgba(0,0,0,.7);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
     margin: 0 auto;
 }
 .user_main_right_content .p
@@ -1521,17 +1545,17 @@ p.p_company_info
 
     color: #fff;
     border: 1px solid rgba(255,255,255,1);
+    background-color: #ff6f00;
     border-radius: 5px;
 }
 
 .normal_button:focus
 {
-    opacity: .9;
     outline: none;
 }
 .sendresume_button.normal_button:hover
 {
-    background-color: #ff6f00;
+    opacity: .9;
 }
 .follow_button
 {

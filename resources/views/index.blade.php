@@ -60,13 +60,17 @@
 			<div class="paginate">{{ $jobs->links() }}</div>
 		</div>
 	</div>
-	<div class="user_main_right_content {{ $resume!=null?'':'blur' }}">
-	<div class="login_button_posa"></div>
-		@if($resume!=null)
+	<div class="user_main_right_content_banner">
+		<div class="login_button_posa_banner {{ $resume!=null?'display_none':'' }}">
+			<div class="login_button_posa">请登录后编辑自己的简历</div>
+		</div>
+		<div class="user_main_right_content {{ $resume!=null?'':'blur' }}">
+			@if($resume!=null)
 			@include('layouts.resumeApp')
 		@else
 			@include('layouts.resumeDisableApp')
 		@endif
+		</div>
 	</div>
 </div>
 @endsection

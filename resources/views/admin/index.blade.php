@@ -5,12 +5,11 @@
     <div class="main_company_controll moduel">
         <div class="main_compnay_left_banner">
             <ul class="main_compnay_left_nav">
-                <li>查看简历</li>
-                <li>查看已发布的工作</li>
-                <li>查看面试</li>
+                <li class="resumes_trigger">查看简历</li>
+                <li class="jobs_trigger">查看已发布的工作</li>
+                <li class="interviews_trigger">查看面试</li>
             </ul>
         </div>
-
         <div class="main_company_right_banner">
 
             <div class="jobs_modeul">

@@ -1666,7 +1666,11 @@ span.numofpeople
     height: 100%;
 }
 
+.jobs_modeul
+{
+    margin-bottom: 50px;
+}
 .resumes_modeul
 {
-    padding-top: 50px;
+    margin-bottom: 50px;
 }
