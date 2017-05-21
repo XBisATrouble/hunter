@@ -11,8 +11,8 @@
             <div class="question_show_body">{!!  $question->body !!}</div>
         </div>
         <div class="question_publisher_info_banner">
-            <img src="/images/avatars/default.png">
-            <div class="question_publisher_name">赵晴</div>
+            <img src="{{ $question->publisher->avatar }}">
+            <div class="question_publisher_name">{{ $question->publisher->name }}</div>
         </div>
         <div class="question_line">
             <div class="question_line_tittle">回复</div>
@@ -50,7 +50,9 @@
         </form>
         @else
         <div class="button_banner">
-            <button class="return_login">登陆提交回复</button>
+            <a href="/login">
+                <button class="return_login">登陆提交回复</button>
+            </a>
         </div>
         @endif
     </div>
