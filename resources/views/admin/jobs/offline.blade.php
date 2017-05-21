@@ -31,13 +31,13 @@
                             <!-- ^^^^^^^^^^^^^^^^下线功能^^^^^^^^^^^^^^^^^^^ -->
                         </div>
                     @endif
-                    <a class="gray big" href="jobs/{{$job->id}}">{{ $job->name }}</a>
+                    <a class="gray big" href="/jobs/{{$job->id}}">{{ $job->name }}</a>
                     <p class="gray">
                         工作发布于 :
                         <br>{{ $job->created_at }}</p>
                     <p class="gray" style="height: 150px;">
                         工作简介 :
-                        <br>{!! substr($job->description,0,400).'...' !!}</p>
+                        <br>{!! mb_substr($job->description,0,150,"utf-8").'...' !!}</p>
                 </div>
                 <div class="index_single_item_peopleinfo"></div>
                 <div class="index_single_item_peopleinfo"></div>

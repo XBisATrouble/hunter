@@ -16,7 +16,9 @@
 				<li>
 					<a href="#">投票</a>
 				</li>
-				<div class="question_create"><a href="/questions/create">分享我的经验</a></div>
+				@if(Auth::check())
+					<div class="question_create"><a href="/questions/create">分享我的经验</a></div>
+				@endif
 			</ul>
 		</div>
 		@foreach($questions as $question)
