@@ -8,7 +8,7 @@
 		<form class="input_banner">
 			<input type="text" name="username" value="{{ $user->
 			name }}">
-			<input type="text" name="useremail" value="{{ $user->
+			<input type="text" readonly="readonly" value="{{ $user->
 			email }}" >
 			<button class="edit_user_info">修改</button>
 		</form>
