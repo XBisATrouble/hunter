@@ -5,28 +5,36 @@
     <div class="question_modeul">
         <div class="question_banner">
             <div class="question_show_tittle">{{ $question->title }}</div>
-            <div class="question_show_info">恽涵发布于三天前 {{ $question->answers_count }}个回复</div>
+            <div class="question_show_info">{{ $question->publisher->name }} 发布于三天前 {{ $question->answers_count }}个回复</div>
             <div class="question_show_body">{!!  $question->body !!}</div>
         </div>
         <div class="question_publisher_info_banner"></div>
         <div class="question_line">
-            <div class="question_line_tittle">回答</div>
+            <div class="question_line_tittle">回复</div>
         </div>
         <div class="question_comment_banner">
             <!--  item作为循环单位 -->
+            @foreach($question->answers as $answer)
             <div class="question_comment_item_banner">
-                <img src="/images/avatars/1_1495114810img.png">
+                <img src="{{ $answer->user->avatar }}">
                 <div class="question_comment_item">
-                    大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的
+                    {{ $answer->user->name }}
+                </div>
+                <div class="question_comment_item">
+                    {!! $answer->body !!}
+                </div>
+                <div class="question_comment_item">
+                    {!! $answer->updated_at !!}
                 </div>
             </div>
+            @endforeach
 
         </div>
+        @if(Auth::check())
         <div class="question_line">
-            <div class="question_line_tittle">我的评论</div>
+            <div class="question_line_tittle">我的回复</div>
         </div>
-        <form action="/questions/{{ $question->
-            id }}/answer" method="post">
+        <form action="/questions/{{ $question->id }}/answer" method="post">
                     {{ csrf_field() }}
             <!-- 编辑器容器 -->
             <div class="editor_banner">
@@ -41,6 +49,11 @@
                 <button class="question_submit_button">提交</button>
             </div>
         </form>
+        @else
+            <div class="question_line">
+                <button>登陆提交回复</button>
+            </div>
+        @endif
     </div>
 </div>
 
