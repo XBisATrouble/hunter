@@ -87,6 +87,9 @@
 					最高学历 :
 					<input type="text" name="edulevel" value="{{ $resume->edulevel }}"></div>
 				<div class="resume_user_pic">
+				<div class="resume_user_pic_tip">
+					点击修改头像
+				</div>
 					{{--
 					<img id="preview" />
 					--}}
