@@ -416,14 +416,14 @@ input.search_input:focus
 }
 .user_main_right_content_banner
 {
-    position: relative; 
+    position: relative;
 }
 .user_main_right_content
 {
     position: relative;
-
-/*    overflow: scroll;
+    /*    overflow: scroll;
     overflow-x: hidden;*/
+
     overflow: hidden;
 
     width: 350px;
@@ -438,28 +438,33 @@ input.search_input:focus
 }
 .login_button_posa_banner
 {
-    width: 350px;
-    height: 1000px;
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
-    z-index: 1;
+
+    width: 350px;
+    height: 1000px;
 }
 .login_button_posa
 {
-    position: absolute;
-    font-weight: 700;
     font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+
+    position: absolute;
+    z-index: 2;
     top: 0;
     top: 45%;
     left: 18%;
-    line-height: 40px;
-    text-align: center;
-color: rgba(0,0,0,.7);
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 2;
+
     margin: 0 auto;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: rgba(0,0,0,.7);
+    border-radius: 5px;
 }
 .user_main_right_content .p
 {
@@ -525,11 +530,12 @@ color: rgba(0,0,0,.7);
 {
     position: absolute;
     top: 32px;
-    left: -4px;
+    left: -5px;
 
-    width: 7px;
-    height: 7px;
+    width: 9px;
+    height: 9px;
 
+    border: 2px solid #ddd;
     border-radius: 50%;
     background-color: rgba(0,146,210,1);
 }
@@ -1545,8 +1551,8 @@ p.p_company_info
 
     color: #fff;
     border: 1px solid rgba(255,255,255,1);
-    background-color: #ff6f00;
     border-radius: 5px;
+    background-color: #ff6f00;
 }
 
 .normal_button:focus
@@ -1663,6 +1669,7 @@ p.p_company_info
 }
 .resume_content
 {
+    min-height: 180px;
     padding-left: 20px;
 
     border-left: 1px solid #245655;
@@ -1816,6 +1823,149 @@ p.p_company_info
 
     letter-spacing: 1px;
 }
+
+
+
+
+
+
+
+.user_info_all_banner
+{
+    display: flex;
+
+    width: 1200px;
+    min-height: 800px;
+    margin: 0 auto;
+
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.user_info_left_banner
+{
+    float: left;
+    overflow: hidden;
+
+    width: 20%;
+    min-height: 100px;
+    padding: 50px 0;
+
+    color: rgba(0,0,0,.7);
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.1);
+}
+form.input_banner
+{
+    position: relative;
+
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+}
+.user_info_left_banner input
+{
+    line-height: 35px;
+
+    width: 200px;
+    height: 35px;
+    margin-top: 20px;
+    padding: 0 10px;
+
+    color: rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 3px;
+}
+.user_info_left_banner input:focus
+{
+    border: 1px solid rgba(0,146,210,1);
+}
+.user_info_right_banner
+{
+    padding: 50px;
+    float: left;
+    overflow: hidden;
+
+    width: 75%;
+    min-height: 100px;
+
+    color: rgba(0,0,0,.7);
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.1);
+}
+.user_info_left_banner p
+{
+    text-align: center;
+}
+button.upload_avatar
+{
+    width: 100px;
+    height: 30px;
+    margin-bottom: 30px;
+
+    cursor: pointer;
+    -webkit-transition: all .1s;
+         -o-transition: all .1s;
+            transition: all .1s;
+
+    color: rgba(241,241,241,1);
+    border: 1px solid rgba(0,146,210,1);
+    border-radius: 3px;
+    background-color: rgba(0,146,210,1);
+}
+button.upload_avatar:focus
+{
+    outline: none;
+}
+button.upload_avatar:hover
+{
+    border: 1px solid rgba(0,146,210,.9);
+    background-color: rgba(0,146,210,.9);
+}
+button.edit_user_info
+{
+    position: absolute;
+    left: 25%;
+
+    width: 100px;
+    height: 30px;
+    margin-top: 30px;
+
+    cursor: pointer;
+    -webkit-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+
+    color: rgba(241,241,241,1);
+    border: 1px solid rgba(0,146,210,1);
+    border-radius: 3px;
+    background-color: rgba(0,146,210,1);
+}
+button.edit_user_info:focus
+{
+    outline: none;
+}
+button.edit_user_info:hover
+{
+    border: 1px solid rgba(0,146,210,.9);
+    background-color: rgba(0,146,210,.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

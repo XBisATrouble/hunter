@@ -3,8 +3,7 @@
 <div class="resume_banner" id="resume">
 	<div class="resume_left_banner">
 		<div class="resume_avatar">
-			<img src="{{ $resume->photo }}">
-		</div>
+			<img src="{{ $resume->photo }}"></div>
 		<div class="resume_hope">
 			<p>{{ $resume->expected_work_place }}</p>
 			<p>{{ $resume->expected_work_position }}</p>
@@ -18,26 +17,35 @@
 			<p>
 				<img src="/dist/resume/age.png">{{ 2017-substr($resume->birthday,0,4) }}岁</p>
 			<p>
-				<img src="/dist/resume/major.png">{{ $resume->major }}
-			</p>
+				<img src="/dist/resume/major.png">{{ $resume->major }}</p>
 		</div>
 		<div class="resume_skill">
 			<div class="resume_tittle">个人技能</div>
-{{ $resume->skills }}
+			{{ $resume->skills }}
 		</div>
 		<div class="resume_selfdes">
 			<div class="resume_tittle">自我评价</div>
-{{ $resume->evaluations }}
+			{{ $resume->evaluations }}
 		</div>
 	</div>
 	<div class="resume_right_banner">
 		<div class="resume_schoolexp">
 			<div class="resume_exptittle">
-				<img src="/dist/resume/exp_big.png">校内经历</div>
-			<div class="resume_timetitle">
-				{{ $resume->job_start }}123123
+				<img src="/dist/resume/exp_big.png">校内经历
 			</div>
-			{!! $resume->job_description !!}
+			<div class="resume_content">
+				<div class="resume_timetittle">
+					<div class="resume_round"></div>
+					2017-2-2
+				</div>
+				熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
+			熟练运用框架开发项目.
+			了解整个WEB开发过程和底层原理.
+			</div>
 		</div>
 		<div class="resume_projectexp ">
 			<div class="resume_exptittle">
@@ -56,12 +64,11 @@
 				{!! $resume->papers !!}
 		</div>
 	</div>
-	</div>
+</div>
 
 
 <div class="tools">
 	<button id="btn-html2canvas">export PDF by using jspdf + html2canvas</button>
-</div>
 </div>
 
 @section('js')
