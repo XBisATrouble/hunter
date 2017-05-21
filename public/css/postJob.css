@@ -1347,7 +1347,7 @@ span.numofpeople
     overflow: hidden;
 
     width: 1100px;
-    min-height: 1200px;
+    min-height: 1556px;
     margin: 0 auto;
 
     background-color: #fff;
@@ -1358,7 +1358,7 @@ span.numofpeople
     overflow: hidden;
 
     width: 300px;
-    min-height: 1200px;
+    min-height: 1556px;
 
     background-color: #254665;
 }
@@ -1368,10 +1368,11 @@ span.numofpeople
     overflow: hidden;
 
     width: 800px;
-    min-height: 1200px;
+    min-height: 1556px;
 
     background-color: #fff;
 }
+
 .resume_schoolexp,
 .resume_projectexp,
 .resume_jobexp,
@@ -1390,6 +1391,7 @@ span.numofpeople
 }
 .resume_content
 {
+    min-height: 150px;
     padding-left: 20px;
 
     border-left: 1px solid #245655;
@@ -1461,14 +1463,15 @@ span.numofpeople
     border-radius: 50%;
     background-color: #245655;
 }
+
 .resume_avatar
 {
     position: relative;
 
     overflow: hidden;
 
-    width: 165px;
-    height: 250px;
+    width: 160px;
+    height: 160px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 30px;
@@ -1681,6 +1684,54 @@ span.numofpeople
     width: 120px;
     height: 100%;
 }
+
+/*导出为PDF*/
+.tools
+{
+    position: relative;
+    top: 40px;
+
+    width: 1000px;
+    height: 40px;
+    margin: 0 auto;
+}
+#btn-html2canvas
+{
+    line-height: 40px;
+
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+
+    cursor: pointer;
+    text-align: center;
+
+    color: rgba(241,241,241,1);
+    border: #254665;
+    background-color: #254665;
+}
+#btn-html2canvas:hover
+{
+    opacity: .9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .jobs_modeul,
 .interviews_modeul,
