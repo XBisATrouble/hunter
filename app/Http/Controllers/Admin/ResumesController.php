@@ -8,8 +8,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-
+use App\Post;
 use App\Repositories\ResumeRepository;
+use Auth;
 
 class ResumesController
 {
@@ -26,7 +27,9 @@ class ResumesController
 
     public function index()
     {
-        return view('admin.resumes.index');
+        $resumes_id=Auth::guard('admin')->user()->resumes->pluck('resume_id');
+        $resumes=$this->resume->idInArray($resumes_id);
+        return view('admin.resumes.index',compact('resumes','post'));
     }
 
     public function show($id)
