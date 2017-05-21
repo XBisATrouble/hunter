@@ -64,7 +64,7 @@ Route::post('user/avatar','UserController@avatarUpload');
 Route::get('resume/{resume}/post','JobPostController@post');
 Route::post('resume/photo','JobPostController@photo');
 Route::get('test',function (){
-    return view('errors.503');
+    return view('errors.404');
 });
 
 Route::post('questions/{id}/answer','AnswersController@store');

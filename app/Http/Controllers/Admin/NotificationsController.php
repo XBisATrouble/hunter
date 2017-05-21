@@ -21,12 +21,12 @@ class NotificationsController extends Controller
     {
         $admin=Auth::guard('admin')->user();
         $admin->unreadNotifications->markAsRead();
-        return view('admin.Notifications.index',compact('admin'));
+        return view('admin.notifications.index',compact('admin'));
     }
 
     public function all()
     {
         $admin=Auth::guard('admin')->user();
-        return view('admin.Notifications.index_all',compact('admin'));
+        return view('admin.notifications.index_all',compact('admin'));
     }
 }

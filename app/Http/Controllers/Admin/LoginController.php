@@ -84,7 +84,7 @@ class LoginController extends Controller
      */
     protected function attemptLogin(Request $request)
     {
-        $credentials=array_merge($this->credentials($request),['is_active'=>1]);
+        $credentials=array_merge($this->credentials($request)); //如果需要激活邮件才能登陆 ,['is_active'=>1]
         return $this->guard()->attempt(
             $credentials, $request->has('remember')
         );
