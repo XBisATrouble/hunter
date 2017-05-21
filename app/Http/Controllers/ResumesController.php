@@ -103,6 +103,8 @@ class ResumesController extends Controller
         $resume->shcool_description=$this->markdown->markdown($resume->shcool_description);
         $resume->project_description=$this->markdown->markdown($resume->project_description);
         $resume->job_description=$this->markdown->markdown($resume->job_description);
+        $resume->awards=$this->markdown->markdown($resume->awards);
+        $resume->papers=$this->markdown->markdown($resume->papers);
         return view('resumes.show',compact('resume'));
     }
 

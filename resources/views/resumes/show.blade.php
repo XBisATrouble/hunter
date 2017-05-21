@@ -1,6 +1,6 @@
 @extends('layouts.userApp')
 @section('content')
-<div class="resume_banner">
+<div class="resume_banner" id="resume">
 	<div class="resume_left_banner">
 		<div class="resume_avatar">
 			<img src="{{ $resume->photo }}">
@@ -34,6 +34,9 @@
 		<div class="resume_schoolexp">
 			<div class="resume_exptittle">
 				<img src="/dist/resume/exp_big.png">校内经历</div>
+			<div class="resume_timetitle">
+				{{ $resume->job_start }}123123
+			</div>
 			{!! $resume->job_description !!}
 		</div>
 		<div class="resume_projectexp ">
@@ -49,15 +52,21 @@
 		<div class="resume_priceandessay">
 			<div class="resume_exptittle">
 				<img src="/dist/resume/exp_big.png">获奖历史及论文发表</div>
-			熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.
+				{!! $resume->awards !!}
+				{!! $resume->papers !!}
 		</div>
 	</div>
 	</div>
+
+
+<div class="tools">
+	<button id="btn-html2canvas">export PDF by using jspdf + html2canvas</button>
 </div>
+</div>
+
+@section('js')
+	<script src="/js/jspdf.debug.js"></script>
+	<script src="/js/html2canvas.js"></script>
+	<script src="/js/main.js"></script>
+@endsection
 @endsection('content')

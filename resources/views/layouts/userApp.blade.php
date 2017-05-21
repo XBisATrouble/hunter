@@ -87,5 +87,6 @@
     </div>
     <script src="/js/user_function.js"></script>
     <script src="/js/app.js"></script>
+    @yield('js')
 </body>
 </html>

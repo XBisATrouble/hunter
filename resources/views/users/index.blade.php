@@ -11,4 +11,8 @@
     </div>
 
 
+    @foreach($jobs as $job)
+        {{ $job->name }}
+    @endforeach
+
 @endsection('content')
