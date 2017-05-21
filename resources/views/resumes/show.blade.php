@@ -36,26 +36,32 @@
 			<div class="resume_content">
 				<div class="resume_timetittle">
 					<div class="resume_round"></div>
-					2017-2-2
+					{{ $resume->school_start }} - {{ $resume->school_end }} &nbsp;&nbsp; &nbsp;{{ $resume->school_position }}
 				</div>
-				熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.
+				{!! $resume->school_description !!}
 			</div>
 		</div>
 		<div class="resume_projectexp ">
 			<div class="resume_exptittle">
 				<img src="/dist/resume/exp_big.png">项目经历</div>
-			{!! $resume->job_description !!}
+			<div class="resume_content">
+				<div class="resume_timetittle">
+					<div class="resume_round"></div>
+					{{ $resume->project_start }} - {{ $resume->project_end }} &nbsp;&nbsp; &nbsp;{{ $resume->project_position }}
+				</div>
+				{!! $resume->project_description !!}
+			</div>
 		</div>
 		<div class="resume_jobexp ">
 			<div class="resume_exptittle">
 				<img src="/dist/resume/exp_big.png">工作经历</div>
-			{!! $resume->job_description !!}
+			<div class="resume_content">
+				<div class="resume_timetittle">
+					<div class="resume_round"></div>
+					{{ $resume->job_start }} - {{ $resume->job_end }} &nbsp;&nbsp; &nbsp;{{ $resume->job_position }}
+				</div>
+				{!! $resume->job_description !!}
+			</div>
 		</div>
 		<div class="resume_priceandessay">
 			<div class="resume_exptittle">

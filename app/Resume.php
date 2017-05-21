@@ -20,6 +20,11 @@ class Resume extends Model
         return $this->belongsToMany(Job::class,'resume_job')->withTimestamps();
     }
 
+    public function jobs()
+    {
+        return $this->belongsToMany(Job::class,'resume_job')->withTimestamps();
+    }
+
     public function postThis($job)
     {
         return $this->post()->toggle($job);

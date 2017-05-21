@@ -6,45 +6,22 @@
 			<user-avatar avatar="{{ $user->avatar }}"></user-avatar>
 		</div>
 		<form class="input_banner">
-			<input type="text" name="username" value="{{ $user->
-			name }}">
-			<input type="text" readonly="readonly" value="{{ $user->
-			email }}" >
+			<input type="text" name="username" value="{{ $user->name }}">
+			<input type="text" readonly="readonly" value="{{ $user->email }}" >
 			<button class="edit_user_info">修改</button>
 		</form>
 	</div>
 
 	<div class="user_info_right_banner">
+        @foreach($jobs as $job)
 		<div class="resume_content">
 			<div class="resume_timetittle">
 				<div class="resume_round"></div>
-				2017-2-2
+				{{ \Carbon\Carbon::parse($job->pivot->updated_at)->diffForHumans() }}
 			</div>
-			熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.
+            向 {{ $job->publish->name }} 公司的职位： <a href="/jobs/{{ $job->id }}">{{ $job->name }}</a> 投送简历
 		</div>
-		<div class="resume_content">
-			<div class="resume_timetittle">
-				<div class="resume_round"></div>
-				2017-2-2
-			</div>
-			熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.熟练掌握JavaScript,TypeScript,Python等热门开发语言.
-			熟练运用框架开发项目.
-			了解整个WEB开发过程和底层原理.
-		</div>
+        @endforeach
 	</div>
-
-    @foreach($jobs as $job)
-        {{ $job->name }}
-    @endforeach
 </div>
 @endsection('content')
