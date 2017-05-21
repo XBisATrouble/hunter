@@ -5,6 +5,7 @@
     <div class="main_company_controll moduel">
         <div class="main_compnay_left_banner">
             <ul class="main_compnay_left_nav">
+            <li class="all_trigger">首页</li>
                 <li class="resumes_trigger">查看简历</li>
                 <li class="jobs_trigger">查看已发布的工作</li>
                 <li class="interviews_trigger">查看面试</li>
@@ -15,8 +16,8 @@
             <div class="jobs_modeul">
                 <ul class="main_company_right_banner_nav">
                     <li>所有工作</li>
-                    <li>未收到简历的工作</li>
-                    <li>收到简历的工作</li>
+                    <li>线上的工作</li>
+                    <li>已下线的工作</li>
                 </ul>
                 @foreach($jobs as $job)
                 <div class="index_single_item">
@@ -45,12 +46,9 @@
                 </div>
                 @endforeach
             </div>
-
             <div class="resumes_modeul">
                 <ul class="main_company_right_banner_nav">
                     <li>所有简历</li>
-                    <li>已收到的简历</li>
-                    <li>已处理的简历</li>
                 </ul>
                 @include('layouts.resumeMin')
             </div>
