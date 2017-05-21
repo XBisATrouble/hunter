@@ -6,7 +6,7 @@
 		{{ csrf_field() }}
 		<input type="text" name="name" value="{{ $admin->name }}" readonly="readonly">
 		<textarea name="description">{{ $admin->description }}</textarea>
-		<button class="company_info_submit"></button>
+		<button class="company_info_submit">修改</button>
 	</form>
 </div>
 @endsection
