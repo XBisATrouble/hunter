@@ -52,6 +52,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('notifications/all','NotificationsController@all');
     $router->resource('resumes','ResumesController');
     $router->get('info','AdminController@index');
+    $router->post('info','AdminController@changeInfo');
 
     $router->get('jobs/{id}/resumes','JobsController@resumes');
 

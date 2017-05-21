@@ -8,9 +8,16 @@
 
 namespace App\Repositories;
 
-
-use App\Models\Admin;
+use Auth;
 
 class AdminRepository
 {
+    public function update($attributes)
+    {
+        $admin=Auth::guard('admin')->user();
+        $admin->description=$attributes['description'];
+        $admin->name=$attributes['name'];
+        $admin->save();
+        return back();
+    }
 }
