@@ -5,7 +5,7 @@
 	<form class="company_info_edit">
 		<input type="text" name="company_name">
 		<textarea name="company_description"></textarea>
-		<button class="company_info_submit"></button>
+		<button class="company_info_submit">修改</button>
 	</form>
 </div>
 

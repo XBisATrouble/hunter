@@ -1792,6 +1792,7 @@ span.numofpeople
     border: 1px solid rgba(0,146,210,1);
     border-radius: 5px;
     margin-top: 20px;
+    color: rgba(241,241,241,1);
 }
 .company_info_submit:focus
 {
