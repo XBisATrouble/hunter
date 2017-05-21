@@ -35,8 +35,8 @@ class JobsController extends Controller
     public function __construct(JobRepository $job,Markdown $markdown,JobsClassRepository $class)
     {
         $this->job = $job;
-        $this->markdown=$markdown;
-        $this->class=$class;
+        $this->markdown = $markdown;
+        $this->class = $class;
     }
 
     /**

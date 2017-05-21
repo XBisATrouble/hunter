@@ -1217,7 +1217,7 @@ input.search_input:focus
 .resume_user_edu_info_banner,
 .resume_user_project_info_banner,
 .resume_user_schoolexp_info_banner,
-.resume_user_company_info_banner,
+.resume_user_company_info_banner
 {
     height: 260px;
 }
