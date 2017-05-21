@@ -15,7 +15,7 @@
         <div class="question_comment_banner">
             <!--  item作为循环单位 -->
             <div class="question_comment_item_banner">
-            <img src="/images/avatars/1_1495114810img.png">
+                <img src="/images/avatars/1_1495114810img.png">
                 <div class="question_comment_item">
                     大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的大家在用HomeStead开发的时候,Node实在HomeStead里面运行的还是在本机运行的
                 </div>

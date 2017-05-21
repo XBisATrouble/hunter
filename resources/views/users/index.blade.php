@@ -5,7 +5,8 @@
 		<div id="app">
 			<user-avatar avatar="{{ $user->avatar }}"></user-avatar>
 		</div>
-		<form class="input_banner">
+		<form class="input_banner" action="/user/name" method="post">
+			{{ csrf_field() }}
 			<input type="text" name="username" value="{{ $user->name }}">
 			<input type="text" readonly="readonly" value="{{ $user->email }}" >
 			<button class="edit_user_info">修改</button>

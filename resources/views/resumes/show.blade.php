@@ -35,7 +35,7 @@
 			<div class="resume_content">
 				<div class="resume_timetittle">
 					<div class="resume_round"></div>
-					{{ $resume->school_start }} - {{ $resume->school_end }} &nbsp;&nbsp; &nbsp;{{ $resume->school_position }}
+					{{ $resume->school_start }} - {{ $resume->school_end }} &nbsp;&nbsp;  {{ $resume->school_name }}&nbsp;{{ $resume->school_position }}
 				</div>
 				{!! $resume->school_description !!}
 			</div>
@@ -46,7 +46,7 @@
 			<div class="resume_content">
 				<div class="resume_timetittle">
 					<div class="resume_round"></div>
-					{{ $resume->project_start }} - {{ $resume->project_end }} &nbsp;&nbsp; &nbsp;{{ $resume->project_position }}
+					{{ $resume->project_start }} - {{ $resume->project_end }} &nbsp;&nbsp; &nbsp; {{ $resume->project_name }} {{ $resume->project_position }}
 				</div>
 				{!! $resume->project_description !!}
 			</div>
@@ -58,7 +58,7 @@
 			<div class="resume_content">
 				<div class="resume_timetittle">
 					<div class="resume_round"></div>
-					{{ $resume->job_start }} - {{ $resume->job_end }} &nbsp;&nbsp; &nbsp;{{ $resume->job_position }}
+					{{ $resume->job_start }} - {{ $resume->job_end }} &nbsp;&nbsp; &nbsp; {{ $resume->job_company }} {{ $resume->job_position }}
 				</div>
 				{!! $resume->job_description !!}
 			</div>

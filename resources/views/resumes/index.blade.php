@@ -136,7 +136,7 @@
 					<br>
 					职位 :
 					<input type="text" name="job_position" class="small" value="{{ $resume->
-					position }}">
+					job_position }}">
 					<br>
 					时间 :
 					<input type="text" name="job_start" class="small" style="margin-right: 20px;" value="{{ $resume->

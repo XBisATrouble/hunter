@@ -24,9 +24,9 @@
         </div>
     </div>
     <div>
-        @foreach($resume->post as $job)
-            {{ $job->name }}
-            <br>
-        @endforeach
+        {{--@foreach($resume->post as $job)--}}
+            {{--{{ $job->name }}--}}
+            {{--<br>--}}
+        {{--@endforeach--}}
     </div>
 @endforeach
