@@ -31,8 +31,7 @@
 	<div class="resume_right_banner">
 		<div class="resume_schoolexp">
 			<div class="resume_exptittle">
-				<img src="/dist/resume/exp_big.png">校内经历
-			</div>
+				<img src="/dist/resume/exp_big.png">校内经历</div>
 			<div class="resume_content">
 				<div class="resume_timetittle">
 					<div class="resume_round"></div>
@@ -52,6 +51,7 @@
 				{!! $resume->project_description !!}
 			</div>
 		</div>
+
 		<div class="resume_jobexp ">
 			<div class="resume_exptittle">
 				<img src="/dist/resume/exp_big.png">工作经历</div>
@@ -63,23 +63,21 @@
 				{!! $resume->job_description !!}
 			</div>
 		</div>
+
 		<div class="resume_priceandessay">
 			<div class="resume_exptittle">
 				<img src="/dist/resume/exp_big.png">获奖历史及论文发表</div>
-				{!! $resume->awards !!}
+			{!! $resume->awards !!}
 				{!! $resume->papers !!}
 		</div>
 	</div>
 </div>
-
-
 <div class="tools">
-	<button id="btn-html2canvas">export PDF by using jspdf + html2canvas</button>
+	<button id="btn-html2canvas">导出PDF格式</button>
 </div>
-
 @section('js')
-	<script src="/js/jspdf.debug.js"></script>
-	<script src="/js/html2canvas.js"></script>
-	<script src="/js/main.js"></script>
+<script src="/js/jspdf.debug.js"></script>
+<script src="/js/html2canvas.js"></script>
+<script src="/js/main.js"></script>
 @endsection
 @endsection('content')
