@@ -36,7 +36,7 @@
                     <a href="/admin/resumes">简历管理</a>
                 </li>
                 <li>
-                    <a href="">面试管理</a>
+                    <a href="/admin/interview">面试管理</a>
                 </li>
             </ul>
             <ul class="nav_user_function">

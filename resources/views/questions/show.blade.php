@@ -7,13 +7,15 @@
     <div class="answers">
         {{ $question->answers_count }}个回复
         <div>
+            @foreach($question->answers as $answer)
+                {!! $answer->body !!}
+            @endforeach
             <form action="/questions/{{ $question->
                 id }}/answer" method="post">
                     {{ csrf_field() }}
                 <!-- 编辑器容器 -->
                 <div class="form-group{{ $errors->
                     has('body') ? ' has-error' : '' }}">
-                    <label for="body">回复</label>
                     <script id="container" name="body" style="height:200px;" type="text/plain">{!! old('body')  !!}</script>
                     @if ($errors->has('body'))
                     <span class="help-block"> <strong>{{ $errors->first('body') }}</strong>

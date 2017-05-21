@@ -48,4 +48,13 @@ class UserController extends Controller
 
         return ['url' => $user->avatar];
     }
+
+    public function changeName(Request $request)
+    {
+        $user=Auth::user();
+        $user->name = $request->get('username');
+        $user->save();
+
+        return back();
+    }
 }

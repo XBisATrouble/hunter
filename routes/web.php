@@ -54,12 +54,15 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('info','AdminController@index');
 
     $router->get('jobs/{id}/resumes','JobsController@resumes');
+
+    $router->resource('interview','InterviewController');
 });
 
 Route::get('job/{job}/follow','JobFollowController@follow');
 Route::get('user/followed','UserController@followed');
 Route::get('user','UserController@index');
 Route::post('user/avatar','UserController@avatarUpload');
+Route::post('user/name','UserController@changeName');
 
 Route::get('resume/{resume}/post','JobPostController@post');
 Route::post('resume/photo','JobPostController@photo');
