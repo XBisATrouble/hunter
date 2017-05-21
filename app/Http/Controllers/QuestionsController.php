@@ -18,6 +18,7 @@ class QuestionsController extends Controller
     public function __construct(QuestionRepository $question)
     {
         $this->question = $question;
+        $this->middleware('auth');
     }
 
     /**
@@ -27,7 +28,7 @@ class QuestionsController extends Controller
      */
     public function index()
     {
-        $questions=$this->question->questionFeed();
+        $questions=$this->question->getQuestionFeed();
         return view('questions.index',compact('questions'));
     }
 

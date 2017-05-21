@@ -1,6 +1,6 @@
 @extends('layouts.userApp')
-@include('vendor.ueditor.assets')
 @section('content')
+    @include('vendor.ueditor.assets')
     <div class="main_content">
         <div>
             <form action="/questions" method="post">

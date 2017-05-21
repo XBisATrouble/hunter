@@ -23,8 +23,8 @@ class QuestionRepository
         return Question::find($id);
     }
 
-    public function questionFeed()
+    public function getQuestionFeed()
     {
-        return Question::all();
+        return Question::latest('updated_at')->with('publisher')->paginate(20);
     }
 }

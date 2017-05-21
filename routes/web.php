@@ -66,3 +66,5 @@ Route::post('resume/photo','JobPostController@photo');
 Route::get('test',function (){
     return view('errors.503');
 });
+
+Route::post('questions/{id}/answer','AnswersController@store');
