@@ -1739,3 +1739,65 @@ span.numofpeople
 {
     padding-bottom: 50px;
 }
+
+
+
+/*company_info modeul*/
+.company_info_edit
+{
+    color: rgba(0,0,0,.7);
+    width: 600px;
+    height: 800px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+}
+.company_info_edit input
+{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.company_info_edit input:focus
+{
+    outline: none;
+    border: 1px solid rgba(0,146,210,.5);
+}
+.company_info_edit textarea
+{
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 400px;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    resize: none;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.company_info_edit textarea:focus
+{
+    outline: none;
+    border: 1px solid rgba(0,146,210,.5);
+}
+.company_info_submit
+{
+    width: 150px;
+    margin: 0 auto;
+    height: 40px;
+    background-color: rgba(0,146,210,1);
+    border: 1px solid rgba(0,146,210,1);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.company_info_submit:focus
+{
+    outline: none;
+}
+.company_info_submit:hover
+{
+    opacity: .9;
+}
