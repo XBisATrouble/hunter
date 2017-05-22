@@ -1579,8 +1579,7 @@ span.numofpeople
     overflow: hidden;
 
     box-sizing: border-box;
-    border-left: 
-    width: 900px;
+    width: 1200px;
     height: 190px;
     margin-top: 30px;
     margin-bottom: 50px;
@@ -1595,6 +1594,7 @@ span.numofpeople
 {
     border-left: 5px solid rgba(0,146,210,1);
 }
+
 .resume_base_thumb_pic
 {
     float: left;
@@ -1677,6 +1677,49 @@ span.numofpeople
 {
     background-color: rgba(0,146,210,.9);
 }
+.resume_pass
+{
+    font-size: 16px;
+    line-height: 40px;
+
+    width: 150px;
+    height: 40px;
+    margin-left: 25px;
+
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+    text-align: center;
+
+    border-radius: 5px;
+    background-color: rgba(0,146,210,1);
+}
+.resume_pass:hover
+{
+    background-color: rgba(0,146,210,.9);
+}
+.resume_reject
+{
+    font-size: 16px;
+    line-height: 40px;
+
+    width: 150px;
+    height: 40px;
+    margin-left: 25px;
+
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+    text-align: center;
+
+    border-radius: 5px;
+    background-color: #ff6f00;
+}
+.resume_reject:hover
+{
+    background-color: #ff6f00;
+}
+
 .action_button_banner
 {
     float: right;

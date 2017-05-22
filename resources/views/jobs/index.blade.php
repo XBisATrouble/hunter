@@ -124,7 +124,7 @@
 					<div class="user_main_single_advance_tag_tan"></div>
 				</div>
 				<div class="per33">
-					<a class="big blue" href="jobs/{{ $job->id }}">{{ $job->name }}</a>
+					<a class="big blue" href="/jobs/{{ $job->id }}">{{ $job->name }}</a>
 					<p class="gray margin15">学历要求 : {{ $job->education }}</p>
 					<p class="gray margin15">工作地点 : {{ $job->province }}</p>
 				</div>
@@ -135,7 +135,7 @@
 				</div>
 				<div class="per33" style="border-left: 2px solid rgba(0,0,0,.2);padding-left: 50px;">
 					<div class="user_main_single_jobinfo_button small">
-						<a href="jobs/{{ $job->id }}">工作详情</a>
+						<a href="/jobs/{{ $job->id }}">工作详情</a>
 					</div>
 					<p class="blue margin15" >
 						<span class="gray">查看公司工作 :</span>

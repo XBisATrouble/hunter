@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/css/normallize.css">
     <link rel="stylesheet" type="text/css" href="/css/postJob.css">
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="/css/sweetalert.css">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Scripts -->
@@ -74,5 +75,6 @@
     <div class="botoom_banner">
         <div class="bottom_content"></div>
     </div>
+
 </body>
 </html>

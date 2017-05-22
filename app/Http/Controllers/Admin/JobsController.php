@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\StoreJobRequest;
-use App\Job;
 use App\Markdown\Markdown;
+use App\Post;
 use App\Repositories\JobRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Alert;
 
 class JobsController extends Controller
 {
@@ -178,5 +179,28 @@ class JobsController extends Controller
     {
         $resumes=$this->jobRepositories->byId($id)->posted;
         return view('admin.jobs.resumes',compact('resumes'));
+    }
+
+    public function approve($resume_id)
+    {
+        $posts = Post::where('resume_id',$resume_id)->get();
+        foreach ($posts as $post) {
+            $post->status = '1';
+            $post->save();
+        }
+
+        Alert::success('成功通过!')->persistent("关闭");
+        return back();
+    }
+    public function reject($resume_id)
+    {
+        $posts = Post::where('resume_id',$resume_id)->get();
+        foreach ($posts as $post) {
+            $post->status = '0';
+            $post->save();
+        }
+
+        Alert::success('成功拒绝!')->persistent("关闭");
+        return back();
     }
 }

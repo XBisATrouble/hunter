@@ -22,11 +22,21 @@
                 <a class="full_a" href="/admin/resumes/{{ $resume->id }}">查看简历</a>
             </div>
         </div>
+
+            <div class="resume_reject" style="float:right">
+                <a class="full_a" href="/admin/job/resume/{{ $resume->id }}/reject">拒绝</a>
+            </div>
+            <div class="resume_pass"  style="float:right">
+                <a class="full_a" href="/admin/job/resume/{{ $resume->id }}/approve">通过</a>
+            </div>
+        <div style="float:right;margin-top: 50px;">
+            当前状态：通过
+        </div>
     </div>
-    <div>
+    {{--<div>--}}
         {{--@foreach($resume->post as $job)--}}
             {{--{{ $job->name }}--}}
             {{--<br>--}}
         {{--@endforeach--}}
-    </div>
+    {{--</div>--}}
 @endforeach

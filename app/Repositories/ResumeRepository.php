@@ -34,7 +34,7 @@ class ResumeRepository
 
     public function idInArray($array)
     {
-        return Resume::whereIn('id',$array)->take(5)->get();
+        return Resume::with('jobs')->whereIn('id',$array)->take(5)->get();
     }
 
     public function postedByAdminId($id)
