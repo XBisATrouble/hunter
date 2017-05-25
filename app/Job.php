@@ -9,7 +9,7 @@ class Job extends Model
 {
     protected $fillable=[
         'name','salary','province','city','class_id','experience','education','advantage','description','address','publisher_id','followers_count'
-    ];
+];
 
     protected $hidden=[
         'created_at','updated_at',

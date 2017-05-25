@@ -6,7 +6,6 @@ use App\Http\Requests\StoreJobRequest;
 use App\Markdown\Markdown;
 use App\Post;
 use App\Repositories\JobRepository;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Alert;

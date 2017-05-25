@@ -43,3 +43,8 @@
 | [NauxLiu/Laravel-SendCloud](https://github.com/NauxLiu/Laravel-SendCloud) | 第三方的邮件发送服务          | 注册的邮件认证功能          |
 | [uxweb/sweet-alert](https://github.com/uxweb/sweet-alert) | 弹窗服务                | 投送简历使用了此扩展包        |
 
+
+## 想法
+#### 1. 增加人才池的构建
+#### 2. 增加个人能力图与职位之间的匹配关系
+#### 3. 增加个人与企业即时通讯
