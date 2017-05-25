@@ -6,6 +6,3 @@
 Homestead.json
 Homestead.yaml
 .env
-*.js linguist-language=PHP
-*.css linguist-language=PHP
-*.html linguist-language=PHP
