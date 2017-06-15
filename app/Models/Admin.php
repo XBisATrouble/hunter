@@ -43,6 +43,11 @@ class Admin extends Authenticatable
 
     public function resumes()
     {
-        return $this->hasMany(Post::class);
+        return $this->belongsToMany(Resume::class,'resume_job')->withPivot('status','job_id','id')->withTimestamps();
     }
+
+//    public function resumes()
+//    {
+//        return $this->hasMany(Post::class);
+//    }
 }

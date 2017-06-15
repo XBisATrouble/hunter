@@ -56,9 +56,10 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 
     $router->get('jobs/{id}/resumes','JobsController@resumes');
 
+    $router->get('/interview/{post_id}','InterviewController@interview');
     $router->resource('interview','InterviewController');
-    $router->get('/job/resume/{resume_id}/approve','JobsController@approve');
-    $router->get('/job/resume/{resume_id}/reject','JobsController@reject');
+    $router->get('/job/{job_id}/resume/{resume_id}/approve','JobsController@approve');
+    $router->get('/job/{job_id}/resume/{resume_id}/reject','JobsController@reject');
 });
 
 Route::get('job/{job}/follow','JobFollowController@follow');

@@ -11,7 +11,7 @@
             <p>
                 <img src="/dist/resume_thumb/sch.png">{{ $resume->school }}</p>
             <p>
-                <img src="/dist/resume_thumb/age.png">{{ 2017-substr($resume->birthday,0,4) }}岁</p>
+                应聘职位：<a href="/admin/jobs/{{ $resume->pivot->job_id }}">{{ \App\Job::find($resume->pivot->job_id)->first()->name }}</a> </p>
         </div>
         <div class="resume_base_thumb">
             <p>
@@ -24,13 +24,16 @@
         </div>
 
             <div class="resume_reject" style="float:right">
-                <a class="full_a" href="/admin/job/resume/{{ $resume->id }}/reject">拒绝</a>
+                <a class="full_a" href="/admin/job/{{ $resume->pivot->job_id }}/resume/{{ $resume->id }}/reject">拒绝</a>
             </div>
             <div class="resume_pass"  style="float:right">
-                <a class="full_a" href="/admin/job/resume/{{ $resume->id }}/approve">通过</a>
+                <a class="full_a" href="/admin/job/{{ $resume->pivot->job_id }}/resume/{{ $resume->id }}/approve">通过</a>
             </div>
         <div style="float:right;margin-top: 50px;">
-            当前状态：通过
+            当前状态：{{ $resume->pivot->status==1?'通过':'拒绝' }}
+        </div>
+        <div class="resume_pass"  style="float:right">
+            <a class="full_a" href="/admin/interview/{{ $resume->pivot->id }}">发送面试邮件</a>
         </div>
     </div>
     {{--<div>--}}

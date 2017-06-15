@@ -27,8 +27,9 @@ class ResumesController
 
     public function index()
     {
-        $resumes_id=Auth::guard('admin')->user()->resumes()->distinct('resumes_id')->pluck('resume_id');
-        $resumes=$this->resume->idInArray($resumes_id);
+        $resumes=Auth::guard('admin')->user()->resumes;
+        //$resumes_id=Auth::guard('admin')->user()->resumes()->distinct('resumes_id')->pluck('resume_id');
+        //$resumes=$this->resume->idInArray($resumes_id);
         return view('admin.resumes.index',compact('resumes'));
     }
 

@@ -2,6 +2,8 @@
 
 @section('content')
     <div class="main_content">
-        待完善
+        @foreach ($resumes as $resume)
+            {{ $resume->pivot->id }}
+        @endforeach
     </div>
 @endsection

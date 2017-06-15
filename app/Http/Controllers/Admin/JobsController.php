@@ -180,9 +180,9 @@ class JobsController extends Controller
         return view('admin.jobs.resumes',compact('resumes'));
     }
 
-    public function approve($resume_id)
+    public function approve($job_id,$resume_id)
     {
-        $posts = Post::where('resume_id',$resume_id)->get();
+        $posts = Post::where('resume_id',$resume_id)->where('job_id',$job_id)->get();
         foreach ($posts as $post) {
             $post->status = '1';
             $post->save();
@@ -191,9 +191,9 @@ class JobsController extends Controller
         Alert::success('成功通过!')->persistent("关闭");
         return back();
     }
-    public function reject($resume_id)
+    public function reject($job_id,$resume_id)
     {
-        $posts = Post::where('resume_id',$resume_id)->get();
+        $posts = Post::where('resume_id',$resume_id)->where('job_id',$job_id)->get();
         foreach ($posts as $post) {
             $post->status = '0';
             $post->save();

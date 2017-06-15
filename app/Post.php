@@ -19,4 +19,9 @@ class Post extends Model
 
         return Carbon::parse($date)->diffForHumans();
     }
+
+    public function interview()
+    {
+        return $this->hasOne(Interview::class);
+    }
 }
