@@ -72,12 +72,20 @@
 		</div>
 	</div>
 </div>
+<div class="container" style="display: flex; flex-wrap: nowrap;justify-content: space-around;width: 1200px;margin: 0 auto;">
+	<div id="chart" style="margin: 0 auto;flex-grow: 1">
+	</div>
+	<div style="flex-grow: 1;line-height: 500px;text-align: left">此人适合的岗位是: <a href="/admin/jobs/9" class="blue">PHP开发工程师</a></div>
+</div>
+
 <div class="tools">
 	<button id="btn-html2canvas">导出PDF格式</button>
 </div>
-@section('js')
+
 <script src="/js/jspdf.debug.js"></script>
 <script src="/js/html2canvas.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/charts.js"></script>
+@section('js')
 @endsection
 @endsection('content')

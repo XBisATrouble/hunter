@@ -1677,6 +1677,13 @@ span.numofpeople
 {
     background-color: rgba(0,146,210,.9);
 }
+.flex_banner
+{
+    display: flex;
+    flex-wrap: wrap;
+    width:30%;
+    justify-content: space-between;
+}
 .resume_pass
 {
     font-size: 16px;

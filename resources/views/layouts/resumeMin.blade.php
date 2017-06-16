@@ -11,7 +11,7 @@
             <p>
                 <img src="/dist/resume_thumb/sch.png">{{ $resume->school }}</p>
             <p>
-                应聘职位：<a href="/admin/jobs/{{ $resume->pivot->job_id }}">{{ \App\Job::find($resume->pivot->job_id)->first()->name }}</a> </p>
+                应聘职位：<a class="blue" href="/admin/jobs/{{ $resume->pivot->job_id }}">{{ \App\Job::find($resume->pivot->job_id)->first()->name }}</a> </p>
         </div>
         <div class="resume_base_thumb">
             <p>
@@ -23,18 +23,21 @@
             </div>
         </div>
 
+        <div class="flex_banner">
             <div class="resume_reject" style="float:right">
                 <a class="full_a" href="/admin/job/{{ $resume->pivot->job_id }}/resume/{{ $resume->id }}/reject">拒绝</a>
             </div>
             <div class="resume_pass"  style="float:right">
                 <a class="full_a" href="/admin/job/{{ $resume->pivot->job_id }}/resume/{{ $resume->id }}/approve">通过</a>
             </div>
-        <div style="float:right;margin-top: 50px;">
-            当前状态：{{ $resume->pivot->status==1?'通过':'拒绝' }}
+            <div class="resume_pass"  style="margin-top:50px;">
+                <a class="full_a" href="/admin/interview/{{ $resume->pivot->id }}">发送面试邮件</a>
+            </div>
+            <div style="margin-top: 50px;">
+                当前状态：{{ $resume->pivot->status==1?'通过':'拒绝' }}
+            </div>
         </div>
-        <div class="resume_pass"  style="float:right">
-            <a class="full_a" href="/admin/interview/{{ $resume->pivot->id }}">发送面试邮件</a>
-        </div>
+
     </div>
     {{--<div>--}}
         {{--@foreach($resume->post as $job)--}}
