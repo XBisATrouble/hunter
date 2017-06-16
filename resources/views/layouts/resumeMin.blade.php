@@ -24,13 +24,13 @@
         </div>
 
         <div class="flex_banner">
-            <div class="resume_reject" style="float:right">
-                <a class="full_a" href="/admin/job/{{ $resume->pivot->job_id }}/resume/{{ $resume->id }}/reject">拒绝</a>
-            </div>
             <div class="resume_pass"  style="float:right">
                 <a class="full_a" href="/admin/job/{{ $resume->pivot->job_id }}/resume/{{ $resume->id }}/approve">通过</a>
             </div>
-            <div class="resume_pass"  style="margin-top:50px;">
+            <div class="resume_reject" style="float:right">
+                <a class="full_a" href="/admin/job/{{ $resume->pivot->job_id }}/resume/{{ $resume->id }}/reject">拒绝</a>
+            </div>
+            <div class="resume_reject"  style="margin-top:50px;">
                 <a class="full_a" href="/admin/interview/{{ $resume->pivot->id }}">发送面试邮件</a>
             </div>
             <div style="margin-top: 50px;">

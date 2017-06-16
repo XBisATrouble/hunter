@@ -8,7 +8,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-
 use App\Job;
 use App\Post;
 use App\Repositories\InterviewsRepository;

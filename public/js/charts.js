@@ -4,9 +4,9 @@ $(function(){
     step: 1,
     title: " ",
     values: {
-      "JavaScript": 2.1,
-      "Node.js": 3.5,
-      "jQuery": 3,
+      "Java": 2.1,
+      "Python": 3.5,
+      ".Net": 3,
       "PHP": 5,
       "C++": 4.5,
       "解决问题能力": 3.5,
